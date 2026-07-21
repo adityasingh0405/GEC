@@ -1,0 +1,20 @@
+{
+  "links": [
+    { "label": "Home", "href": "/" },
+    { "label": "About", "href": "/about" },
+    {
+      "label": "Courses",
+      "href": "/courses",
+      "children": [
+        { "label": "Bachelor of Theology (B.Th)", "href": "/courses/bth" },
+        { "label": "Master of Divinity (M.Dv)", "href": "/courses/mdv" },
+        { "label": "Master of Theology (M.Th)", "href": "/courses/mth" },
+        { "label": "Diploma in Music", "href": "/courses/diploma-music" }
+      ]
+    },
+    { "label": "Admissions", "href": "/admissions" },
+    { "label": "Gallery", "href": "/gallery" },
+    { "label": "News", "href": "/news" },
+    { "label": "Contact", "href": "/contact" }
+  ]
+}

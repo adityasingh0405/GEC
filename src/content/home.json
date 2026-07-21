@@ -1,0 +1,33 @@
+{
+  "hero": {
+    "headline": "Equipping Leaders for God's Kingdom",
+    "subheadline": "A premier institution for theological and music education, nurturing excellence in ministry, worship, and scholarship.",
+    "cta1": { "label": "Explore Courses", "href": "/courses" },
+    "cta2": { "label": "Apply Now", "href": "/admissions" },
+    "image": "hero-campus.jpg"
+  },
+  "stats": [
+    { "value": "20+", "label": "Years of Excellence" },
+    { "value": "500+", "label": "Alumni Serving Globally" },
+    { "value": "4", "label": "Academic Programs" },
+    { "value": "100%", "label": "Faculty with Advanced Degrees" }
+  ],
+  "aboutPreview": {
+    "heading": "A Legacy of Faith and Scholarship",
+    "body": "Founded on the conviction that academic excellence and spiritual formation go hand in hand, Glory Education Center has been shaping servant-leaders for over two decades. Our programs combine rigorous theological study with practical ministry training.",
+    "cta": { "label": "Learn About Us", "href": "/about" },
+    "image": "about-chapel.jpg"
+  },
+  "featuredCourses": ["bth", "mdv", "mth", "diploma-music"],
+  "facultyHeading": "Meet Our Faculty",
+  "facultySubheading": "Dedicated scholars and practitioners committed to your formation",
+  "galleryHeading": "Life at GEC",
+  "gallerySubheading": "A glimpse into our vibrant campus community",
+  "newsHeading": "Latest News & Updates",
+  "newsSubheading": "Stay informed about campus events and announcements",
+  "admissionsCTA": {
+    "heading": "Begin Your Journey Today",
+    "body": "Applications are now open for the upcoming academic year. Join a community of scholars, worshippers, and leaders.",
+    "cta": { "label": "Start Your Application", "href": "/admissions" }
+  }
+}

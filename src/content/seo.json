@@ -1,0 +1,74 @@
+{
+  "default": {
+    "titleTemplate": "%s | Glory Education Center",
+    "description": "Glory Education Center — A premier institution for theological and music education, equipping leaders for ministry and worship.",
+    "keywords": "theological education, seminary, Bible college, theology degree, music ministry, India"
+  },
+  "pages": {
+    "/": {
+      "title": "Glory Education Center — Equipping Leaders for God's Kingdom",
+      "description": "Glory Education Center offers B.Th, M.Dv, M.Th, and Diploma in Music programs. Transformative theological and music education in India.",
+      "keywords": "glory education center, theology college India, Bible seminary, BTh MDv MTh, diploma music"
+    },
+    "/about": {
+      "title": "About Us",
+      "description": "Learn about Glory Education Center's mission, vision, history, and leadership. Founded in 2005, we have been equipping servant-leaders for over two decades.",
+      "keywords": "about glory education center, theological seminary history, mission vision"
+    },
+    "/courses": {
+      "title": "Our Programs",
+      "description": "Explore our academic programs: Bachelor of Theology (B.Th), Master of Divinity (M.Dv), Master of Theology (M.Th), and Diploma in Music.",
+      "keywords": "theology courses India, BTh degree, Master of Divinity, Master of Theology, diploma music ministry"
+    },
+    "/courses/bth": {
+      "title": "Bachelor of Theology (B.Th)",
+      "description": "A 3-year undergraduate degree in biblical and theological studies. Earn your B.Th at Glory Education Center and prepare for ministry leadership.",
+      "keywords": "bachelor of theology, BTh degree India, theology undergraduate program"
+    },
+    "/courses/mdv": {
+      "title": "Master of Divinity (M.Dv)",
+      "description": "The professional graduate degree for ordained ministry and pastoral leadership. Pursue your M.Dv at Glory Education Center.",
+      "keywords": "master of divinity, MDv India, ministry degree, pastoral leadership"
+    },
+    "/courses/mth": {
+      "title": "Master of Theology (M.Th)",
+      "description": "An advanced research degree for theological educators and scholars. Pursue your M.Th at Glory Education Center.",
+      "keywords": "master of theology, MTh India, theological research, seminary postgraduate"
+    },
+    "/courses/diploma-music": {
+      "title": "Diploma in Music",
+      "description": "A 2-year diploma program for worship leaders and musicians. Develop your musical gifts and theological foundations for ministry.",
+      "keywords": "diploma in music, worship leader training, church music, music ministry India"
+    },
+    "/admissions": {
+      "title": "Admissions",
+      "description": "Learn how to apply to Glory Education Center. Review requirements, the admissions process, and submit your inquiry.",
+      "keywords": "seminary admissions, apply theology degree, GEC application, theological college India admissions"
+    },
+    "/gallery": {
+      "title": "Gallery",
+      "description": "Explore photos from campus life, events, and academics at Glory Education Center.",
+      "keywords": "GEC gallery, campus life, seminary events photos"
+    },
+    "/news": {
+      "title": "News & Updates",
+      "description": "Stay updated with the latest news, events, and announcements from Glory Education Center.",
+      "keywords": "GEC news, seminary announcements, theology college events"
+    },
+    "/contact": {
+      "title": "Contact Us",
+      "description": "Contact Glory Education Center for admissions inquiries, general questions, and more. We're here to help.",
+      "keywords": "contact GEC, seminary contact India, theology college inquiry"
+    },
+    "/privacy-policy": {
+      "title": "Privacy Policy",
+      "description": "Read the Privacy Policy of Glory Education Center.",
+      "keywords": ""
+    },
+    "/terms": {
+      "title": "Terms & Conditions",
+      "description": "Read the Terms and Conditions of Glory Education Center.",
+      "keywords": ""
+    }
+  }
+}

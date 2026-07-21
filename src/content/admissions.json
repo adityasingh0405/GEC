@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "heading": "Admissions",
+    "subheading": "Begin your journey toward transformative theological and music education"
+  },
+  "intake": "Academic year begins in June. Applications are accepted from January through April.",
+  "process": [
+    { "step": 1, "title": "Submit Application", "desc": "Complete the online application form and submit all required documents." },
+    { "step": 2, "title": "Document Review", "desc": "Our admissions team reviews your application, transcripts, and reference letters." },
+    { "step": 3, "title": "Personal Interview", "desc": "Selected applicants are invited for a personal interview with faculty." },
+    { "step": 4, "title": "Admission Decision", "desc": "You will receive a written offer of admission within 2–3 weeks of your interview." },
+    { "step": 5, "title": "Enrollment", "desc": "Accept your offer, pay the registration fee, and complete enrollment formalities." }
+  ],
+  "requirements": {
+    "general": [
+      "Completed application form",
+      "Recent passport-size photograph",
+      "Copies of academic certificates and mark sheets",
+      "Pastoral/Church recommendation letter",
+      "Personal statement or testimony",
+      "Government-issued ID (Aadhar, Passport, etc.)"
+    ],
+    "programSpecific": "Each program may have additional requirements. Please refer to the individual course pages for details."
+  },
+  "fees": {
+    "note": "Detailed fee structure is provided upon admission offer. Scholarships and payment plans are available."
+  },
+  "faq": [
+    {
+      "question": "When can I apply?",
+      "answer": "Applications are open from January 1 to April 30 each year for the June intake. Late applications may be considered subject to availability."
+    },
+    {
+      "question": "Are scholarships available?",
+      "answer": "Yes, GEC offers merit-based and need-based scholarships. Contact admissions for details and eligibility criteria."
+    },
+    {
+      "question": "Can international students apply?",
+      "answer": "Yes, GEC welcomes applications from international students. Please contact us to discuss visa requirements and specific arrangements."
+    },
+    {
+      "question": "Is there a hostel facility?",
+      "answer": "Yes, GEC provides separate hostel accommodations for male and female students. Accommodation is subject to availability."
+    },
+    {
+      "question": "What documents do I need for admission?",
+      "answer": "Generally: academic transcripts, pastoral recommendation, personal statement, and government ID. Program-specific requirements may apply."
+    },
+    {
+      "question": "How do I know if my application was received?",
+      "answer": "You will receive an email acknowledgment within 2 business days of submitting your application."
+    }
+  ],
+  "formFields": {
+    "courses": [
+      "Bachelor of Theology (B.Th)",
+      "Master of Divinity (M.Dv)",
+      "Master of Theology (M.Th)",
+      "Diploma in Music"
+    ]
+  }
+}

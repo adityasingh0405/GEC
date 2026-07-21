@@ -1,0 +1,253 @@
+[
+  {
+    "id": "bth",
+    "slug": "bth",
+    "title": "Bachelor of Theology",
+    "abbreviation": "B.Th",
+    "duration": "3 Years",
+    "level": "Undergraduate",
+    "category": "Theology",
+    "tagline": "A foundational degree in biblical and theological studies",
+    "description": "The Bachelor of Theology program provides a comprehensive foundation in Old and New Testament studies, systematic theology, church history, and practical ministry. Graduates are equipped to serve effectively as pastors, teachers, and ministry leaders.",
+    "image": "course-bth.jpg",
+    "color": "#1E3A5F",
+    "eligibility": [
+      "Completion of 10+2 (Higher Secondary) or equivalent",
+      "Personal faith commitment and church recommendation",
+      "Proficiency in English (reading and writing)",
+      "Willingness to engage in community and practical ministry"
+    ],
+    "curriculum": [
+      {
+        "year": "Year 1",
+        "subjects": ["Old Testament Survey", "New Testament Survey", "Introduction to Theology", "Biblical Languages (Greek/Hebrew Basics)", "Church History I", "Homiletics I", "Pastoral Ministry Basics"]
+      },
+      {
+        "year": "Year 2",
+        "subjects": ["Old Testament Exegesis", "New Testament Exegesis", "Systematic Theology I", "Systematic Theology II", "Church History II", "Homiletics II", "Christian Ethics", "Counseling Basics"]
+      },
+      {
+        "year": "Year 3",
+        "subjects": ["Biblical Theology", "Apologetics", "Missiology", "Leadership & Administration", "Theology of Worship", "Internship / Field Education", "Research Project"]
+      }
+    ],
+    "careers": [
+      "Pastor / Church Planter",
+      "Bible Teacher / Educator",
+      "Chaplain",
+      "Youth / Children's Ministry Leader",
+      "Mission Worker",
+      "Christian School Teacher"
+    ],
+    "admissionRequirements": [
+      "Completed application form",
+      "Official academic transcripts",
+      "Pastoral reference letter",
+      "Personal statement of faith",
+      "Interview with admissions committee"
+    ],
+    "faq": [
+      {
+        "question": "Is accommodation available for outstation students?",
+        "answer": "Yes, GEC offers hostel facilities for both male and female students. Contact admissions for availability and fees."
+      },
+      {
+        "question": "Can I work while studying?",
+        "answer": "The program is full-time and includes field education. Limited part-time ministry roles may be permitted with permission."
+      },
+      {
+        "question": "What is the medium of instruction?",
+        "answer": "The primary medium of instruction is English, with some courses available in regional languages."
+      },
+      {
+        "question": "Is the B.Th recognized for further study?",
+        "answer": "Yes, our B.Th degree is accepted for admission into our M.Dv and M.Th programs, and by many seminaries internationally."
+      }
+    ]
+  },
+  {
+    "id": "mdv",
+    "slug": "mdv",
+    "title": "Master of Divinity",
+    "abbreviation": "M.Dv",
+    "duration": "3 Years",
+    "level": "Postgraduate",
+    "category": "Theology",
+    "tagline": "The professional degree for ministry leadership",
+    "description": "The Master of Divinity is the standard professional degree for those called to ordained ministry and pastoral leadership. The program deepens biblical, theological, and ministry competencies while emphasizing practical formation.",
+    "image": "course-mdv.jpg",
+    "color": "#2A5284",
+    "eligibility": [
+      "Bachelor's degree from an accredited institution",
+      "A B.Th or equivalent theological foundation is preferred",
+      "Personal testimony and church recommendation",
+      "English proficiency"
+    ],
+    "curriculum": [
+      {
+        "year": "Year 1",
+        "subjects": ["Advanced Biblical Hermeneutics", "Old Testament Theology", "New Testament Theology", "Systematic Theology Advanced", "Preaching & Communication", "Pastoral Theology"]
+      },
+      {
+        "year": "Year 2",
+        "subjects": ["Christian Education & Discipleship", "Missiology & World Religions", "Church Administration", "Counseling & Care Ministry", "Elective I", "Elective II", "Ministry Practicum"]
+      },
+      {
+        "year": "Year 3",
+        "subjects": ["Contextual Theology", "Leadership in Ministry", "Church Planting Strategies", "Theology of Culture", "Dissertation / Ministry Project", "Supervised Ministry Internship"]
+      }
+    ],
+    "careers": [
+      "Senior Pastor / Lead Minister",
+      "Seminary Lecturer",
+      "Denominational Leader",
+      "Missionary",
+      "Chaplain (Hospital, Military, University)",
+      "Christian Organization Director"
+    ],
+    "admissionRequirements": [
+      "Bachelor's degree (minimum 50% aggregate)",
+      "Completed application form",
+      "Official academic transcripts",
+      "Two reference letters (pastoral + academic)",
+      "Statement of ministry calling",
+      "Personal interview"
+    ],
+    "faq": [
+      {
+        "question": "What is the difference between M.Dv and M.Th?",
+        "answer": "The M.Dv is a professional ministry degree focused on pastoral and ministry leadership. The M.Th is an academic research degree for those pursuing advanced scholarship or teaching."
+      },
+      {
+        "question": "Are there specialization tracks in the M.Dv?",
+        "answer": "Yes, students may choose electives focusing on Pastoral Ministry, Youth Ministry, Missions, or Christian Education."
+      },
+      {
+        "question": "Can I pursue M.Dv after completing B.Th at GEC?",
+        "answer": "Absolutely. GEC B.Th graduates meeting our academic standards are encouraged to continue with M.Dv."
+      }
+    ]
+  },
+  {
+    "id": "mth",
+    "slug": "mth",
+    "title": "Master of Theology",
+    "abbreviation": "M.Th",
+    "duration": "2 Years",
+    "level": "Postgraduate",
+    "category": "Theology",
+    "tagline": "Advanced scholarship for theological educators and researchers",
+    "description": "The Master of Theology is a rigorous academic degree for those who wish to specialize in a particular theological discipline and contribute to theological scholarship, teaching, and research.",
+    "image": "course-mth.jpg",
+    "color": "#1E3A5F",
+    "eligibility": [
+      "M.Dv or B.Th with distinction from an accredited seminary",
+      "Strong academic background with writing and research skills",
+      "Proficiency in English; knowledge of Biblical languages preferred",
+      "Approval of proposed research area"
+    ],
+    "curriculum": [
+      {
+        "year": "Year 1",
+        "subjects": ["Research Methodology in Theology", "Theological German/French (Optional)", "Specialized Seminars (x3)", "Independent Study", "Thesis Proposal Development"]
+      },
+      {
+        "year": "Year 2",
+        "subjects": ["Advanced Seminar in Specialization", "Thesis Research & Writing", "Thesis Defense", "Teaching Practicum (Optional)"]
+      }
+    ],
+    "specializations": [
+      "Biblical Studies (OT or NT)",
+      "Systematic Theology",
+      "Church History",
+      "Missiology",
+      "Christian Ethics"
+    ],
+    "careers": [
+      "Seminary or Bible College Professor",
+      "Theological Researcher & Author",
+      "Academic Dean",
+      "Denominational Theologian",
+      "Doctoral Program Candidate"
+    ],
+    "admissionRequirements": [
+      "M.Dv or B.Th with distinction (minimum 65% or equivalent)",
+      "Research proposal (500–1000 words)",
+      "Academic writing sample",
+      "Two academic reference letters",
+      "Interview with faculty committee"
+    ],
+    "faq": [
+      {
+        "question": "Is the M.Th a full-time program?",
+        "answer": "The M.Th is designed as a full-time program, though limited part-time options may be available. Contact admissions for details."
+      },
+      {
+        "question": "Do I need to know Biblical Greek or Hebrew?",
+        "answer": "Proficiency in at least one Biblical language is strongly recommended. Students without this background may be required to complete preparatory coursework."
+      },
+      {
+        "question": "Can the M.Th lead to doctoral studies?",
+        "answer": "Yes. The M.Th is the standard preparation for doctoral (Ph.D. / Th.D.) studies in theology at institutions worldwide."
+      }
+    ]
+  },
+  {
+    "id": "diploma-music",
+    "slug": "diploma-music",
+    "title": "Diploma in Music",
+    "abbreviation": "Dip. Music",
+    "duration": "2 Years",
+    "level": "Diploma",
+    "category": "Music",
+    "tagline": "Equipping worship leaders and musicians for ministry",
+    "description": "The Diploma in Music equips students with both the spiritual and technical skills needed to lead worship and serve in music ministry. The program integrates music theory, instrument training, vocal development, and worship theology.",
+    "image": "course-music.jpg",
+    "color": "#C8972B",
+    "eligibility": [
+      "Completion of 10+2 or equivalent",
+      "Basic musical aptitude (audition required)",
+      "Personal faith and church involvement",
+      "Passion for worship ministry"
+    ],
+    "curriculum": [
+      {
+        "year": "Year 1",
+        "subjects": ["Music Theory I & II", "Vocal Training I", "Keyboard / Guitar (Primary Instrument)", "Worship Theology", "Church Music History", "Ear Training & Sight-Reading", "Ensemble & Choir"]
+      },
+      {
+        "year": "Year 2",
+        "subjects": ["Music Theory III", "Vocal Training II", "Advanced Instrument Study", "Songwriting & Arrangement", "Sound Engineering Basics", "Worship Leading Practicum", "Recital & Final Project"]
+      }
+    ],
+    "careers": [
+      "Worship Leader / Pastor",
+      "Church Choir Director",
+      "Music Ministry Coordinator",
+      "Christian Music Educator",
+      "Recording / Studio Musician (Ministry)",
+      "Mission Field Worship Leader"
+    ],
+    "admissionRequirements": [
+      "Completed application form",
+      "Musical audition (live or recorded)",
+      "Academic transcripts",
+      "Pastoral recommendation letter",
+      "Personal statement on music ministry calling"
+    ],
+    "faq": [
+      {
+        "question": "Do I need to play an instrument already?",
+        "answer": "Basic musical ability is required, but you do not need to be an advanced musician. An audition helps us understand your current level and place you appropriately."
+      },
+      {
+        "question": "What instruments are taught?",
+        "answer": "The program focuses on keyboard/piano and guitar as primary instruments, with ensemble opportunities on various instruments."
+      },
+      {
+        "question": "Is this program recognized by churches and denominations?",
+        "answer": "Yes, GEC's Diploma in Music is recognized by numerous churches and denominations for worship leadership roles."
+      }
+    ]
+  }
+]

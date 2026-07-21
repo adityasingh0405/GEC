@@ -1,0 +1,56 @@
+{
+  "hero": {
+    "heading": "About Glory Education Center",
+    "breadcrumb": "About"
+  },
+  "mission": {
+    "heading": "Our Mission",
+    "body": "To provide transformative theological and music education that equips men and women for faithful, effective ministry and worship leadership in the church and the world."
+  },
+  "vision": {
+    "heading": "Our Vision",
+    "body": "To be a center of academic excellence and spiritual formation that produces servant-leaders who glorify God through their lives, scholarship, and ministry."
+  },
+  "values": [
+    { "icon": "bible", "title": "Biblical Fidelity", "desc": "All learning is anchored in the authority and sufficiency of Scripture." },
+    { "icon": "academic", "title": "Academic Excellence", "desc": "We hold our programs to the highest standards of theological scholarship." },
+    { "icon": "community", "title": "Community & Formation", "desc": "Holistic formation happens in the context of a loving Christian community." },
+    { "icon": "service", "title": "Service & Mission", "desc": "Education is in service of the church and the Great Commission." }
+  ],
+  "history": {
+    "heading": "Our History",
+    "body": "Glory Education Center was established in 2005 by a group of visionary educators and ministry leaders who recognized the need for academically rigorous, spiritually vibrant theological training.",
+    "timeline": [
+      { "year": "2005", "event": "Glory Education Center founded with the first cohort of 20 students in the Bachelor of Theology program." },
+      { "year": "2008", "event": "Launched the Diploma in Music program, expanding GEC's ministry formation offerings." },
+      { "year": "2012", "event": "Received formal accreditation from the Board of Theological Education, affirming academic standards." },
+      { "year": "2015", "event": "Introduced the Master of Divinity (M.Dv) program, welcoming post-graduate students." },
+      { "year": "2018", "event": "Launched the Master of Theology (M.Th) program for advanced research and specialization." },
+      { "year": "2021", "event": "Celebrated 500+ alumni serving across India and internationally in ministry and education." },
+      { "year": "2025", "event": "Marking 20 years of transforming lives through Word and worship." }
+    ]
+  },
+  "leadership": {
+    "heading": "Leadership",
+    "members": [
+      {
+        "name": "Rev. Dr. Samuel Thomas",
+        "title": "Principal",
+        "bio": "Rev. Dr. Samuel Thomas brings over 30 years of ministry and academic experience. He holds a Doctorate in Theology from a leading seminary.",
+        "image": "leadership-principal.jpg"
+      },
+      {
+        "name": "Dr. Grace Mathew",
+        "title": "Dean of Academics",
+        "bio": "Dr. Grace Mathew oversees all academic programs with a passion for integrating rigorous scholarship with spiritual formation.",
+        "image": "leadership-dean.jpg"
+      },
+      {
+        "name": "Pastor Joel Abraham",
+        "title": "Dean of Students",
+        "bio": "Pastor Joel Abraham champions student wellbeing, community life, and pastoral mentorship across all programs.",
+        "image": "leadership-students.jpg"
+      }
+    ]
+  }
+}

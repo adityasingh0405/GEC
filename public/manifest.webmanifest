@@ -1,0 +1,39 @@
+{
+  "name": "Glory Education Center",
+  "short_name": "GEC",
+  "description": "A premier institution for theological and music education",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8F9FA",
+  "theme_color": "#1E3A5F",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Courses",
+      "url": "/courses",
+      "description": "Browse all academic programs"
+    },
+    {
+      "name": "Admissions",
+      "url": "/admissions",
+      "description": "Apply to Glory Education Center"
+    },
+    {
+      "name": "Contact",
+      "url": "/contact",
+      "description": "Get in touch with us"
+    }
+  ]
+}

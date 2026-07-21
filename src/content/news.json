@@ -1,0 +1,68 @@
+[
+  {
+    "id": "n1",
+    "slug": "admissions-open-2026",
+    "title": "Admissions Now Open for the 2026 Academic Year",
+    "excerpt": "Applications are now being accepted for all programs beginning June 2026. Seats are limited — apply early.",
+    "date": "2026-01-10",
+    "category": "Admissions",
+    "image": "news/admissions-2026.jpg",
+    "author": "GEC Admissions Office",
+    "body": "Glory Education Center is pleased to announce that applications are now open for the 2026 academic year. We are accepting applications for our Bachelor of Theology (B.Th), Master of Divinity (M.Dv), Master of Theology (M.Th), and Diploma in Music programs. Seats are limited, and we encourage early applications. Visit our Admissions page to learn more and submit your application."
+  },
+  {
+    "id": "n2",
+    "slug": "graduation-ceremony-2025",
+    "title": "Graduation Ceremony 2025 — A Celebration of Faith and Excellence",
+    "excerpt": "GEC celebrated the graduation of 45 students across all programs at the Annual Convocation 2025.",
+    "date": "2025-11-15",
+    "category": "Events",
+    "image": "news/graduation-2025.jpg",
+    "author": "GEC Communications",
+    "body": "Glory Education Center hosted its Annual Convocation on November 15, 2025, celebrating 45 graduates across all programs. The ceremony was graced by distinguished guests from leading seminaries and churches. Rev. Dr. Samuel Thomas delivered the charge to graduates, urging them to serve with humility and excellence in their respective callings."
+  },
+  {
+    "id": "n3",
+    "slug": "missions-conference-2025",
+    "title": "Annual Missions Conference — Expanding the Kingdom Globally",
+    "excerpt": "GEC hosted its Annual Missions Conference with speakers from 5 nations sharing frontline mission stories.",
+    "date": "2025-09-20",
+    "category": "Events",
+    "image": "news/missions-conf-2025.jpg",
+    "author": "GEC Events Team",
+    "body": "The Annual Missions Conference brought together students, faculty, and mission practitioners from across India and abroad. Speakers from 5 nations shared their experiences on the frontline of gospel ministry. The conference challenged students to consider cross-cultural service and global mission engagement."
+  },
+  {
+    "id": "n4",
+    "slug": "music-recital-2025",
+    "title": "Diploma in Music Students Present Annual Recital",
+    "excerpt": "The Music Department showcased exceptional talent at the Annual Recital, featuring worship compositions by graduating students.",
+    "date": "2025-10-05",
+    "category": "Music",
+    "image": "news/music-recital-2025.jpg",
+    "author": "Music Department",
+    "body": "The GEC Annual Music Recital was a powerful showcase of God-given talent, featuring performances by Diploma in Music students. Graduating students presented original worship compositions alongside classical pieces, moving the audience to worship. Prof. Mary Daniel expressed deep pride in her students' growth over the two-year program."
+  },
+  {
+    "id": "n5",
+    "slug": "scholarship-program-2026",
+    "title": "New Scholarship Program Announced for 2026 Intake",
+    "excerpt": "GEC introduces merit and need-based scholarships for new students joining in 2026, including full and partial bursaries.",
+    "date": "2026-02-01",
+    "category": "Admissions",
+    "image": "news/scholarship-2026.jpg",
+    "author": "GEC Administration",
+    "body": "Glory Education Center is pleased to announce the launch of its expanded scholarship program for the 2026 academic year. The program includes full and partial bursaries for both merit-based and need-based applicants. Eligible students may apply for scholarships alongside their regular admission application. The goal is to ensure that financial constraints do not prevent called and qualified students from receiving theological and music education."
+  },
+  {
+    "id": "n6",
+    "slug": "faculty-publication-dr-grace",
+    "title": "Dr. Grace Mathew Publishes New Commentary on Ephesians",
+    "excerpt": "GEC's Dean of Academics has authored a new scholarly commentary on the Book of Ephesians, released by a leading theological publisher.",
+    "date": "2025-08-12",
+    "category": "Academics",
+    "image": "news/faculty-publication.jpg",
+    "author": "GEC Communications",
+    "body": "Dr. Grace Mathew, Dean of Academics and Associate Professor of Biblical Studies, has published a new commentary on the Book of Ephesians. The work, released by a leading theological publisher, explores Pauline theology through the lens of ecclesiology and spiritual warfare. The commentary is already being used in seminaries across South Asia and is available for purchase through the GEC library."
+  }
+]
