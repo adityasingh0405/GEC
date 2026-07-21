@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import Container from '@components/common/Container'
+import logo from '../../assets/logo.png'
 import {
   FacebookIcon, InstagramIcon, YoutubeIcon, TwitterIcon,
   MapPinIcon, PhoneIcon, MailIcon
@@ -47,11 +48,12 @@ export default function Footer() {
               className="flex items-center gap-3 mb-5 focus-visible:ring-2 focus-visible:ring-[#C8972B] rounded"
               aria-label="Glory Education Center — Home"
             >
-              <div
-                className="w-10 h-10 rounded-lg flex items-center justify-center text-white text-sm font-bold"
-                style={{ background: 'linear-gradient(135deg, #2A5284 0%, #1E3A5F 100%)' }}
-              >
-                GEC
+              <div className="w-12 h-12 flex items-center justify-center shrink-0">
+                <img
+                  src={logo}
+                  alt="Glory Education Center Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div>
                 <span className="block text-base font-bold leading-tight">Glory Education Center</span>
