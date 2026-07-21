@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import SEOHead from '@seo/SEOHead'
 import JsonLD from '@seo/JsonLD'
@@ -15,89 +17,183 @@ import facultyData from '@content/faculty.json'
 import newsData from '@content/news.json'
 import { CheckIcon, ArrowRightIcon } from '@components/common/Icons'
 
-// Hero section
+// ─── Hero Carousel Images ────────────────────────────────────────────────────
+// Replace these Unsplash URLs with actual ImageKit campus photos when available.
+// The first image has fetchpriority="high" for LCP; the rest are lazy-loaded.
+const HERO_IMAGES = [
+  {
+    src: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1920&q=80&auto=format&fit=crop',
+    alt: 'Students in a college campus courtyard',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1920&q=80&auto=format&fit=crop',
+    alt: 'Open theological books in a library',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1920&q=80&auto=format&fit=crop',
+    alt: 'University graduation ceremony',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&q=80&auto=format&fit=crop',
+    alt: 'Student studying in a peaceful setting',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=1920&q=80&auto=format&fit=crop',
+    alt: 'Music students in a worship session',
+  },
+]
+
+const OVERLAY =
+  'linear-gradient(180deg, rgba(12,25,52,.42) 0%, rgba(15,36,68,.55) 55%, rgba(12,28,58,.68) 100%)'
+
+// ─── Hero Component ──────────────────────────────────────────────────────────
 function Hero({ data }) {
+  const [current, setCurrent] = useState(0)
+
+  // Crossfade every 7 seconds
+  useEffect(() => {
+    const id = setInterval(() => {
+      setCurrent(c => (c + 1) % HERO_IMAGES.length)
+    }, 7000)
+    return () => clearInterval(id)
+  }, [])
+
   return (
     <section
-      className="relative min-h-[90vh] flex items-center overflow-hidden"
-      style={{
-        background: 'linear-gradient(135deg, #152940 0%, #1E3A5F 50%, #2A5284 100%)',
-      }}
+      className="relative h-screen min-h-[600px] max-h-[1080px] flex flex-col overflow-hidden"
       aria-labelledby="hero-heading"
     >
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-5" aria-hidden="true">
-        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern id="cross" width="40" height="40" patternUnits="userSpaceOnUse">
-              <path d="M20 0v40M0 20h40" stroke="white" strokeWidth="1"/>
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#cross)"/>
-        </svg>
+      {/* ── Image Carousel (crossfade) ─────────────────────────────── */}
+      <div className="absolute inset-0" aria-hidden="true">
+        {HERO_IMAGES.map((img, i) => (
+          <div
+            key={img.src}
+            className="absolute inset-0 transition-opacity duration-[1800ms] ease-in-out"
+            style={{ opacity: i === current ? 1 : 0 }}
+          >
+            <img
+              src={img.src}
+              alt={img.alt}
+              className="w-full h-full object-cover"
+              style={{
+                // Ken Burns: scale slowly from 1 → 1.06 while visible
+                transform: i === current ? 'scale(1.06)' : 'scale(1)',
+                transition: i === current
+                  ? 'transform 8000ms ease-in-out, opacity 1800ms ease-in-out'
+                  : 'transform 0ms, opacity 1800ms ease-in-out',
+              }}
+              fetchpriority={i === 0 ? 'high' : undefined}
+              loading={i === 0 ? 'eager' : 'lazy'}
+              decoding="async"
+            />
+          </div>
+        ))}
+
+        {/* Deep navy gradient overlay for readability */}
+        <div className="absolute inset-0" style={{ background: OVERLAY }} />
       </div>
 
-      {/* Decorative glow orbs */}
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full opacity-10 pointer-events-none"
-        style={{ background: 'radial-gradient(circle, #C8972B, transparent)' }} aria-hidden="true" />
-      <div className="absolute bottom-1/4 left-1/6 w-72 h-72 rounded-full opacity-8 pointer-events-none"
-        style={{ background: 'radial-gradient(circle, #2A5284, transparent)' }} aria-hidden="true" />
+      {/* ── Main Content (vertically centred below header) ─────────── */}
+      <div className="relative z-10 flex flex-1 flex-col items-center justify-center pt-16 sm:pt-20 px-5 text-center">
+        {/* Accreditation Badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.55 }}
+          className="inline-flex items-center gap-2 mb-7 px-5 py-2 rounded-full border border-white/25 bg-white/10 backdrop-blur-md text-white/90 text-xs sm:text-sm font-medium tracking-wide"
+        >
+          <span className="w-1.5 h-1.5 rounded-full bg-[#D4A843] animate-pulse shrink-0" />
+          Accredited Theological &amp; Music Education
+        </motion.div>
 
-      <Container>
-        <div className="relative z-10 py-24 lg:py-32 max-w-4xl">
-          {/* Tagline badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/80 text-sm font-medium mb-6 border border-white/20"
+        {/* Headline */}
+        <motion.h1
+          id="hero-heading"
+          initial={{ opacity: 0, y: 28 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.65, delay: 0.12 }}
+          className="font-display font-bold text-white leading-[1.1] text-balance max-w-4xl"
+          style={{ fontSize: 'clamp(2.4rem, 5.5vw, 4.5rem)' }}
+        >
+          Equipping Leaders for{' '}
+          <em className="not-italic text-[#D4A843]">God's Kingdom</em>
+        </motion.h1>
+
+        {/* Supporting paragraph */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.24 }}
+          className="mt-6 max-w-2xl text-white/80 text-base sm:text-lg leading-relaxed font-sans"
+        >
+          Preparing students through theological education, worship, leadership, and service.
+        </motion.p>
+
+        {/* CTAs */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.55, delay: 0.36 }}
+          className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4"
+        >
+          {/* Primary — Apply Now */}
+          <Link
+            to="/admissions"
+            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-[15px] font-semibold text-[#1E3A5F] bg-[#D4A843] hover:bg-[#C8972B] transition-all duration-200 hover:-translate-y-0.5 shadow-xl shadow-[#C8972B]/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D4A843]"
           >
-            <span className="w-2 h-2 rounded-full bg-[#C8972B] animate-pulse" aria-hidden="true" />
-            Accredited Theological & Music Education
-          </motion.div>
+            Apply Now
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
 
-          {/* Main headline */}
-          <motion.h1
-            id="hero-heading"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-6 text-balance"
+          {/* Secondary — Explore Courses */}
+          <Link
+            to="/courses"
+            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-[15px] font-semibold text-white border-2 border-white/35 hover:border-white/65 hover:bg-white/10 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
           >
-            {data.headline}
-          </motion.h1>
+            Explore Courses
+          </Link>
+        </motion.div>
+      </div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.2 }}
-            className="text-lg sm:text-xl text-white/75 leading-relaxed mb-10 max-w-2xl"
-          >
-            {data.subheadline}
-          </motion.p>
+      {/* ── Carousel Dot Indicators ───────────────────────────────── */}
+      <div className="relative z-10 flex items-center justify-center gap-2 pb-8" aria-hidden="true">
+        {HERO_IMAGES.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            className={`transition-all duration-300 rounded-full ${
+              i === current ? 'w-6 h-1.5 bg-[#D4A843]' : 'w-1.5 h-1.5 bg-white/40 hover:bg-white/65'
+            }`}
+            aria-label={`Go to slide ${i + 1}`}
+          />
+        ))}
+      </div>
 
-          {/* CTAs */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-4"
-          >
-            <Button href={data.cta1.href} variant="accent" size="lg">
-              {data.cta1.label}
-              <ArrowRightIcon className="w-5 h-5" />
-            </Button>
-            <Button href={data.cta2.href} variant="ghost" size="lg">
-              {data.cta2.label}
-            </Button>
-          </motion.div>
-        </div>
-      </Container>
+      {/* ── Scroll Indicator ──────────────────────────────────────── */}
+      <motion.button
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.9, duration: 0.6 }}
+        className="absolute bottom-20 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1.5 text-white/50 hover:text-white/80 transition-colors cursor-pointer"
+        onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
+        aria-label="Scroll to content"
+      >
+        <span className="text-[9px] font-semibold uppercase tracking-[0.2em]">Scroll</span>
+        <motion.div
+          animate={{ y: [0, 5, 0] }}
+          transition={{ repeat: Infinity, duration: 1.9, ease: 'easeInOut' }}
+          className="w-5 h-8 rounded-full border-2 border-white/30 flex justify-center items-start pt-1.5"
+        >
+          <div className="w-1 h-2 rounded-full bg-[#D4A843]" />
+        </motion.div>
+      </motion.button>
 
-      {/* Bottom wave */}
-      <div className="absolute bottom-0 inset-x-0 pointer-events-none" aria-hidden="true">
-        <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-          <path d="M0 80L1440 0V80H0Z" fill="#F8F9FA"/>
+      {/* ── Bottom Wave Divider ───────────────────────────────────── */}
+      <div className="absolute bottom-0 inset-x-0 z-10 pointer-events-none" aria-hidden="true">
+        <svg viewBox="0 0 1440 56" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full h-10 sm:h-14">
+          <path d="M0 56L1440 0V56H0Z" fill="#F8F9FA" />
         </svg>
       </div>
     </section>

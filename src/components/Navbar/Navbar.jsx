@@ -3,30 +3,33 @@ import { Link, NavLink, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useScrolled } from '@hooks/useScrolled'
 import { MenuIcon, XIcon, ChevronDownIcon } from '@components/common/Icons'
-import Button from '@components/common/Button'
 import navData from '@content/navigation.json'
+import logo from "@assets/logo.png";
 
+/* ─────────────────────────────────────────
+   Desktop Dropdown Menu
+───────────────────────────────────────── */
 function DropdownMenu({ items, isOpen }) {
   return (
     <AnimatePresence>
       {isOpen && (
         <motion.ul
-          initial={{ opacity: 0, y: -8 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -8 }}
-          transition={{ duration: 0.18, ease: 'easeOut' }}
-          className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-white border border-[#DDE3EC] rounded-xl shadow-xl overflow-hidden z-50"
+          initial={{ opacity: 0, y: 8, scale: 0.98 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          exit={{ opacity: 0, y: 8, scale: 0.98 }}
+          transition={{ duration: 0.16, ease: 'easeOut' }}
+          className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-56 bg-[#0E1E33] border border-white/15 rounded-xl shadow-2xl shadow-black/50 overflow-hidden z-50 py-1.5"
           role="menu"
         >
+          <div className="h-[2px] w-full bg-gradient-to-r from-[#D4A843] via-[#C8972B] to-[#D4A843]" />
           {items.map(item => (
             <li key={item.href} role="none">
               <NavLink
                 to={item.href}
                 className={({ isActive }) =>
-                  `block px-4 py-3 text-sm font-medium transition-colors ${
-                    isActive
-                      ? 'bg-[#EFF3F8] text-[#1E3A5F]'
-                      : 'text-[#1A1A2E] hover:bg-[#EFF3F8] hover:text-[#1E3A5F]'
+                  `block px-5 py-2.5 text-xs font-semibold uppercase tracking-wider transition-colors duration-150 ${isActive
+                    ? 'bg-white/10 text-[#D4A843]'
+                    : 'text-white/80 hover:bg-white/5 hover:text-white'
                   }`
                 }
                 role="menuitem"
@@ -41,15 +44,16 @@ function DropdownMenu({ items, isOpen }) {
   )
 }
 
+/* ─────────────────────────────────────────
+   Desktop Nav Item
+───────────────────────────────────────── */
 function NavItem({ link }) {
   const [open, setOpen] = useState(false)
   const ref = useRef(null)
   const location = useLocation()
 
-  // Close dropdown on route change
   useEffect(() => setOpen(false), [location])
 
-  // Close on outside click
   useEffect(() => {
     const handler = (e) => {
       if (ref.current && !ref.current.contains(e.target)) setOpen(false)
@@ -64,17 +68,20 @@ function NavItem({ link }) {
       <li className="relative" ref={ref}>
         <button
           onClick={() => setOpen(o => !o)}
-          onKeyDown={(e) => e.key === 'Escape' && setOpen(false)}
           aria-expanded={open}
           aria-haspopup="true"
-          className={`flex items-center gap-1 px-1 py-2 text-sm font-semibold transition-colors rounded ${
-            isActive ? 'text-[#1E3A5F]' : 'text-[#5A6A7A] hover:text-[#1E3A5F]'
-          }`}
+          className={`relative flex items-center gap-1.5 py-2 text-xs font-bold uppercase tracking-[0.1em] transition-colors duration-200 ${isActive ? 'text-white' : 'text-white/80 hover:text-white'
+            }`}
         >
           {link.label}
-          <ChevronDownIcon
-            className={`w-4 h-4 transition-transform ${open ? 'rotate-180' : ''}`}
-          />
+          <ChevronDownIcon className={`w-3.5 h-3.5 text-white/70 transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
+          {isActive && (
+            <motion.span
+              layoutId="navUnderline"
+              className="absolute -bottom-1 left-0 right-0 h-[2px] rounded-full bg-[#C8972B]"
+              transition={{ type: 'spring', stiffness: 400, damping: 32 }}
+            />
+          )}
         </button>
         <DropdownMenu items={link.children} isOpen={open} />
       </li>
@@ -83,182 +90,30 @@ function NavItem({ link }) {
 
   return (
     <li>
-      <NavLink
-        to={link.href}
-        end={link.href === '/'}
-        className={({ isActive }) =>
-          `block px-1 py-2 text-sm font-semibold transition-colors rounded ${
-            isActive ? 'text-[#1E3A5F]' : 'text-[#5A6A7A] hover:text-[#1E3A5F]'
-          }`
-        }
-      >
-        {link.label}
+      <NavLink to={link.href} end={link.href === '/'}>
+        {({ isActive }) => (
+          <span
+            className={`relative block py-2 text-xs font-bold uppercase tracking-[0.1em] transition-colors duration-200 ${isActive ? 'text-white' : 'text-white/80 hover:text-white'
+              }`}
+          >
+            {link.label}
+            {isActive && (
+              <motion.span
+                layoutId="navUnderline"
+                className="absolute -bottom-1 left-0 right-0 h-[2px] rounded-full bg-[#C8972B]"
+                transition={{ type: 'spring', stiffness: 400, damping: 32 }}
+              />
+            )}
+          </span>
+        )}
       </NavLink>
     </li>
   )
 }
 
-export default function Navbar() {
-  const scrolled = useScrolled(20)
-  const [mobileOpen, setMobileOpen] = useState(false)
-  const location = useLocation()
-
-  // Close mobile menu on route change
-  useEffect(() => setMobileOpen(false), [location])
-
-  // Lock body scroll when mobile menu is open
-  useEffect(() => {
-    document.body.style.overflow = mobileOpen ? 'hidden' : ''
-    return () => { document.body.style.overflow = '' }
-  }, [mobileOpen])
-
-  return (
-    <>
-      <header
-        className={`fixed top-0 inset-x-0 z-40 transition-all duration-300 ${
-          scrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-[#DDE3EC]'
-            : 'bg-white/90 backdrop-blur-sm'
-        }`}
-        style={{ height: 'var(--navbar-height)' }}
-      >
-        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
-          {/* Logo */}
-          <Link
-            to="/"
-            className="flex items-center gap-3 shrink-0 focus-visible:ring-2 focus-visible:ring-[#C8972B] rounded"
-            aria-label="Glory Education Center — Home"
-          >
-            <div
-              className="w-9 h-9 rounded-lg flex items-center justify-center text-white text-sm font-bold shrink-0"
-              style={{ background: 'linear-gradient(135deg, #1E3A5F 0%, #2A5284 100%)' }}
-              aria-hidden="true"
-            >
-              GEC
-            </div>
-            <div className="hidden sm:block">
-              <span className="block text-base font-bold text-[#1E3A5F] leading-tight">
-                Glory Education
-              </span>
-              <span className="block text-xs text-[#5A6A7A] leading-tight">
-                Center
-              </span>
-            </div>
-          </Link>
-
-          {/* Desktop Nav */}
-          <nav aria-label="Main navigation" className="hidden lg:flex">
-            <ul className="flex items-center gap-6 list-none">
-              {navData.links.map(link => (
-                <NavItem key={link.href} link={link} />
-              ))}
-            </ul>
-          </nav>
-
-          {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center gap-3">
-            <Button href="/admissions" variant="primary" size="sm">
-              Apply Now
-            </Button>
-          </div>
-
-          {/* Mobile Menu Toggle */}
-          <button
-            className="lg:hidden p-2 rounded-lg text-[#1E3A5F] hover:bg-[#EFF3F8] transition-colors"
-            onClick={() => setMobileOpen(o => !o)}
-            aria-expanded={mobileOpen}
-            aria-controls="mobile-menu"
-            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
-          >
-            {mobileOpen ? <XIcon /> : <MenuIcon />}
-          </button>
-        </div>
-      </header>
-
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {mobileOpen && (
-          <>
-            {/* Overlay */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className="fixed inset-0 z-30 bg-black/40"
-              onClick={() => setMobileOpen(false)}
-              aria-hidden="true"
-            />
-
-            {/* Drawer */}
-            <motion.div
-              id="mobile-menu"
-              role="dialog"
-              aria-modal="true"
-              aria-label="Mobile navigation"
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="fixed right-0 top-0 bottom-0 w-[85vw] max-w-sm z-40 bg-white shadow-2xl overflow-y-auto"
-            >
-              {/* Drawer Header */}
-              <div className="flex items-center justify-between px-6 py-5 border-b border-[#DDE3EC]">
-                <Link
-                  to="/"
-                  className="flex items-center gap-2"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  <div
-                    className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-xs font-bold"
-                    style={{ background: 'linear-gradient(135deg, #1E3A5F 0%, #2A5284 100%)' }}
-                  >
-                    GEC
-                  </div>
-                  <span className="font-bold text-[#1E3A5F] text-sm">Glory Education Center</span>
-                </Link>
-                <button
-                  onClick={() => setMobileOpen(false)}
-                  className="p-1.5 rounded-lg text-[#5A6A7A] hover:bg-[#EFF3F8]"
-                  aria-label="Close menu"
-                >
-                  <XIcon className="w-5 h-5" />
-                </button>
-              </div>
-
-              {/* Drawer Links */}
-              <nav aria-label="Mobile navigation">
-                <ul className="px-4 py-4 space-y-1">
-                  {navData.links.map(link => (
-                    <MobileNavItem
-                      key={link.href}
-                      link={link}
-                      onClose={() => setMobileOpen(false)}
-                    />
-                  ))}
-                </ul>
-              </nav>
-
-              {/* CTA */}
-              <div className="px-6 py-4 border-t border-[#DDE3EC] mt-4">
-                <Button
-                  href="/admissions"
-                  variant="primary"
-                  size="md"
-                  className="w-full justify-center"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  Apply Now
-                </Button>
-              </div>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
-    </>
-  )
-}
-
+/* ─────────────────────────────────────────
+   Mobile Nav Item
+───────────────────────────────────────── */
 function MobileNavItem({ link, onClose }) {
   const [open, setOpen] = useState(false)
   const location = useLocation()
@@ -271,10 +126,10 @@ function MobileNavItem({ link, onClose }) {
         <button
           onClick={() => setOpen(o => !o)}
           aria-expanded={open}
-          className="w-full flex items-center justify-between px-4 py-3 rounded-lg text-left font-semibold text-[#1A1A2E] hover:bg-[#EFF3F8] transition-colors"
+          className="w-full flex items-center justify-between px-4 py-3 rounded-xl text-left font-bold text-white hover:bg-white/10 transition-colors text-xs uppercase tracking-wider"
         >
           {link.label}
-          <ChevronDownIcon className={`w-4 h-4 text-[#5A6A7A] transition-transform ${open ? 'rotate-180' : ''}`} />
+          <ChevronDownIcon className={`w-4 h-4 text-white/60 transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
         </button>
         <AnimatePresence>
           {open && (
@@ -283,7 +138,7 @@ function MobileNavItem({ link, onClose }) {
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="overflow-hidden pl-4 mt-1 space-y-1"
+              className="overflow-hidden pl-4 mt-1 space-y-0.5"
             >
               {link.children.map(child => (
                 <li key={child.href}>
@@ -291,10 +146,9 @@ function MobileNavItem({ link, onClose }) {
                     to={child.href}
                     onClick={onClose}
                     className={({ isActive }) =>
-                      `block px-4 py-2.5 rounded-lg text-sm font-medium transition-colors ${
-                        isActive
-                          ? 'bg-[#1E3A5F] text-white'
-                          : 'text-[#5A6A7A] hover:bg-[#EFF3F8] hover:text-[#1E3A5F]'
+                      `block px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors ${isActive
+                        ? 'bg-[#C8972B] text-[#0B1526]'
+                        : 'text-white/75 hover:bg-white/5 hover:text-white'
                       }`
                     }
                   >
@@ -316,15 +170,192 @@ function MobileNavItem({ link, onClose }) {
         end={link.href === '/'}
         onClick={onClose}
         className={({ isActive }) =>
-          `block px-4 py-3 rounded-lg font-semibold transition-colors ${
-            isActive
-              ? 'bg-[#1E3A5F] text-white'
-              : 'text-[#1A1A2E] hover:bg-[#EFF3F8] hover:text-[#1E3A5F]'
+          `block px-4 py-3 rounded-xl font-bold text-xs uppercase tracking-wider transition-colors ${isActive
+            ? 'bg-[#C8972B] text-[#0B1526]'
+            : 'text-white/85 hover:bg-white/10 hover:text-white'
           }`
         }
       >
         {link.label}
       </NavLink>
     </li>
+  )
+}
+
+/* ─────────────────────────────────────────
+   Main Full-Width Header / Navbar
+───────────────────────────────────────── */
+export default function Navbar() {
+  const scrolled = useScrolled(20)
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const location = useLocation()
+
+  useEffect(() => setMobileOpen(false), [location])
+
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [mobileOpen])
+
+  return (
+    <>
+      {/* Full-Width Fixed Header */}
+      <header
+        className={`fixed top-0 inset-x-0 z-50 w-full transition-all duration-300 ${scrolled
+          ? "bg-[#0B1526]/95 backdrop-blur-xl shadow-lg border-b border-white/10"
+          : "bg-[#0B1526]/85 backdrop-blur-lg border-b border-white/10"
+          }`}
+        role="banner"
+      >
+        {/* Gold Accent */}
+        <div className="h-[2px] w-full bg-[#C8972B]" />
+
+        {/* Header Container */}
+        <div className="max-w-[1400px] mx-auto h-[78px] px-6 lg:px-10 flex items-center justify-between">
+
+          {/* ================= LOGO ================= */}
+          <Link
+            to="/"
+            className="flex items-center gap-5 shrink-0 overflow-visible group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8972B] rounded-lg"
+            aria-label="Glory Education Center — Home"
+          >
+            {/* Large Logo */}
+            <div className="relative flex items-center justify-center shrink-0">
+              <img
+                src={logo}
+                alt="Glory Education Center Logo"
+                className="w-[48px] h-[48px] lg:w-[52px] lg:h-[52px] object-contain transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+
+            {/* Text */}
+            <div className="leading-none">
+              <h1 className="text-[18px] font-bold text-white tracking-tight">
+                Glory Education Center
+              </h1>
+
+              <p className="mt-1 text-[10px] uppercase tracking-[0.22em] text-white/65 font-medium">
+                Theological &amp; Music Education
+              </p>
+            </div>
+          </Link>
+
+          {/* ================= NAVIGATION ================= */}
+          <nav
+            aria-label="Main navigation"
+            className="hidden lg:flex items-center"
+          >
+            <ul className="flex items-center gap-9 xl:gap-11">
+              {navData.links.map((link) => (
+                <NavItem key={link.href} link={link} />
+              ))}
+            </ul>
+          </nav>
+
+          {/* ================= CTA ================= */}
+          <div className="hidden lg:flex items-center">
+            <Link
+              to="/admissions"
+              className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#C8972B] text-[#D4A843] text-xs font-bold uppercase tracking-[0.18em] transition-all duration-300 hover:bg-[#C8972B] hover:text-[#0B1526] hover:-translate-y-[1px] hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8972B]"
+            >
+              Apply Now
+              <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+
+          {/* ================= MOBILE MENU ================= */}
+          <button
+            className="lg:hidden p-2 rounded-lg text-white hover:bg-white/10 transition-colors"
+            onClick={() => setMobileOpen((o) => !o)}
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-menu"
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          >
+            {mobileOpen ? (
+              <XIcon className="w-6 h-6" />
+            ) : (
+              <MenuIcon className="w-6 h-6" />
+            )}
+          </button>
+
+        </div>
+      </header>
+
+      {/* Mobile Drawer Menu */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm"
+              onClick={() => setMobileOpen(false)}
+              aria-hidden="true"
+            />
+
+            <motion.div
+              id="mobile-menu"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Mobile navigation menu"
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+              className="fixed right-0 top-0 bottom-0 w-[85vw] max-w-sm z-50 bg-[#0B1526] shadow-2xl overflow-y-auto border-l border-white/10"
+            >
+              <div className="h-[2px] w-full bg-[#C8972B]" />
+
+              <div className="flex items-center justify-between px-6 py-5 border-b border-white/10">
+                <Link
+                  to="/"
+                  className="flex items-center gap-2.5"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  <div className="w-9 h-9 rounded-lg bg-[#C8972B] flex items-center justify-center text-[#0B1526] text-xs font-black">
+                    GEC
+                  </div>
+                  <div>
+                    <span className="block font-bold text-white text-sm">Glory Education Center</span>
+                    <span className="block text-[9px] uppercase tracking-widest text-white/60">Theological &amp; Music</span>
+                  </div>
+                </Link>
+                <button
+                  onClick={() => setMobileOpen(false)}
+                  className="p-2 rounded-lg text-white/70 hover:bg-white/10 hover:text-white transition-colors"
+                  aria-label="Close menu"
+                >
+                  <XIcon className="w-5 h-5" />
+                </button>
+              </div>
+
+              <nav aria-label="Mobile navigation">
+                <ul className="px-4 py-5 space-y-1">
+                  {navData.links.map(link => (
+                    <MobileNavItem
+                      key={link.href}
+                      link={link}
+                      onClose={() => setMobileOpen(false)}
+                    />
+                  ))}
+                </ul>
+              </nav>
+
+              <div className="px-6 py-4 border-t border-white/10">
+                <Link
+                  to="/admissions"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center justify-center gap-2 w-full py-3 rounded-full text-xs font-bold uppercase tracking-wider text-[#0B1526] bg-[#C8972B] hover:bg-[#D4A843] transition-all shadow-md"
+                >
+                  Apply Now &rarr;
+                </Link>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </>
   )
 }
