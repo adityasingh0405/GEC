@@ -1,65 +1,86 @@
 [
   {
     "id": "g1",
-    "alt": "Students gathered for morning chapel worship",
-    "category": "Campus Life",
-    "src": "gallery/chapel-worship.jpg",
-    "thumb": "gallery/chapel-worship.jpg?tr=w-400,h-300,fo-auto"
+    "title": "Chapel Worship Service",
+    "alt": "Students and faculty gathered for morning chapel worship",
+    "category": "Worship",
+    "src": "/images/placeholder-worship.jpg"
   },
   {
     "id": "g2",
-    "alt": "Library and study hall at Glory Education Center",
+    "title": "GEC Academic Library",
+    "alt": "Quiet study hall and theological library at Glory Education Center",
     "category": "Campus",
-    "src": "gallery/library.jpg",
-    "thumb": "gallery/library.jpg?tr=w-400,h-300,fo-auto"
+    "src": "/images/placeholder-library.jpg"
   },
   {
     "id": "g3",
-    "alt": "Graduation ceremony — class of 2024",
-    "category": "Events",
-    "src": "gallery/graduation.jpg",
-    "thumb": "gallery/graduation.jpg?tr=w-400,h-300,fo-auto"
+    "title": "Annual Graduation Convocation",
+    "alt": "Graduation ceremony celebrating graduating class",
+    "category": "Graduation",
+    "src": "/images/placeholder-events.jpg"
   },
   {
     "id": "g4",
-    "alt": "Music students in ensemble practice session",
+    "title": "Music Department Choir Practice",
+    "alt": "Music students in vocal training and choir rehearsal",
     "category": "Music",
-    "src": "gallery/music-ensemble.jpg",
-    "thumb": "gallery/music-ensemble.jpg?tr=w-400,h-300,fo-auto"
+    "src": "/images/placeholder-music.jpg"
   },
   {
     "id": "g5",
-    "alt": "Annual Missions Conference 2024",
+    "title": "Annual Missions & Youth Conference",
+    "alt": "Guest speakers and students at the Missions Conference",
     "category": "Events",
-    "src": "gallery/missions-conference.jpg",
-    "thumb": "gallery/missions-conference.jpg?tr=w-400,h-300,fo-auto"
+    "src": "/images/placeholder-events.jpg"
   },
   {
     "id": "g6",
-    "alt": "Students in outdoor fellowship gathering",
-    "category": "Campus Life",
-    "src": "gallery/fellowship.jpg",
-    "thumb": "gallery/fellowship.jpg?tr=w-400,h-300,fo-auto"
+    "title": "Student Campus Fellowship",
+    "alt": "Students gathering in the campus quad for fellowship",
+    "category": "Students",
+    "src": "/images/placeholder-community.jpg"
   },
   {
     "id": "g7",
-    "alt": "Faculty convocation and inauguration 2024",
-    "category": "Events",
-    "src": "gallery/convocation.jpg",
-    "thumb": "gallery/convocation.jpg?tr=w-400,h-300,fo-auto"
+    "title": "Worship Night & Recital",
+    "alt": "Student-led praise night in main sanctuary",
+    "category": "Worship",
+    "src": "/images/placeholder-worship.jpg"
   },
   {
     "id": "g8",
-    "alt": "Classroom lecture in New Testament studies",
-    "category": "Academics",
-    "src": "gallery/classroom.jpg",
-    "thumb": "gallery/classroom.jpg?tr=w-400,h-300,fo-auto"
+    "title": "Instrumental Music Lab",
+    "alt": "Keyboard and piano instruction session",
+    "category": "Music",
+    "src": "/images/placeholder-music.jpg"
   },
   {
     "id": "g9",
-    "alt": "Student hostel and dormitory block",
+    "title": "Campus Main Entrance & Hostel",
+    "alt": "Administrative building and student hostel lawns",
     "category": "Campus",
-    "src": "gallery/hostel.jpg",
-    "thumb": "gallery/hostel.jpg?tr=w-400,h-300,fo-auto"
+    "src": "/images/placeholder-campus.jpg"
+  },
+  {
+    "id": "g10",
+    "title": "Graduates Receiving Degrees",
+    "alt": "Students receiving B.Th and M.Div degrees",
+    "category": "Graduation",
+    "src": "/images/placeholder-events.jpg"
+  },
+  {
+    "id": "g11",
+    "title": "Student Group Discussion",
+    "alt": "Theology students engaging in peer group study",
+    "category": "Students",
+    "src": "/images/placeholder-community.jpg"
+  },
+  {
+    "id": "g12",
+    "title": "Community Gospel Outreach",
+    "alt": "Students conducting weekend community service",
+    "category": "Events",
+    "src": "/images/placeholder-events.jpg"
   }
 ]

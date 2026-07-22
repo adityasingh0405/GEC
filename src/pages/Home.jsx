@@ -15,7 +15,7 @@ import homeData from '@content/home.json'
 import coursesData from '@content/courses.json'
 import facultyData from '@content/faculty.json'
 import newsData from '@content/news.json'
-import { CheckIcon, ArrowRightIcon } from '@components/common/Icons'
+import { CheckIcon, ArrowRightIcon, BookOpen, FileText, GraduationCap, Globe } from '@components/common/Icons'
 
 // ─── Hero Carousel Images ────────────────────────────────────────────────────
 // Replace these Unsplash URLs with actual ImageKit campus photos when available.
@@ -163,9 +163,8 @@ function Hero({ data }) {
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className={`transition-all duration-300 rounded-full ${
-              i === current ? 'w-6 h-1.5 bg-[#D4A843]' : 'w-1.5 h-1.5 bg-white/40 hover:bg-white/65'
-            }`}
+            className={`transition-all duration-300 rounded-full ${i === current ? 'w-6 h-1.5 bg-[#D4A843]' : 'w-1.5 h-1.5 bg-white/40 hover:bg-white/65'
+              }`}
             aria-label={`Go to slide ${i + 1}`}
           />
         ))}
@@ -292,7 +291,7 @@ function AboutPreview({ data }) {
               {/* Placeholder visual — decorative cross/book pattern */}
               <div className="text-center text-white/20 p-12">
                 <svg className="w-32 h-32 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                  <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>
                 <p className="text-lg font-semibold text-white/40">Campus Photo</p>
                 <p className="text-xs text-white/20 mt-1">Replace with ImageKit image</p>
@@ -420,69 +419,137 @@ export default function Home() {
       </section>
 
       {/* Gallery Strip */}
-      <section className="section-padding bg-white" aria-labelledby="gallery-section-heading">
+      <section className="relative py-16 overflow-hidden bg-gradient-to-br from-[#2A5284] to-[#1E3A5F]">
         <Container>
-          <SectionHeading
-            heading={homeData.galleryHeading}
-            subheading={homeData.gallerySubheading}
-            className="mb-12"
-          />
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-3">
-            {[1,2,3,4,5,6].map(i => (
-              <motion.div
-                key={i}
-                variants={staggerItem}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                className="aspect-square bg-gradient-to-br from-[#EFF3F8] to-[#DDE3EC] rounded-xl overflow-hidden group cursor-pointer"
-              >
-                <div className="w-full h-full flex items-center justify-center text-[#2A5284]/20 group-hover:scale-105 transition-transform duration-300">
-                  <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                </div>
-              </motion.div>
-            ))}
+          <div className="text-center mb-10">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white">
+              Your Journey at Glory Education Center
+            </h2>
+
+            <p className="mt-3 text-lg text-white/80">
+              Growing in Faith • Knowledge • Service
+            </p>
           </div>
 
-          <div className="text-center mt-10">
-            <Button href="/gallery" variant="secondary" size="md">
-              View Full Gallery
-            </Button>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 rounded-2xl overflow-hidden shadow-2xl">
+
+            {/* Discover */}
+            <div className="group bg-white h-40 flex flex-col justify-center items-center transition-all duration-300 hover:-translate-y-2 hover:z-10">
+              <BookOpen className="w-9 h-9 text-[#2A5284] mb-3" />
+              <p className="uppercase text-xs tracking-[0.2em] text-gray-500">
+                Discover
+              </p>
+              <h3 className="text-2xl font-bold text-[#1E3A5F]">
+                Explore Your Calling
+              </h3>
+            </div>
+
+            {/* Apply */}
+            <div className="group bg-[#A6C4E8] h-40 flex flex-col justify-center items-center transition-all duration-300 hover:-translate-y-2">
+              <FileText className="w-9 h-9 text-[#1E3A5F] mb-3" />
+              <p className="uppercase text-xs tracking-[0.2em] text-gray-600">
+                Apply
+              </p>
+              <h3 className="text-2xl font-bold text-[#1E3A5F]">
+                Begin Your Journey
+              </h3>
+            </div>
+
+            {/* Learn */}
+            <div className="group bg-[#6D97C4] h-40 flex flex-col justify-center items-center transition-all duration-300 hover:-translate-y-2">
+              <GraduationCap className="w-9 h-9 text-white mb-3" />
+              <p className="uppercase text-xs tracking-[0.2em] text-white/80">
+                Learn
+              </p>
+              <h3 className="text-2xl font-bold text-white">
+                Grow in Excellence
+              </h3>
+            </div>
+
+            {/* Serve */}
+            <div className="group bg-[#1E3A5F] h-40 flex flex-col justify-center items-center transition-all duration-300 hover:-translate-y-2">
+              <Globe className="w-9 h-9 text-[#D4A017] mb-3" />
+              <p className="uppercase text-xs tracking-[0.2em] text-white/70">
+                Serve
+              </p>
+              <h3 className="text-2xl font-bold text-white">
+                Make an Impact
+              </h3>
+            </div>
+
           </div>
+
         </Container>
       </section>
 
-      {/* News Section */}
-      <section className="section-padding bg-[#EFF3F8]" aria-labelledby="news-section-heading">
+      {/* video Section */}
+      <section className="section-padding bg-[#EFF3F8]">
         <Container>
           <SectionHeading
-            heading={homeData.newsHeading}
-            subheading={homeData.newsSubheading}
+            heading="Welcome to Glory Education Center"
+            subheading="Equipping Leaders for God's Kingdom"
             className="mb-12"
           />
 
           <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '-60px' }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="relative flex flex-col lg:flex-row items-center"
           >
-            {recentNews.map(article => (
-              <motion.div key={article.id} variants={staggerItem}>
-                <NewsCard article={article} />
-              </motion.div>
-            ))}
-          </motion.div>
+            {/* Video */}
+            <div className="w-full lg:w-2/3 z-10">
+              <div className="overflow-hidden rounded-2xl shadow-2xl">
+                <div className="aspect-video">
+                  <iframe
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                    title="Welcome to Glory Education Center"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            </div>
 
-          <div className="text-center mt-10">
-            <Button href="/news" variant="secondary" size="md">
-              All News & Updates
-            </Button>
-          </div>
+            {/* Welcome Card */}
+            <motion.div
+              whileHover={{ y: -5 }}
+              className="w-full lg:w-[42%] bg-white rounded-2xl shadow-2xl p-8 lg:-ml-20 lg:mt-0 mt-8 relative z-20"
+            >
+              <h3 className="text-2xl font-bold text-[#1E3A5F] mb-5">
+                Welcome
+              </h3>
+
+              <p className="text-gray-600 leading-8 mb-6">
+                Glory Education Center is committed to preparing students
+                through theological education, worship, leadership, and
+                service. We strive to develop faithful Christian leaders who
+                are equipped with biblical knowledge, spiritual maturity, and
+                practical ministry skills to impact churches and communities
+                around the world.
+              </p>
+
+              <a
+                href="/about"
+                className="inline-flex items-center text-[#D4A017] font-semibold hover:gap-3 gap-2 transition-all"
+              >
+                Read More →
+              </a>
+
+              <div className="border-t mt-8 pt-6">
+                <h4 className="font-bold text-[#1E3A5F] text-lg">
+                  Rev. John Doe
+                </h4>
+
+                <p className="text-gray-500">
+                  Principal, Glory Education Center
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
         </Container>
       </section>
 

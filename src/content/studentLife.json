@@ -1,0 +1,82 @@
+{
+  "sections": [
+    {
+      "id": "worship",
+      "title": "Worship & Chapel Life",
+      "subtitle": "Spiritual Growth & Fellowship",
+      "description": "Daily chapel services, student-led praise and worship, prayer gatherings, and spiritual retreat days form the heartbeat of spiritual formation at Glory Education Center.",
+      "features": [
+        "Daily Morning Chapel Services",
+        "Student & Faculty Led Worship Teams",
+        "Weekly Intercessory Prayer Groups",
+        "Annual Spiritual Renewal Retreats"
+      ],
+      "image": "/images/placeholder-worship.jpg"
+    },
+    {
+      "id": "campus-life",
+      "title": "Campus Life",
+      "subtitle": "Community & Living",
+      "description": "Our residential and commuter campus offers a vibrant community life where lifelong friendships are built through communal meals, sports, cultural events, and ministry outreach.",
+      "features": [
+        "On-Campus Student Hostels",
+        "Dining Hall & Fellowship Center",
+        "Sports & Recreational Facilities",
+        "Cultural Diversity & Fellowship"
+      ],
+      "image": "/images/placeholder-campus.jpg"
+    },
+    {
+      "id": "library",
+      "title": "Theological Library",
+      "subtitle": "Academic Excellence & Research",
+      "description": "Houses over 25,000 volumes, rare theological commentaries, digital research databases, quiet study rooms, and high-speed internet for comprehensive academic research.",
+      "features": [
+        "25,000+ Physical Theological Volumes",
+        "Access to Digital Journals & Databases",
+        "Individual & Group Study Bays",
+        "Dedicated Research Librarians"
+      ],
+      "image": "/images/placeholder-library.jpg"
+    },
+    {
+      "id": "music-department",
+      "title": "Music Department",
+      "subtitle": "Worship Arts & Performance",
+      "description": "Equipped with state-of-the-art practice rooms, sound recording facilities, pianos, key instruments, and choir halls to nurture musical gifts for global ministry.",
+      "features": [
+        "Instrumental & Vocal Training Labs",
+        "Digital Audio Workstations (DAW)",
+        "GEC Sanctuary Choir & Ensemble",
+        "Regular Concerts & Live Recitals"
+      ],
+      "image": "/images/placeholder-music.jpg"
+    },
+    {
+      "id": "events",
+      "title": "Student Events & Outreaches",
+      "subtitle": "Practical Ministry & Impact",
+      "description": "Students participate in weekend church ministries, community gospel outreaches, music fests, youth camps, and social service projects across urban and rural communities.",
+      "features": [
+        "Weekend Church Internship Placements",
+        "Mission Exposure Trips",
+        "Annual Music & Youth Festival",
+        "Community Outreach & Welfare"
+      ],
+      "image": "/images/placeholder-events.jpg"
+    },
+    {
+      "id": "community",
+      "title": "Community & Care",
+      "subtitle": "Mentorship & Discipleship",
+      "description": "Every student is paired with a faculty mentor for personal discipleship, academic guidance, and pastoral counseling throughout their time at GEC.",
+      "features": [
+        "1-on-1 Faculty Mentorship",
+        "Student Care & Pastoral Counseling",
+        "Peer Support & Care Groups",
+        "Alumni Network & Fellowship"
+      ],
+      "image": "/images/placeholder-community.jpg"
+    }
+  ]
+}

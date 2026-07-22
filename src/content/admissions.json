@@ -1,15 +1,147 @@
 {
   "hero": {
-    "heading": "Admissions",
-    "subheading": "Begin your journey toward transformative theological and music education"
+    "heading": "Admissions at Glory Education Center",
+    "subheading": "Begin your journey toward transformative theological and music education."
   },
-  "intake": "Academic year begins in June. Applications are accepted from January through April.",
+  "intake": "Academic Year 2026–2027 intake begins in June. Applications accepted from January through May.",
+  "subpages": [
+    {
+      "id": "process",
+      "title": "Admission Process",
+      "subtitle": "Step-by-Step Guide",
+      "description": "Discover the 5 simple steps from application submission to enrollment.",
+      "href": "/admissions/process"
+    },
+    {
+      "id": "eligibility",
+      "title": "Eligibility Requirements",
+      "subtitle": "Entry Criteria per Course",
+      "description": "Review academic qualifications, spiritual requirements, and prerequisite standards for each program.",
+      "href": "/admissions/eligibility"
+    },
+    {
+      "id": "documents",
+      "title": "Required Documents",
+      "subtitle": "Checklist & Guidelines",
+      "description": "Complete list of certificates, transcripts, pastor references, and IDs needed for your application.",
+      "href": "/admissions/documents"
+    },
+    {
+      "id": "fees",
+      "title": "Fee Structure",
+      "subtitle": "Tuition, Hostel & Financial Aid",
+      "description": "Transparent breakdown of tuition fees, accommodation options, installment plans, and scholarship opportunities.",
+      "href": "/admissions/fees"
+    },
+    {
+      "id": "calendar",
+      "title": "Academic Calendar",
+      "subtitle": "Dates & Important Milestones",
+      "description": "Important dates for admissions, term starts, examinations, retreats, and holidays.",
+      "href": "/admissions/calendar"
+    },
+    {
+      "id": "apply",
+      "title": "Apply Now",
+      "subtitle": "Online Application Form",
+      "description": "Fill out our interactive admission application form to apply for the upcoming academic session.",
+      "href": "/admissions/apply"
+    }
+  ],
   "process": [
-    { "step": 1, "title": "Submit Application", "desc": "Complete the online application form and submit all required documents." },
-    { "step": 2, "title": "Document Review", "desc": "Our admissions team reviews your application, transcripts, and reference letters." },
-    { "step": 3, "title": "Personal Interview", "desc": "Selected applicants are invited for a personal interview with faculty." },
-    { "step": 4, "title": "Admission Decision", "desc": "You will receive a written offer of admission within 2–3 weeks of your interview." },
-    { "step": 5, "title": "Enrollment", "desc": "Accept your offer, pay the registration fee, and complete enrollment formalities." }
+    { "step": 1, "title": "Submit Application", "desc": "Complete the online application form and upload essential personal & academic documents." },
+    { "step": 2, "title": "Document Review", "desc": "Our admissions committee reviews your transcripts, pastoral recommendation, and testimony." },
+    { "step": 3, "title": "Personal Interview", "desc": "Shortlisted candidates attend an in-person or online interview with faculty members." },
+    { "step": 4, "title": "Admission Decision", "desc": "Receive your formal admission offer letter along with scholarship and fee guidance." },
+    { "step": 5, "title": "Enrollment & Orientation", "desc": "Confirm your acceptance, pay tuition deposit, and attend orientation week." }
+  ],
+  "eligibilityMatrix": [
+    {
+      "course": "Bachelor of Theology (B.Th)",
+      "duration": "3 Years (6 Semesters)",
+      "academic": "10+2 / Higher Secondary / Intermediate from a recognized board (or equivalent diploma).",
+      "spiritual": "Active member of a local church for at least 1 year with a clear Christian testimony.",
+      "language": "Working knowledge of English (or target regional medium)."
+    },
+    {
+      "course": "Master of Divinity (M.Dv)",
+      "duration": "3 Years (2 Years for B.Th Graduates)",
+      "academic": "Bachelor's degree (B.A., B.Sc., B.Com, B.Tech) or B.Th with minimum second class.",
+      "spiritual": "Recommendation from local church pastor/denominational leader affirming call to ministry.",
+      "language": "Proficiency in spoken and written English."
+    },
+    {
+      "course": "Master of Theology (M.Th)",
+      "duration": "2 Years (4 Semesters)",
+      "academic": "M.Div degree from an accredited institution with minimum B grade average.",
+      "spiritual": "Demonstrated research aptitude and ministry experience in chosen field.",
+      "language": "High English proficiency; knowledge of Biblical languages (Greek/Hebrew) where required."
+    },
+    {
+      "course": "Diploma in Music",
+      "duration": "2 Years (4 Semesters)",
+      "academic": "10th Standard / SSLC pass from recognized board.",
+      "spiritual": "Passionate interest in church music, choir, and worship leading.",
+      "language": "Basic English communication."
+    }
+  ],
+  "documentsList": [
+    {
+      "category": "Academic Credentials",
+      "items": [
+        "10th Standard / SSLC Marksheet & Passing Certificate",
+        "12th Standard / Higher Secondary Marksheet & Certificate",
+        "Graduation Degree Certificate & Consolidated Mark Sheets (for M.Div applicants)",
+        "M.Div/B.Th Degree & Transcripts (for M.Th applicants)",
+        "Transfer Certificate (TC) or Migration Certificate from previous institution"
+      ]
+    },
+    {
+      "category": "Identification & Personal",
+      "items": [
+        "Government-issued Photo ID (Aadhaar Card / Passport / Voter ID)",
+        "4 Recent passport-size color photographs (white background)",
+        "Personal Testimony (1-2 pages handwritten or typed detailing your conversion and call to study)"
+      ]
+    },
+    {
+      "category": "References & Recommendations",
+      "items": [
+        "Pastoral Recommendation Letter (sealed or directly emailed by Church Pastor)",
+        "Academic / Character Reference Letter from teacher, employer, or elder"
+      ]
+    }
+  ],
+  "feeStructure": {
+    "currency": "INR (₹)",
+    "tuition": [
+      { "program": "Bachelor of Theology (B.Th)", "perSemester": "₹ 15,000", "perYear": "₹ 30,000" },
+      { "program": "Master of Divinity (M.Dv)", "perSemester": "₹ 20,000", "perYear": "₹ 40,000" },
+      { "program": "Master of Theology (M.Th)", "perSemester": "₹ 25,000", "perYear": "₹ 50,000" },
+      { "program": "Diploma in Music", "perSemester": "₹ 12,500", "perYear": "₹ 25,000" }
+    ],
+    "otherFees": [
+      { "item": "Admission / Registration Fee (One-time)", "amount": "₹ 2,000" },
+      { "item": "Library & IT Annual Fee", "amount": "₹ 2,500" },
+      { "item": "Hostel Accommodation (Includes Room & Board / Month)", "amount": "₹ 4,500 / month" },
+      { "item": "Examination Fee (Per Semester)", "amount": "₹ 1,500" }
+    ],
+    "financialAid": "Need-based scholarships and partial tuition fee waivers are available for deserving candidates recommended by their sponsoring church. Contact the finance office for financial aid forms."
+  },
+  "academicCalendar": [
+    { "date": "Jan 1, 2026", "event": "Online Applications Open for Academic Year 2026–2027", "category": "Admissions" },
+    { "date": "May 15, 2026", "event": "Application Submission Deadline (First Phase)", "category": "Admissions" },
+    { "date": "May 25–28, 2026", "event": "Applicant Entrance Interviews & Auditions", "category": "Admissions" },
+    { "date": "June 10, 2026", "event": "New Student Hostel Arrival & Check-In", "category": "Campus" },
+    { "date": "June 12, 2026", "event": "Orientation Week & Convocation Chapel", "category": "Academics" },
+    { "date": "June 15, 2026", "event": "Commencement of Semester I Classes", "category": "Academics" },
+    { "date": "Oct 15–22, 2026", "event": "Mid-Term Examinations & Evaluation", "category": "Exams" },
+    { "date": "Nov 20, 2026", "event": "Annual Worship & Music Recital", "category": "Events" },
+    { "date": "Dec 10–18, 2026", "event": "Semester I End Examinations", "category": "Exams" },
+    { "date": "Dec 19 – Jan 3", "event": "Christmas & New Year Vacation", "category": "Holidays" },
+    { "date": "Jan 4, 2027", "event": "Commencement of Semester II Classes", "category": "Academics" },
+    { "date": "April 20–28, 2027", "event": "Semester II Final Examinations", "category": "Exams" },
+    { "date": "May 8, 2027", "event": "Annual Graduation & Commissioning Ceremony", "category": "Graduation" }
   ],
   "requirements": {
     "general": [
@@ -28,27 +160,19 @@
   "faq": [
     {
       "question": "When can I apply?",
-      "answer": "Applications are open from January 1 to April 30 each year for the June intake. Late applications may be considered subject to availability."
+      "answer": "Applications are open from January 1 to May 15 each year for the June intake. Late applications may be considered subject to seat availability."
     },
     {
       "question": "Are scholarships available?",
       "answer": "Yes, GEC offers merit-based and need-based scholarships. Contact admissions for details and eligibility criteria."
     },
     {
-      "question": "Can international students apply?",
-      "answer": "Yes, GEC welcomes applications from international students. Please contact us to discuss visa requirements and specific arrangements."
+      "question": "Are hostel facilities provided?",
+      "answer": "Yes, GEC provides separate hostel facilities for male and female students with round-the-clock security, dining, and Wi-Fi."
     },
     {
-      "question": "Is there a hostel facility?",
-      "answer": "Yes, GEC provides separate hostel accommodations for male and female students. Accommodation is subject to availability."
-    },
-    {
-      "question": "What documents do I need for admission?",
-      "answer": "Generally: academic transcripts, pastoral recommendation, personal statement, and government ID. Program-specific requirements may apply."
-    },
-    {
-      "question": "How do I know if my application was received?",
-      "answer": "You will receive an email acknowledgment within 2 business days of submitting your application."
+      "question": "What happens after I submit my application?",
+      "answer": "Our admissions team will acknowledge receipt within 2 business days and contact you to schedule your personal interview."
     }
   ],
   "formFields": {

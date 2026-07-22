@@ -2,16 +2,16 @@
   "name": "Glory Education Center",
   "shortName": "GEC",
   "tagline": "Equipping Leaders for God's Kingdom",
-  "description": "Glory Education Center is a premier institution offering theological and music education, equipping students to serve with excellence in ministry and the arts.",
+  "description": "Glory Education Center is a premier institution offering theological, church planting, and music education, equipping leaders for God's harvest field.",
   "domain": "https://www.gloryeducationcenter.org",
   "logo": "/logo.svg",
   "founded": "2005",
   "contact": {
-    "address": "123 Seminary Road, City, State 400001, India",
-    "phone": "+91 00000 00000",
+    "address": "WZ-18/13/3 Village Budella, Vikas Puri, New Delhi – 110018, India",
+    "phone": "+91 6360777933",
     "email": "info@gloryeducationcenter.org",
-    "admissionsEmail": "admissions@gloryeducationcenter.org",
-    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.0!2d72.8!3d19.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zPlace!5e0!3m2!1sen!2sin!4v1627000000000!5m2!1sen!2sin"
+    "admissionsEmail": "info@gloryeducationcenter.org",
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.765412!2d77.06!3d28.63!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zVmlrYXMgUHVyaSwgTmV3IERlbGhp!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
   },
   "social": {
     "facebook": "https://facebook.com/gloryeducationcenter",

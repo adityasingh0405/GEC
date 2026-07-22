@@ -17,9 +17,10 @@ const socialIcons = {
 const quickLinks = [
   { label: 'Home', href: '/' },
   { label: 'About Us', href: '/about' },
-  { label: 'Admissions', href: '/admissions' },
+  { label: 'Faculty', href: '/faculty' },
+  { label: 'Student Life', href: '/student-life' },
   { label: 'Gallery', href: '/gallery' },
-  { label: 'News', href: '/news' },
+  { label: 'News & Events', href: '/news' },
   { label: 'Contact', href: '/contact' },
 ]
 
@@ -30,19 +31,36 @@ const courseLinks = [
   { label: 'Diploma in Music', href: '/courses/diploma-music' },
 ]
 
+const admissionLinks = [
+  { label: 'Admission Process', href: '/admissions/process' },
+  { label: 'Eligibility', href: '/admissions/eligibility' },
+  { label: 'Required Documents', href: '/admissions/documents' },
+  { label: 'Fee Structure', href: '/admissions/fees' },
+  { label: 'Academic Calendar', href: '/admissions/calendar' },
+  { label: 'Apply Now', href: '/admissions/apply' },
+]
+
+const resourceLinks = [
+  { label: 'Resources Hub', href: '/resources' },
+  { label: 'Meeting Schedule', href: '/meeting-schedule' },
+  { label: 'Prayer Request', href: '/prayer-request' },
+  { label: 'Donation & Support', href: '/donation' },
+  { label: 'Sitemap', href: '/sitemap' },
+]
+
 export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="bg-[#152940] text-white" aria-labelledby="footer-heading">
+    <footer className="bg-[#152940] text-white border-t border-white/10" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">Footer</h2>
 
       <Container>
         {/* Main Footer Grid */}
-        <div className="py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-10">
 
           {/* Brand Column */}
-          <div className="sm:col-span-2 lg:col-span-1">
+          <div className="sm:col-span-2 md:col-span-3 lg:col-span-1">
             <Link
               to="/"
               className="flex items-center gap-3 mb-5 focus-visible:ring-2 focus-visible:ring-[#C8972B] rounded"
@@ -63,6 +81,7 @@ export default function Footer() {
             <p className="text-sm text-white/60 leading-relaxed mb-6">
               {siteData.description}
             </p>
+
             {/* Social Links */}
             <div className="flex items-center gap-3">
               {Object.entries(siteData.social).map(([key, url]) => {
@@ -74,7 +93,7 @@ export default function Footer() {
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-lg bg-white/10 hover:bg-[#C8972B] flex items-center justify-center transition-colors"
+                    className="w-9 h-9 rounded-lg bg-white/10 hover:bg-[#C8972B] hover:text-[#0B1526] flex items-center justify-center transition-colors"
                     aria-label={`Follow us on ${key.charAt(0).toUpperCase() + key.slice(1)}`}
                   >
                     <Icon className="w-4 h-4" />
@@ -86,7 +105,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-sm font-semibold text-white/80 uppercase tracking-wider mb-4">
+            <h3 className="text-xs font-bold text-[#C8972B] uppercase tracking-widest mb-4">
               Quick Links
             </h3>
             <ul className="space-y-2.5">
@@ -94,7 +113,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-sm text-white/60 hover:text-[#C8972B] transition-colors"
+                    className="text-xs text-white/70 hover:text-white transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -103,17 +122,17 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Programs */}
+          {/* Courses */}
           <div>
-            <h3 className="text-sm font-semibold text-white/80 uppercase tracking-wider mb-4">
-              Programs
+            <h3 className="text-xs font-bold text-[#C8972B] uppercase tracking-widest mb-4">
+              Courses
             </h3>
             <ul className="space-y-2.5">
               {courseLinks.map(link => (
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-sm text-white/60 hover:text-[#C8972B] transition-colors"
+                    className="text-xs text-white/70 hover:text-white transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -122,51 +141,79 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Admissions */}
           <div>
-            <h3 className="text-sm font-semibold text-white/80 uppercase tracking-wider mb-4">
-              Contact
+            <h3 className="text-xs font-bold text-[#C8972B] uppercase tracking-widest mb-4">
+              Admissions
             </h3>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-2.5">
-                <MapPinIcon className="w-4 h-4 text-[#C8972B] shrink-0 mt-0.5" />
-                <span className="text-sm text-white/60 leading-snug">
-                  {siteData.contact.address}
-                </span>
-              </li>
-              <li className="flex items-center gap-2.5">
-                <PhoneIcon className="w-4 h-4 text-[#C8972B] shrink-0" />
-                <a
-                  href={`tel:${siteData.contact.phone.replace(/\s/g, '')}`}
-                  className="text-sm text-white/60 hover:text-[#C8972B] transition-colors"
-                >
-                  {siteData.contact.phone}
-                </a>
-              </li>
-              <li className="flex items-center gap-2.5">
-                <MailIcon className="w-4 h-4 text-[#C8972B] shrink-0" />
-                <a
-                  href={`mailto:${siteData.contact.email}`}
-                  className="text-sm text-white/60 hover:text-[#C8972B] transition-colors"
-                >
-                  {siteData.contact.email}
-                </a>
-              </li>
+            <ul className="space-y-2.5">
+              {admissionLinks.map(link => (
+                <li key={link.href}>
+                  <Link
+                    to={link.href}
+                    className="text-xs text-white/70 hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
+
+          {/* Resources & Contact */}
+          <div>
+            <h3 className="text-xs font-bold text-[#C8972B] uppercase tracking-widest mb-4">
+              Resources &amp; Contact
+            </h3>
+            <ul className="space-y-2.5 mb-6">
+              {resourceLinks.map(link => (
+                <li key={link.href}>
+                  <Link
+                    to={link.href}
+                    className="text-xs text-white/70 hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <div className="pt-4 border-t border-white/10 space-y-2">
+              <div className="flex items-start gap-2 text-xs text-white/60">
+                <MapPinIcon className="w-3.5 h-3.5 text-[#C8972B] shrink-0 mt-0.5" />
+                <span>{siteData.contact.address}</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-white/60">
+                <PhoneIcon className="w-3.5 h-3.5 text-[#C8972B] shrink-0" />
+                <a href={`tel:${siteData.contact.phone.replace(/\s/g, '')}`} className="hover:text-white transition-colors">
+                  {siteData.contact.phone}
+                </a>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-white/60">
+                <MailIcon className="w-3.5 h-3.5 text-[#C8972B] shrink-0" />
+                <a href={`mailto:${siteData.contact.email}`} className="hover:text-white transition-colors">
+                  {siteData.contact.email}
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-white/10 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-white/40 text-center sm:text-left">
+          <p className="text-xs text-white/50 text-center sm:text-left">
             © {year} {siteData.name}. All rights reserved.
           </p>
-          <div className="flex items-center gap-6">
-            <Link to="/privacy-policy" className="text-xs text-white/40 hover:text-white/70 transition-colors">
+          <div className="flex flex-wrap items-center justify-center gap-6">
+            <Link to="/sitemap" className="text-xs text-white/50 hover:text-white transition-colors">
+              Sitemap
+            </Link>
+            <Link to="/privacy-policy" className="text-xs text-white/50 hover:text-white transition-colors">
               Privacy Policy
             </Link>
-            <Link to="/terms" className="text-xs text-white/40 hover:text-white/70 transition-colors">
-              Terms & Conditions
+            <Link to="/terms" className="text-xs text-white/50 hover:text-white transition-colors">
+              Terms &amp; Conditions
             </Link>
           </div>
         </div>

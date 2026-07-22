@@ -1,0 +1,59 @@
+{
+  "downloads": [
+    {
+      "id": "prospectus",
+      "title": "Academic Prospectus 2026–2027",
+      "description": "Comprehensive guide containing full course structures, faculty profiles, admission policies, and campus information.",
+      "format": "PDF",
+      "size": "4.2 MB",
+      "href": "/downloads/prospectus.pdf"
+    },
+    {
+      "id": "constitution",
+      "title": "Institution Constitution & Guidelines",
+      "description": "Official bylaws, code of conduct, academic regulations, and governance policies of Glory Education Center.",
+      "format": "PDF",
+      "size": "1.8 MB",
+      "href": "/downloads/constitution.pdf"
+    },
+    {
+      "id": "calendar",
+      "title": "Academic Calendar 2026–2027",
+      "description": "Complete breakdown of semester dates, examination schedules, holidays, and campus events.",
+      "format": "PDF",
+      "size": "950 KB",
+      "href": "/downloads/academic-calendar.pdf"
+    },
+    {
+      "id": "application-form",
+      "title": "Printable Admission Application Form",
+      "description": "Downloadable paper application form for prospective students preferring postal or offline submission.",
+      "format": "PDF",
+      "size": "1.1 MB",
+      "href": "/downloads/application-form.pdf"
+    }
+  ],
+  "quickActions": [
+    {
+      "id": "meeting-schedule",
+      "title": "Meeting Schedule",
+      "description": "View weekly chapel services, faculty prayer meetings, choir rehearsals, and student fellowships.",
+      "actionLabel": "View Schedule",
+      "href": "/meeting-schedule"
+    },
+    {
+      "id": "prayer-request",
+      "title": "Prayer Request",
+      "description": "Submit your prayer requests to our intercessory prayer team. We stand with you in faith.",
+      "actionLabel": "Send Request",
+      "href": "/prayer-request"
+    },
+    {
+      "id": "donation",
+      "title": "Donation & Support",
+      "description": "Partner with us in training future gospel leaders through financial gifts and scholarships.",
+      "actionLabel": "Give Today",
+      "href": "/donation"
+    }
+  ]
+}

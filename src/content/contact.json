@@ -4,16 +4,17 @@
     "subheading": "We'd love to hear from you. Reach out with any questions about our programs, admissions, or campus."
   },
   "address": {
-    "street": "123 Seminary Road",
-    "city": "City",
-    "state": "State",
-    "pin": "400001",
+    "street": "WZ-18/13/3 Village Budella",
+    "area": "Vikas Puri",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pin": "110018",
     "country": "India",
-    "full": "123 Seminary Road, City, State 400001, India"
+    "full": "WZ-18/13/3 Village Budella, Vikas Puri, New Delhi – 110018, India"
   },
-  "phone": "+91 00000 00000",
+  "phone": "+91 6360777933",
   "email": "info@gloryeducationcenter.org",
-  "admissionsEmail": "admissions@gloryeducationcenter.org",
-  "officeHours": "Monday – Saturday: 9:00 AM – 5:00 PM",
-  "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.0!2d72.8!3d19.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zPlace!5e0!3m2!1sen!2sin!4v1627000000000!5m2!1sen!2sin"
+  "admissionsEmail": "info@gloryeducationcenter.org",
+  "officeHours": "Monday – Friday: 9:00 AM – 5:00 PM | Saturday: 9:00 AM – 1:00 PM",
+  "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.765412!2d77.06!3d28.63!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zVmlrYXMgUHVyaSwgTmV3IERlbGhp!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
 }

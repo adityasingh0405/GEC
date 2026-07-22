@@ -1,22 +1,106 @@
 {
   "hero": {
     "heading": "About Glory Education Center",
-    "breadcrumb": "About"
+    "subheading": "Nurturing faithful servant-leaders in word, worship, and scholarship since 2005."
   },
+  "subpages": [
+    {
+      "id": "our-story",
+      "title": "Our Story",
+      "subtitle": "Two Decades of Grace & Growth",
+      "description": "Discover how Glory Education Center grew from a modest cohort into a recognized institution equipping leaders across India.",
+      "href": "/about/our-story"
+    },
+    {
+      "id": "vision-mission",
+      "title": "Vision & Mission",
+      "subtitle": "Our Calling & Core Purpose",
+      "description": "Explore our core mission, visionary goals, educational objectives, and foundational values.",
+      "href": "/about/vision-mission"
+    },
+    {
+      "id": "statement-of-faith",
+      "title": "Statement of Faith",
+      "subtitle": "Biblical & Doctrinal Beliefs",
+      "description": "Read our doctrinal confession anchored in the supreme authority of Holy Scripture.",
+      "href": "/about/statement-of-faith"
+    },
+    {
+      "id": "church-profile",
+      "title": "Church Profile",
+      "subtitle": "Ecclesial Affiliation & Heritage",
+      "description": "Learn about our church roots, partner network, and commitment to the local and global church.",
+      "href": "/about/church-profile"
+    },
+    {
+      "id": "leadership-faculty",
+      "title": "Leadership & Faculty",
+      "subtitle": "Mentors & Scholars",
+      "description": "Meet our administration, board of governors, and dedicated faculty members.",
+      "href": "/about/leadership-faculty"
+    }
+  ],
   "mission": {
     "heading": "Our Mission",
     "body": "To provide transformative theological and music education that equips men and women for faithful, effective ministry and worship leadership in the church and the world."
   },
   "vision": {
     "heading": "Our Vision",
-    "body": "To be a center of academic excellence and spiritual formation that produces servant-leaders who glorify God through their lives, scholarship, and ministry."
+    "body": "To be a premier center of academic excellence and spiritual formation that produces servant-leaders who glorify God through their lives, scholarship, and ministry."
   },
   "values": [
-    { "icon": "bible", "title": "Biblical Fidelity", "desc": "All learning is anchored in the authority and sufficiency of Scripture." },
-    { "icon": "academic", "title": "Academic Excellence", "desc": "We hold our programs to the highest standards of theological scholarship." },
-    { "icon": "community", "title": "Community & Formation", "desc": "Holistic formation happens in the context of a loving Christian community." },
-    { "icon": "service", "title": "Service & Mission", "desc": "Education is in service of the church and the Great Commission." }
+    { "icon": "bible", "title": "Biblical Fidelity", "desc": "All learning and practice is anchored in the authority, inerrancy, and sufficiency of Holy Scripture." },
+    { "icon": "academic", "title": "Academic Excellence", "desc": "We hold our curriculum to high standards of theological scholarship and critical inquiry." },
+    { "icon": "community", "title": "Spiritual Formation", "desc": "Holistic transformation takes place within a praying, worshipping, and supportive community." },
+    { "icon": "service", "title": "Servant Leadership", "desc": "Education is geared towards humble service to the Church, society, and the Great Commission." }
   ],
+  "statementOfFaith": {
+    "intro": "Glory Education Center holds firmly to the historic Christian faith expressed in the Holy Scriptures and classic evangelical creeds.",
+    "beliefs": [
+      {
+        "topic": "The Holy Scriptures",
+        "content": "We believe the Bible (66 books of the Old and New Testaments) to be the inspired, infallible, and authoritative Word of God, fully sufficient for faith and life."
+      },
+      {
+        "topic": "The Triune God",
+        "content": "We believe in one God, eternally existing in three co-equal persons: Father, Son, and Holy Spirit, who created and sovereignly rules all things."
+      },
+      {
+        "topic": "Jesus Christ the Lord",
+        "content": "We believe in the deity of Jesus Christ, His virgin birth, sinless life, substitutionary atonement on the cross, bodily resurrection, ascension to heaven, and personal return in power and glory."
+      },
+      {
+        "topic": "Salvation by Grace",
+        "content": "We believe salvation is entirely by grace alone through faith alone in Jesus Christ, apart from human works, granting eternal life to all who repent and believe."
+      },
+      {
+        "topic": "The Holy Spirit",
+        "content": "We believe the Holy Spirit indwells, convicts, regenerates, empowers, and gifts believers for holy living and effective witness in the church and world."
+      },
+      {
+        "topic": "The Church & Great Commission",
+        "content": "We believe the Universal Church is the body of Christ called to worship God, build up believers, and proclaim the gospel to all nations."
+      }
+    ]
+  },
+  "churchProfile": {
+    "heading": "Ecclesial Standing & Affiliation",
+    "overview": "Glory Education Center operates as an inter-denominational evangelical institution in full fellowship with Bible-believing local churches, Christian networks, and theological accreditation bodies across South Asia.",
+    "pillars": [
+      {
+        "title": "Inter-Denominational Fellowship",
+        "desc": "Welcoming students from diverse orthodox Christian backgrounds, fostering unity in essential truths while respecting diverse ministry contexts."
+      },
+      {
+        "title": "Church-Centered Ministry",
+        "desc": "Every student actively serves in local church assemblies, ensuring academic study remains connected to pastoral practice."
+      },
+      {
+        "title": "Accreditation & Quality Assurance",
+        "desc": "Accredited by recognized theological bodies committed to high academic standards and moral integrity."
+      }
+    ]
+  },
   "history": {
     "heading": "Our History",
     "body": "Glory Education Center was established in 2005 by a group of visionary educators and ministry leaders who recognized the need for academically rigorous, spiritually vibrant theological training.",
@@ -31,11 +115,11 @@
     ]
   },
   "leadership": {
-    "heading": "Leadership",
+    "heading": "Leadership & Administration",
     "members": [
       {
         "name": "Rev. Dr. Samuel Thomas",
-        "title": "Principal",
+        "title": "Principal & President",
         "bio": "Rev. Dr. Samuel Thomas brings over 30 years of ministry and academic experience. He holds a Doctorate in Theology from a leading seminary.",
         "image": "leadership-principal.jpg"
       },

@@ -1,39 +1,58 @@
 {
   "name": "Glory Education Center",
   "short_name": "GEC",
-  "description": "A premier institution for theological and music education",
+  "description": "Equipping leaders for God's Kingdom through theological & music education.",
   "start_url": "/",
+  "id": "/",
   "display": "standalone",
-  "background_color": "#F8F9FA",
-  "theme_color": "#1E3A5F",
+  "background_color": "#0B1526",
+  "theme_color": "#0B1526",
   "orientation": "portrait-primary",
+  "categories": ["education", "lifestyle"],
   "icons": [
     {
       "src": "/icons/icon-192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/icons/icon-512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ],
   "shortcuts": [
     {
-      "name": "Courses",
+      "name": "Apply Now",
+      "short_name": "Apply",
+      "url": "/admissions/apply",
+      "description": "Online Admission Application Form"
+    },
+    {
+      "name": "Academics & Courses",
+      "short_name": "Courses",
       "url": "/courses",
-      "description": "Browse all academic programs"
+      "description": "Browse B.Th, M.Div, M.Th & Diploma in Music programs"
     },
     {
-      "name": "Admissions",
-      "url": "/admissions",
-      "description": "Apply to Glory Education Center"
+      "name": "Academic Calendar",
+      "short_name": "Calendar",
+      "url": "/admissions/calendar",
+      "description": "View term dates, exams, and key events"
     },
     {
-      "name": "Contact",
+      "name": "Meeting Schedule",
+      "short_name": "Schedule",
+      "url": "/meeting-schedule",
+      "description": "Weekly Chapel & Prayer Meetings"
+    },
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
       "url": "/contact",
-      "description": "Get in touch with us"
+      "description": "Get in touch with GEC"
     }
   ]
 }

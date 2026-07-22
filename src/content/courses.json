@@ -1,16 +1,274 @@
 [
   {
+    "id": "diploma-music",
+    "slug": "diploma-music",
+    "title": "Diploma in Music",
+    "abbreviation": "Dip. Music",
+    "duration": "2 Years",
+    "level": "Diploma",
+    "category": "Music & Worship",
+    "tagline": "Equipping worship leaders and musicians for faithful ministry and kingdom praise",
+    "description": "The Diploma in Music equips students with both spiritual depth and technical musical excellence needed to lead worship assemblies and serve in music ministry. The program integrates music theory, instrument proficiency, vocal development, choral conducting, and worship theology.",
+    "whoFor": "Designed for aspiring worship leaders, choir directors, church musicians, and vocalists who desire to integrate deep biblical theology with technical musical competence.",
+    "image": "course-music.jpg",
+    "color": "#C8972B",
+    "objectives": [
+      "Develop comprehensive proficiency in music theory, ear training, and primary instruments.",
+      "Formulate a biblical theology of Christian worship and congregational praise.",
+      "Acquire practical vocal techniques, choir conducting, and ensemble arrangement skills.",
+      "Gain hands-on experience in sound engineering, music production, and live recital performance."
+    ],
+    "learningOutcomes": [
+      "Mastery of fundamental and advanced music theory, ear training, and sight-reading.",
+      "Proficiency in primary instruments (keyboard/guitar) and vocal ensemble arrangement.",
+      "Ability to plan, lead, and evaluate Christ-centered congregational worship services.",
+      "Basic competency in live sound reinforcement, audio production, and team leadership."
+    ],
+    "eligibility": [
+      "Completion of 10+2 (Higher Secondary) or equivalent",
+      "Basic musical aptitude (audition required live or via video)",
+      "Personal faith commitment and active local church involvement",
+      "Passion for worship leadership and musical ministry"
+    ],
+    "curriculum": [
+      {
+        "year": "Year 1",
+        "semesters": [
+          {
+            "term": "Semester 1",
+            "subjects": ["Music Theory I", "Vocal Training I", "Keyboard / Guitar I", "Worship Theology", "Ear Training & Sight-Reading"]
+          },
+          {
+            "term": "Semester 2",
+            "subjects": ["Music Theory II", "Church Music History", "Primary Instrument II", "Choir & Ensemble I", "Hymnology & Psalmody"]
+          }
+        ]
+      },
+      {
+        "year": "Year 2",
+        "semesters": [
+          {
+            "term": "Semester 3",
+            "subjects": ["Music Theory III", "Vocal Training II", "Advanced Instrument Study", "Songwriting & Arrangement", "Live Sound Engineering"]
+          },
+          {
+            "term": "Semester 4",
+            "subjects": ["Worship Leading Practicum", "Music Production Basics", "Choral Conducting", "Studio Recording", "Graduation Recital Project"]
+          }
+        ]
+      }
+    ],
+    "careers": [
+      "Worship Pastor / Leader",
+      "Church Choir Director",
+      "Music Ministry Coordinator",
+      "Christian Music Educator",
+      "Studio / Recording Musician (Ministry)",
+      "Mission Field Worship Leader"
+    ],
+    "admissionRequirements": [
+      "Completed application form",
+      "Musical audition (live or recorded video)",
+      "Academic transcripts",
+      "Pastoral recommendation letter",
+      "Personal statement on music ministry calling"
+    ],
+    "faq": [
+      {
+        "question": "Do I need to play an instrument already?",
+        "answer": "Basic musical ability is required, but you do not need to be an advanced musician. An audition helps us understand your current level and place you appropriately."
+      },
+      {
+        "question": "What instruments are taught?",
+        "answer": "The program focuses on keyboard/piano and guitar as primary instruments, with ensemble opportunities on various instruments."
+      }
+    ]
+  },
+  {
+    "id": "diploma-church-planting",
+    "slug": "diploma-church-planting",
+    "title": "Diploma in Church Planting",
+    "abbreviation": "Dip. CP",
+    "duration": "1 Year",
+    "level": "Diploma",
+    "category": "Missions & Planting",
+    "tagline": "Practical field training for frontline church planters and pioneer evangelists",
+    "description": "The Diploma in Church Planting provides intensive, hands-on biblical and field training for pioneer evangelists and church planters called to establish local churches in unreached rural and urban villages.",
+    "whoFor": "Ideal for pioneer workers, evangelists, lay leaders, and church planters seeking practical skills in cross-cultural evangelism, cell group leadership, and village church planting.",
+    "image": "course-cp.jpg",
+    "color": "#152940",
+    "objectives": [
+      "Master core principles of pioneer evangelism and cross-cultural church planting.",
+      "Develop practical skills in cell group leadership, discipleship, and village outreach.",
+      "Understand biblical models of church reproduction and indigenous ministry.",
+      "Engage in supervised field education and church planting practicums."
+    ],
+    "learningOutcomes": [
+      "Ability to execute field-level pioneer evangelism and community engagement.",
+      "Skill in starting, nurturing, and multiplying cell groups into local assemblies.",
+      "Deep understanding of basic systematic theology and biblical exposition.",
+      "Competency in mentoring new believers and developing local lay leadership."
+    ],
+    "eligibility": [
+      "Completion of 10th or 10+2 / High School",
+      "Proven recommendation from a local pastor or ministry supervisor",
+      "Heart for unreached village ministry and pioneer outreach",
+      "Willingness to participate in intensive field immersion"
+    ],
+    "curriculum": [
+      {
+        "year": "Year 1",
+        "semesters": [
+          {
+            "term": "Semester 1",
+            "subjects": ["Biblical Basis of Missions", "Pioneer Evangelism Methods", "Old Testament Survey", "Personal Discipleship", "Cell Group Dynamics"]
+          },
+          {
+            "term": "Semester 2",
+            "subjects": ["Church Planting Methods & Models", "Village Ministry & Cross-Cultural Skills", "Pastoral Care Basics", "Supervised Field Practicum", "Church Multiplication Project"]
+          }
+        ]
+      }
+    ],
+    "careers": [
+      "Pioneer Church Planter",
+      "Village Evangelist",
+      "Cell Group Overseer",
+      "Mission Field Assistant",
+      "Community Outreach Leader"
+    ],
+    "admissionRequirements": [
+      "Completed application form",
+      "Pastoral recommendation letter",
+      "Personal statement of salvation and calling",
+      "Personal interview"
+    ],
+    "faq": [
+      {
+        "question": "Is field immersion mandatory?",
+        "answer": "Yes, practical weekend and term field internships in unreached areas are an essential part of the Diploma in Church Planting."
+      }
+    ]
+  },
+  {
+    "id": "bmin",
+    "slug": "bmin",
+    "title": "Bachelor of Ministry & Church Planting",
+    "abbreviation": "B.Min",
+    "duration": "3 Years",
+    "level": "Undergraduate",
+    "category": "Ministry & Missions",
+    "tagline": "Equipping ministry practitioners for church expansion, pastoral care, and discipleship",
+    "description": "The Bachelor of Ministry & Church Planting combines practical ministry skills with foundational biblical studies. It prepares graduates for active pastoral roles, evangelistic outreach, and establishing sustainable churches in diverse communities.",
+    "whoFor": "Designed for students called to practical pastoral ministry, church planting, youth ministry, and community outreach who desire hands-on ministry training combined with biblical grounding.",
+    "image": "course-bmin.jpg",
+    "color": "#2A5284",
+    "objectives": [
+      "Develop solid competency in biblical interpretation and expository teaching.",
+      "Acquire practical tools for planting, growing, and administering local congregations.",
+      "Gain hands-on experience in personal evangelism, counseling, and youth ministry.",
+      "Cultivate spiritual maturity, Christlike servant leadership, and ethical ministry practice."
+    ],
+    "learningOutcomes": [
+      "Comprehensive knowledge of Old and New Testament doctrine and ministry application.",
+      "Proven ability to plan, launch, and pastor new church congregations.",
+      "Competency in personal and group discipleship, pastoral counseling, and conflict resolution.",
+      "Capacity to mobilize local believers for community transformation and missions."
+    ],
+    "eligibility": [
+      "Completion of 10+2 (Higher Secondary) or equivalent",
+      "Personal testimony of faith and church recommendation letter",
+      "Proficiency in English or regional language",
+      "Willingness to engage in weekend ministry placements"
+    ],
+    "curriculum": [
+      {
+        "year": "Year 1",
+        "semesters": [
+          {
+            "term": "Semester 1",
+            "subjects": ["Old Testament Survey I", "New Testament Survey I", "Introduction to Ministry", "Personal Spiritual Formation", "Homiletics I"]
+          },
+          {
+            "term": "Semester 2",
+            "subjects": ["Old Testament Survey II", "New Testament Survey II", "Evangelism & Discipleship", "Church History I", "Pastoral Ministry Basics"]
+          }
+        ]
+      },
+      {
+        "year": "Year 2",
+        "semesters": [
+          {
+            "term": "Semester 3",
+            "subjects": ["Systematic Theology I", "Church Planting Strategies", "Pastoral Care & Counseling", "Church History II", "Youth & Children's Ministry"]
+          },
+          {
+            "term": "Semester 4",
+            "subjects": ["Systematic Theology II", "Biblical Hermeneutics", "Leadership & Administration", "Cross-Cultural Missions", "Ministry Practicum I"]
+          }
+        ]
+      },
+      {
+        "year": "Year 3",
+        "semesters": [
+          {
+            "term": "Semester 5",
+            "subjects": ["Expository Preaching", "Ethics in Ministry", "Contemporary Cults & World Religions", "Advanced Discipleship", "Ministry Practicum II"]
+          },
+          {
+            "term": "Semester 6",
+            "subjects": ["Church Governance & Law", "Urban & Rural Evangelism", "Theology of Worship", "Senior Ministry Project", "Internship & Field Placement"]
+          }
+        ]
+      }
+    ],
+    "careers": [
+      "Pastor / Co-Pastor",
+      "Church Planter",
+      "Evangelist",
+      "Youth Ministry Coordinator",
+      "Missions Coordinator",
+      "NGO / Community Project Leader"
+    ],
+    "admissionRequirements": [
+      "Completed application form",
+      "Academic transcripts (10+2)",
+      "Pastoral reference letter",
+      "Personal testimony of faith",
+      "Interview with faculty"
+    ],
+    "faq": [
+      {
+        "question": "What is the primary focus of B.Min?",
+        "answer": "B.Min emphasizes practical hands-on ministry skills and church planting alongside biblical study, making it ideal for direct pastoral entry."
+      }
+    ]
+  },
+  {
     "id": "bth",
     "slug": "bth",
-    "title": "Bachelor of Theology",
+    "title": "Bachelor of Theology & Church Planting",
     "abbreviation": "B.Th",
     "duration": "3 Years",
     "level": "Undergraduate",
     "category": "Theology",
-    "tagline": "A foundational degree in biblical and theological studies",
-    "description": "The Bachelor of Theology program provides a comprehensive foundation in Old and New Testament studies, systematic theology, church history, and practical ministry. Graduates are equipped to serve effectively as pastors, teachers, and ministry leaders.",
+    "tagline": "A foundational degree in biblical exegesis, systematic theology, and church planting",
+    "description": "The Bachelor of Theology & Church Planting provides a comprehensive, academically rigorous foundation in Old and New Testament studies, biblical languages, systematic theology, church history, and strategic church planting.",
+    "whoFor": "Designed for students seeking a rigorous theological foundation to prepare for pastoral ministry, Bible teaching, seminary teaching, or advanced postgraduate studies.",
     "image": "course-bth.jpg",
     "color": "#1E3A5F",
+    "objectives": [
+      "Develop a comprehensive, sound understanding of Old and New Testament Scriptures in original context.",
+      "Formulate a coherent biblical worldview grounded in systematic evangelical theology.",
+      "Gain practical skills in biblical preaching, pastoral care, and village church planting.",
+      "Cultivate personal spiritual maturity, servant leadership, and ethical integrity."
+    ],
+    "learningOutcomes": [
+      "Mastery of Old and New Testament survey, exegesis, and biblical theology.",
+      "Ability to formulate and defend evangelical systematic theology.",
+      "Expository preaching and teaching competency.",
+      "Field skills for pioneer church planting and discipleship."
+    ],
     "eligibility": [
       "Completion of 10+2 (Higher Secondary) or equivalent",
       "Personal faith commitment and church recommendation",
@@ -20,15 +278,42 @@
     "curriculum": [
       {
         "year": "Year 1",
-        "subjects": ["Old Testament Survey", "New Testament Survey", "Introduction to Theology", "Biblical Languages (Greek/Hebrew Basics)", "Church History I", "Homiletics I", "Pastoral Ministry Basics"]
+        "semesters": [
+          {
+            "term": "Semester 1",
+            "subjects": ["Old Testament Survey I", "New Testament Survey I", "Introduction to Theology", "Biblical Greek Basics", "Church History I", "Homiletics I"]
+          },
+          {
+            "term": "Semester 2",
+            "subjects": ["Old Testament Survey II", "New Testament Survey II", "Biblical Hebrew Basics", "Church History II", "Pastoral Ministry Basics", "Hermeneutics"]
+          }
+        ]
       },
       {
         "year": "Year 2",
-        "subjects": ["Old Testament Exegesis", "New Testament Exegesis", "Systematic Theology I", "Systematic Theology II", "Church History II", "Homiletics II", "Christian Ethics", "Counseling Basics"]
+        "semesters": [
+          {
+            "term": "Semester 3",
+            "subjects": ["Old Testament Exegesis", "Systematic Theology I", "Historical Theology", "Homiletics II", "Christian Ethics", "Counseling Basics"]
+          },
+          {
+            "term": "Semester 4",
+            "subjects": ["New Testament Exegesis", "Systematic Theology II", "Missiology & Church Planting", "Worship Theology", "Field Practicum I"]
+          }
+        ]
       },
       {
         "year": "Year 3",
-        "subjects": ["Biblical Theology", "Apologetics", "Missiology", "Leadership & Administration", "Theology of Worship", "Internship / Field Education", "Research Project"]
+        "semesters": [
+          {
+            "term": "Semester 5",
+            "subjects": ["Biblical Theology", "Apologetics & Worldviews", "Leadership & Administration", "Advanced Exegesis", "Field Practicum II"]
+          },
+          {
+            "term": "Semester 6",
+            "subjects": ["Contemporary Theology", "Pastoral Epistles", "Research Methodology", "Senior Research Project", "Church Planting Internship"]
+          }
+        ]
       }
     ],
     "careers": [
@@ -50,58 +335,168 @@
       {
         "question": "Is accommodation available for outstation students?",
         "answer": "Yes, GEC offers hostel facilities for both male and female students. Contact admissions for availability and fees."
+      }
+    ]
+  },
+  {
+    "id": "mth",
+    "slug": "mth",
+    "title": "Master of Theology & Church Leadership",
+    "abbreviation": "M.Th",
+    "duration": "2 Years",
+    "level": "Postgraduate",
+    "category": "Theology",
+    "tagline": "Advanced academic scholarship and executive leadership for educators and researchers",
+    "description": "The Master of Theology & Church Leadership is a high-level academic research degree designed for scholars, seminary lecturers, and senior church leaders seeking specialization in theological disciplines and executive leadership.",
+    "whoFor": "Intended for candidates holding a B.Th or M.Div who wish to pursue advanced scholarly research, academic teaching, theological authorship, or senior executive ecclesiastical leadership.",
+    "image": "course-mth.jpg",
+    "color": "#1E3A5F",
+    "objectives": [
+      "Conduct independent, original theological research utilizing advanced academic methodology.",
+      "Gain scholarly mastery in a chosen specialization (OT, NT, Systematic Theology, Church History).",
+      "Equip candidates for seminary lecturing, academic publication, and doctoral research.",
+      "Engage critically with contemporary global and contextual theological discourses."
+    ],
+    "learningOutcomes": [
+      "Demonstrated mastery of research methodologies and academic thesis writing.",
+      "Advanced proficiency in exegesis, dogmatics, and historical theology.",
+      "Executive capability in institutional governance and academic leadership.",
+      "Preparation for doctoral-level studies (Ph.D. / Th.D.)."
+    ],
+    "eligibility": [
+      "M.Div or B.Th with distinction from an accredited seminary",
+      "Strong academic background with writing and research skills",
+      "Proficiency in English; knowledge of Biblical languages preferred",
+      "Approval of proposed research area"
+    ],
+    "curriculum": [
+      {
+        "year": "Year 1",
+        "semesters": [
+          {
+            "term": "Semester 1",
+            "subjects": ["Advanced Research Methodology in Theology", "Old Testament Expository Seminars", "Systematic & Dogmatic Theology", "Academic German/French"]
+          },
+          {
+            "term": "Semester 2",
+            "subjects": ["New Testament Expository Seminars", "Contextual & Global Theology", "Executive Leadership & Governance", "Thesis Proposal Defense"]
+          }
+        ]
       },
       {
-        "question": "Can I work while studying?",
-        "answer": "The program is full-time and includes field education. Limited part-time ministry roles may be permitted with permission."
-      },
+        "year": "Year 2",
+        "semesters": [
+          {
+            "term": "Semester 3",
+            "subjects": ["Specialized Seminars in Chosen Track", "Advanced Hermeneutics", "Independent Scholarly Research", "Teaching Practicum"]
+          },
+          {
+            "term": "Semester 4",
+            "subjects": ["Master's Thesis Research & Writing", "Final Thesis Defense", "Scholarly Publication Preparation"]
+          }
+        ]
+      }
+    ],
+    "careers": [
+      "Seminary or Bible College Professor",
+      "Theological Researcher & Author",
+      "Academic Dean / President",
+      "Denominational Leader",
+      "Doctoral Program Candidate"
+    ],
+    "admissionRequirements": [
+      "M.Div or B.Th with distinction (minimum 65% or equivalent)",
+      "Research proposal (500–1000 words)",
+      "Academic writing sample",
+      "Two academic reference letters",
+      "Interview with faculty committee"
+    ],
+    "faq": [
       {
-        "question": "What is the medium of instruction?",
-        "answer": "The primary medium of instruction is English, with some courses available in regional languages."
-      },
-      {
-        "question": "Is the B.Th recognized for further study?",
-        "answer": "Yes, our B.Th degree is accepted for admission into our M.Dv and M.Th programs, and by many seminaries internationally."
+        "question": "Can the M.Th lead to doctoral studies?",
+        "answer": "Yes. The M.Th is the standard preparation for doctoral (Ph.D. / Th.D.) studies in theology worldwide."
       }
     ]
   },
   {
     "id": "mdv",
     "slug": "mdv",
-    "title": "Master of Divinity",
-    "abbreviation": "M.Dv",
+    "title": "Master of Divinity & Church Leadership",
+    "abbreviation": "M.Div",
     "duration": "3 Years",
     "level": "Postgraduate",
-    "category": "Theology",
-    "tagline": "The professional degree for ministry leadership",
-    "description": "The Master of Divinity is the standard professional degree for those called to ordained ministry and pastoral leadership. The program deepens biblical, theological, and ministry competencies while emphasizing practical formation.",
+    "category": "Theology & Leadership",
+    "tagline": "The premier professional degree for pastoral leadership, preaching, and church multiplication",
+    "description": "The Master of Divinity & Church Leadership is the gold-standard professional ministry degree for ordained pastoral leadership, senior church governance, expository preaching, and national church planting movements.",
+    "whoFor": "Designed for university graduates and ministry leaders called to senior pastoral leadership, church multiplication, executive administration, and ordained ministry.",
     "image": "course-mdv.jpg",
     "color": "#2A5284",
+    "objectives": [
+      "Master advanced exegesis of Biblical texts in Hebrew and Greek original contexts.",
+      "Develop executive leadership, church administration, and strategic mission capability.",
+      "Integrate theological scholarship with practical pastoral care and expository preaching excellence.",
+      "Analyze contemporary cultural and ethical challenges from a biblical perspective."
+    ],
+    "learningOutcomes": [
+      "Expository Preaching Excellence: Crafting and delivering biblically faithful, culturally engaging sermons.",
+      "Advanced Original Language Exegesis: Translating and interpreting Old Testament Hebrew and New Testament Greek.",
+      "Executive Church Governance: Managing church administration, financial stewardship, and ministry teams.",
+      "Strategic Church Planting: Planning, launching, and sustaining self-reproducing congregations.",
+      "Pastoral Care & Counseling: Providing compassionate, biblically grounded care in complex pastoral situations.",
+      "Contextual Theology & Worldview: Engaging modern secularism, cults, and religious pluralism with apologetic clarity."
+    ],
     "eligibility": [
-      "Bachelor's degree from an accredited institution",
-      "A B.Th or equivalent theological foundation is preferred",
-      "Personal testimony and church recommendation",
-      "English proficiency"
+      "Bachelor's degree from an accredited institution (B.A., B.Sc., B.Com, B.Tech or B.Th)",
+      "Personal testimony of faith and local church recommendation letter",
+      "English language proficiency",
+      "Commitment to full-time or modular ministry study"
     ],
     "curriculum": [
       {
         "year": "Year 1",
-        "subjects": ["Advanced Biblical Hermeneutics", "Old Testament Theology", "New Testament Theology", "Systematic Theology Advanced", "Preaching & Communication", "Pastoral Theology"]
+        "semesters": [
+          {
+            "term": "Semester 1",
+            "subjects": ["Advanced Biblical Hermeneutics", "Biblical Hebrew I", "Old Testament Theology", "Systematic Theology I", "Expository Preaching & Communication"]
+          },
+          {
+            "term": "Semester 2",
+            "subjects": ["Biblical Greek I", "New Testament Theology", "Systematic Theology II", "Historical Theology & Creeds", "Pastoral Theology & Care"]
+          }
+        ]
       },
       {
         "year": "Year 2",
-        "subjects": ["Christian Education & Discipleship", "Missiology & World Religions", "Church Administration", "Counseling & Care Ministry", "Elective I", "Elective II", "Ministry Practicum"]
+        "semesters": [
+          {
+            "term": "Semester 3",
+            "subjects": ["Biblical Hebrew II", "New Testament Exegesis", "Christian Education & Discipleship", "Missiology & World Religions", "Executive Church Administration"]
+          },
+          {
+            "term": "Semester 4",
+            "subjects": ["Biblical Greek II", "Old Testament Exegesis", "Counseling & Care Ministry", "Church Planting Strategies", "Supervised Ministry Practicum I"]
+          }
+        ]
       },
       {
         "year": "Year 3",
-        "subjects": ["Contextual Theology", "Leadership in Ministry", "Church Planting Strategies", "Theology of Culture", "Dissertation / Ministry Project", "Supervised Ministry Internship"]
+        "semesters": [
+          {
+            "term": "Semester 5",
+            "subjects": ["Contextual Theology & Apologetics", "Senior Pastoral Leadership", "Theology of Culture & Ethics", "Elective Specialization I", "Ministry Practicum II"]
+          },
+          {
+            "term": "Semester 6",
+            "subjects": ["Ecclesial Governance & Financial Management", "Advanced Homiletics Practicum", "Master's Thesis / Project", "Supervised Ministry Internship"]
+          }
+        ]
       }
     ],
     "careers": [
       "Senior Pastor / Lead Minister",
       "Seminary Lecturer",
       "Denominational Leader",
-      "Missionary",
+      "Missionary / Church Planter",
       "Chaplain (Hospital, Military, University)",
       "Christian Organization Director"
     ],
@@ -115,138 +510,8 @@
     ],
     "faq": [
       {
-        "question": "What is the difference between M.Dv and M.Th?",
-        "answer": "The M.Dv is a professional ministry degree focused on pastoral and ministry leadership. The M.Th is an academic research degree for those pursuing advanced scholarship or teaching."
-      },
-      {
-        "question": "Are there specialization tracks in the M.Dv?",
-        "answer": "Yes, students may choose electives focusing on Pastoral Ministry, Youth Ministry, Missions, or Christian Education."
-      },
-      {
-        "question": "Can I pursue M.Dv after completing B.Th at GEC?",
-        "answer": "Absolutely. GEC B.Th graduates meeting our academic standards are encouraged to continue with M.Dv."
-      }
-    ]
-  },
-  {
-    "id": "mth",
-    "slug": "mth",
-    "title": "Master of Theology",
-    "abbreviation": "M.Th",
-    "duration": "2 Years",
-    "level": "Postgraduate",
-    "category": "Theology",
-    "tagline": "Advanced scholarship for theological educators and researchers",
-    "description": "The Master of Theology is a rigorous academic degree for those who wish to specialize in a particular theological discipline and contribute to theological scholarship, teaching, and research.",
-    "image": "course-mth.jpg",
-    "color": "#1E3A5F",
-    "eligibility": [
-      "M.Dv or B.Th with distinction from an accredited seminary",
-      "Strong academic background with writing and research skills",
-      "Proficiency in English; knowledge of Biblical languages preferred",
-      "Approval of proposed research area"
-    ],
-    "curriculum": [
-      {
-        "year": "Year 1",
-        "subjects": ["Research Methodology in Theology", "Theological German/French (Optional)", "Specialized Seminars (x3)", "Independent Study", "Thesis Proposal Development"]
-      },
-      {
-        "year": "Year 2",
-        "subjects": ["Advanced Seminar in Specialization", "Thesis Research & Writing", "Thesis Defense", "Teaching Practicum (Optional)"]
-      }
-    ],
-    "specializations": [
-      "Biblical Studies (OT or NT)",
-      "Systematic Theology",
-      "Church History",
-      "Missiology",
-      "Christian Ethics"
-    ],
-    "careers": [
-      "Seminary or Bible College Professor",
-      "Theological Researcher & Author",
-      "Academic Dean",
-      "Denominational Theologian",
-      "Doctoral Program Candidate"
-    ],
-    "admissionRequirements": [
-      "M.Dv or B.Th with distinction (minimum 65% or equivalent)",
-      "Research proposal (500–1000 words)",
-      "Academic writing sample",
-      "Two academic reference letters",
-      "Interview with faculty committee"
-    ],
-    "faq": [
-      {
-        "question": "Is the M.Th a full-time program?",
-        "answer": "The M.Th is designed as a full-time program, though limited part-time options may be available. Contact admissions for details."
-      },
-      {
-        "question": "Do I need to know Biblical Greek or Hebrew?",
-        "answer": "Proficiency in at least one Biblical language is strongly recommended. Students without this background may be required to complete preparatory coursework."
-      },
-      {
-        "question": "Can the M.Th lead to doctoral studies?",
-        "answer": "Yes. The M.Th is the standard preparation for doctoral (Ph.D. / Th.D.) studies in theology at institutions worldwide."
-      }
-    ]
-  },
-  {
-    "id": "diploma-music",
-    "slug": "diploma-music",
-    "title": "Diploma in Music",
-    "abbreviation": "Dip. Music",
-    "duration": "2 Years",
-    "level": "Diploma",
-    "category": "Music",
-    "tagline": "Equipping worship leaders and musicians for ministry",
-    "description": "The Diploma in Music equips students with both the spiritual and technical skills needed to lead worship and serve in music ministry. The program integrates music theory, instrument training, vocal development, and worship theology.",
-    "image": "course-music.jpg",
-    "color": "#C8972B",
-    "eligibility": [
-      "Completion of 10+2 or equivalent",
-      "Basic musical aptitude (audition required)",
-      "Personal faith and church involvement",
-      "Passion for worship ministry"
-    ],
-    "curriculum": [
-      {
-        "year": "Year 1",
-        "subjects": ["Music Theory I & II", "Vocal Training I", "Keyboard / Guitar (Primary Instrument)", "Worship Theology", "Church Music History", "Ear Training & Sight-Reading", "Ensemble & Choir"]
-      },
-      {
-        "year": "Year 2",
-        "subjects": ["Music Theory III", "Vocal Training II", "Advanced Instrument Study", "Songwriting & Arrangement", "Sound Engineering Basics", "Worship Leading Practicum", "Recital & Final Project"]
-      }
-    ],
-    "careers": [
-      "Worship Leader / Pastor",
-      "Church Choir Director",
-      "Music Ministry Coordinator",
-      "Christian Music Educator",
-      "Recording / Studio Musician (Ministry)",
-      "Mission Field Worship Leader"
-    ],
-    "admissionRequirements": [
-      "Completed application form",
-      "Musical audition (live or recorded)",
-      "Academic transcripts",
-      "Pastoral recommendation letter",
-      "Personal statement on music ministry calling"
-    ],
-    "faq": [
-      {
-        "question": "Do I need to play an instrument already?",
-        "answer": "Basic musical ability is required, but you do not need to be an advanced musician. An audition helps us understand your current level and place you appropriately."
-      },
-      {
-        "question": "What instruments are taught?",
-        "answer": "The program focuses on keyboard/piano and guitar as primary instruments, with ensemble opportunities on various instruments."
-      },
-      {
-        "question": "Is this program recognized by churches and denominations?",
-        "answer": "Yes, GEC's Diploma in Music is recognized by numerous churches and denominations for worship leadership roles."
+        "question": "What is the difference between M.Div and M.Th?",
+        "answer": "The M.Div is a professional ministry degree focused on pastoral and ministry leadership. The M.Th is an academic research degree for those pursuing advanced scholarship or teaching."
       }
     ]
   }

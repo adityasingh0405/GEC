@@ -1,20 +1,52 @@
 {
   "links": [
     { "label": "Home", "href": "/" },
-    { "label": "About", "href": "/about" },
     {
-      "label": "Courses",
+      "label": "About",
+      "href": "/about",
+      "children": [
+        { "label": "Our Story", "href": "/about/our-story" },
+        { "label": "Vision & Mission", "href": "/about/vision-mission" },
+        { "label": "Statement of Faith", "href": "/about/statement-of-faith" },
+        { "label": "Church Profile", "href": "/about/church-profile" },
+        { "label": "Leadership & Faculty", "href": "/about/leadership-faculty" },
+        { "label": "Founder's Message", "href": "/about/founders-message" },
+        { "label": "Principal's Message", "href": "/about/principals-message" }
+      ]
+    },
+    {
+      "label": "Academics",
       "href": "/courses",
       "children": [
         { "label": "Bachelor of Theology (B.Th)", "href": "/courses/bth" },
-        { "label": "Master of Divinity (M.Dv)", "href": "/courses/mdv" },
+        { "label": "Master of Divinity (M.Div)", "href": "/courses/mdv" },
         { "label": "Master of Theology (M.Th)", "href": "/courses/mth" },
-        { "label": "Diploma in Music", "href": "/courses/diploma-music" }
+        { "label": "Diploma in Music", "href": "/courses/diploma-music" },
+        { "label": "Admissions", "href": "/admissions" },
+        { "label": "Academic Calendar", "href": "/admissions/calendar" },
+        { "label": "Apply Now", "href": "/admissions/apply" }
       ]
     },
-    { "label": "Admissions", "href": "/admissions" },
-    { "label": "Gallery", "href": "/gallery" },
-    { "label": "News", "href": "/news" },
+    {
+      "label": "Campus",
+      "href": "/student-life",
+      "children": [
+        { "label": "Student Life", "href": "/student-life" },
+        { "label": "Gallery", "href": "/gallery" },
+        { "label": "News & Events", "href": "/news" }
+      ]
+    },
+    {
+      "label": "Resources",
+      "href": "/resources",
+      "children": [
+        { "label": "Prospectus", "href": "/resources" },
+        { "label": "Constitution", "href": "/resources" },
+        { "label": "Meeting Schedule", "href": "/meeting-schedule" },
+        { "label": "Prayer Request", "href": "/prayer-request" },
+        { "label": "Donation", "href": "/donation" }
+      ]
+    },
     { "label": "Contact", "href": "/contact" }
   ]
 }

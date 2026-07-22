@@ -11,12 +11,47 @@
       "keywords": "glory education center, theology college India, Bible seminary, BTh MDv MTh, diploma music"
     },
     "/about": {
-      "title": "About Us",
-      "description": "Learn about Glory Education Center's mission, vision, history, and leadership. Founded in 2005, we have been equipping servant-leaders for over two decades.",
+      "title": "About Us — Glory Education Center",
+      "description": "Overview of Glory Education Center's story, mission, faith statement, church profile, and leadership.",
       "keywords": "about glory education center, theological seminary history, mission vision"
     },
+    "/about/our-story": {
+      "title": "Our Story — Glory Education Center",
+      "description": "Explore the history, founding vision, and milestone journey of Glory Education Center since 2005.",
+      "keywords": "GEC history, seminary story, theological college milestones"
+    },
+    "/about/vision-mission": {
+      "title": "Vision & Mission — Glory Education Center",
+      "description": "Our core calling, mission statement, institutional vision, and guiding biblical values.",
+      "keywords": "GEC vision, mission statement, theological education core values"
+    },
+    "/about/statement-of-faith": {
+      "title": "Statement of Faith — Glory Education Center",
+      "description": "Read our evangelical doctrinal beliefs and confession of faith anchored in Holy Scripture.",
+      "keywords": "statement of faith, Christian beliefs, seminary doctrine, evangelical theology"
+    },
+    "/about/church-profile": {
+      "title": "Church Profile — Glory Education Center",
+      "description": "Our inter-denominational standing, ecclesial roots, accreditation, and church partner networks.",
+      "keywords": "church profile, accreditation, inter-denominational seminary"
+    },
+    "/about/leadership-faculty": {
+      "title": "Leadership & Governance — Glory Education Center",
+      "description": "Meet our institutional leadership team, board of governors, deans, and administration.",
+      "keywords": "seminary leadership, principal, academic deans"
+    },
+    "/about/founders-message": {
+      "title": "Message from the Founder — Glory Education Center",
+      "description": "Read Dr. Breckenridge Merkle's message on 'A Church in Every Village' and the founding vision of Glory Education Center.",
+      "keywords": "founder message, Dr Breckenridge Merkle, church in every village, GEC vision"
+    },
+    "/about/principals-message": {
+      "title": "Message from the Principal — Glory Education Center",
+      "description": "Read Dr. Henry Sui's letter on equipping students for ministry, academic rigor, spiritual formation, and kingdom service.",
+      "keywords": "principal message, Dr Henry Sui, equipping students, theological scholarship"
+    },
     "/courses": {
-      "title": "Our Programs",
+      "title": "Our Academic Programs",
       "description": "Explore our academic programs: Bachelor of Theology (B.Th), Master of Divinity (M.Dv), Master of Theology (M.Th), and Diploma in Music.",
       "keywords": "theology courses India, BTh degree, Master of Divinity, Master of Theology, diploma music ministry"
     },
@@ -38,27 +73,102 @@
     "/courses/diploma-music": {
       "title": "Diploma in Music",
       "description": "A 2-year diploma program for worship leaders and musicians. Develop your musical gifts and theological foundations for ministry.",
-      "keywords": "diploma in music, worship leader training, church music, music ministry India"
+      "keywords": "diploma in music, worship ministry training, church music course"
+    },
+    "/courses/diploma-church-planting": {
+      "title": "Diploma in Church Planting",
+      "description": "A 1-year practical field program for pioneer church planters and village evangelists.",
+      "keywords": "diploma church planting, pioneer evangelism, village missions"
+    },
+    "/courses/bmin": {
+      "title": "Bachelor of Ministry & Church Planting (B.Min)",
+      "description": "A 3-year undergraduate degree equipping ministry practitioners for church expansion and pastoral care.",
+      "keywords": "bachelor of ministry, BMin degree, church planting bachelor"
     },
     "/admissions": {
-      "title": "Admissions",
-      "description": "Learn how to apply to Glory Education Center. Review requirements, the admissions process, and submit your inquiry.",
+      "title": "Admissions Overview",
+      "description": "Learn how to apply to Glory Education Center. Review process, eligibility, documents, fee structure, and submit your application.",
       "keywords": "seminary admissions, apply theology degree, GEC application, theological college India admissions"
     },
+    "/admissions/process": {
+      "title": "Admission Process — Glory Education Center",
+      "description": "Step-by-step roadmap to apply and enroll at Glory Education Center.",
+      "keywords": "admission process, how to apply seminary"
+    },
+    "/admissions/eligibility": {
+      "title": "Eligibility Requirements — Glory Education Center",
+      "description": "Academic and spiritual admission requirements for B.Th, M.Div, M.Th, and Diploma in Music.",
+      "keywords": "seminary eligibility, BTh requirements, MDiv prerequisites"
+    },
+    "/admissions/documents": {
+      "title": "Required Documents — Glory Education Center",
+      "description": "Checklist of required transcripts, certificates, references, and ID documents.",
+      "keywords": "admission documents checklist, pastoral recommendation"
+    },
+    "/admissions/fees": {
+      "title": "Fee Structure — Glory Education Center",
+      "description": "Transparent tuition, hostel fees, payment plans, and scholarship information.",
+      "keywords": "theology college fees, seminary tuition, scholarships"
+    },
+    "/admissions/calendar": {
+      "title": "Academic Calendar — Glory Education Center",
+      "description": "Important dates for term start, examinations, events, and holidays.",
+      "keywords": "academic calendar, semester dates"
+    },
+    "/admissions/apply": {
+      "title": "Apply Now — Online Application Form",
+      "description": "Submit your online admission application for B.Th, M.Div, M.Th, or Diploma in Music.",
+      "keywords": "online application form, GEC apply now"
+    },
+    "/faculty": {
+      "title": "Our Faculty — Glory Education Center",
+      "description": "Meet our experienced, dedicated faculty scholars in biblical studies, theology, church history, and music.",
+      "keywords": "faculty, theology professors, worship instructors"
+    },
+    "/student-life": {
+      "title": "Student Life — Glory Education Center",
+      "description": "Explore chapel worship, campus living, library facilities, music department, events, and mentorship at GEC.",
+      "keywords": "student life, chapel worship, hostel life, campus events"
+    },
     "/gallery": {
-      "title": "Gallery",
-      "description": "Explore photos from campus life, events, and academics at Glory Education Center.",
-      "keywords": "GEC gallery, campus life, seminary events photos"
+      "title": "Photo Gallery — Glory Education Center",
+      "description": "Explore photos from campus life, worship services, graduation ceremonies, music events, and student activities.",
+      "keywords": "GEC gallery, campus photos, worship images"
     },
     "/news": {
-      "title": "News & Updates",
-      "description": "Stay updated with the latest news, events, and announcements from Glory Education Center.",
-      "keywords": "GEC news, seminary announcements, theology college events"
+      "title": "News & Events — Glory Education Center",
+      "description": "Stay updated with the latest news, announcements, and upcoming events from Glory Education Center.",
+      "keywords": "GEC news, seminary events, upcoming conferences"
+    },
+    "/resources": {
+      "title": "Resources & Downloads — Glory Education Center",
+      "description": "Download academic prospectus, constitution, application forms, and access quick tools.",
+      "keywords": "downloads, prospectus, constitution, meeting schedule, prayer request, donation"
+    },
+    "/prayer-request": {
+      "title": "Prayer Request — Glory Education Center",
+      "description": "Submit your prayer requests to our intercessory prayer team at Glory Education Center.",
+      "keywords": "prayer request, Christian prayer team, intercession"
+    },
+    "/donation": {
+      "title": "Donation & Support — Glory Education Center",
+      "description": "Support theological education and worship leaders by donating to Glory Education Center.",
+      "keywords": "donate to seminary, support theology students, giving"
+    },
+    "/meeting-schedule": {
+      "title": "Meeting Schedule — Glory Education Center",
+      "description": "Weekly schedule of chapel services, prayer meetings, choir rehearsals, and study groups.",
+      "keywords": "meeting schedule, chapel schedule, choir practice"
     },
     "/contact": {
-      "title": "Contact Us",
-      "description": "Contact Glory Education Center for admissions inquiries, general questions, and more. We're here to help.",
-      "keywords": "contact GEC, seminary contact India, theology college inquiry"
+      "title": "Contact Us — Glory Education Center",
+      "description": "Contact Glory Education Center for admissions, campus visits, or general inquiries via form, email, or WhatsApp.",
+      "keywords": "contact GEC, seminary contact, location map, office hours, whatsapp"
+    },
+    "/sitemap": {
+      "title": "Sitemap — Glory Education Center",
+      "description": "Complete site map for easy navigation across all pages of Glory Education Center.",
+      "keywords": "sitemap, GEC page index"
     },
     "/privacy-policy": {
       "title": "Privacy Policy",

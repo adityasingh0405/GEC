@@ -4,12 +4,12 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useScrolled } from '@hooks/useScrolled'
 import { MenuIcon, XIcon, ChevronDownIcon } from '@components/common/Icons'
 import navData from '@content/navigation.json'
-import logo from "@assets/logo.png";
+import logo from "@assets/logo.png"
 
 /* ─────────────────────────────────────────
    Desktop Dropdown Menu
 ───────────────────────────────────────── */
-function DropdownMenu({ items, isOpen }) {
+function DropdownMenu({ items, isOpen, onClose }) {
   return (
     <AnimatePresence>
       {isOpen && (
@@ -18,7 +18,7 @@ function DropdownMenu({ items, isOpen }) {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 8, scale: 0.98 }}
           transition={{ duration: 0.16, ease: 'easeOut' }}
-          className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-56 bg-[#0E1E33] border border-white/15 rounded-xl shadow-2xl shadow-black/50 overflow-hidden z-50 py-1.5"
+          className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-60 bg-[#0E1E33] border border-white/15 rounded-xl shadow-2xl shadow-black/50 overflow-hidden z-50 py-1.5"
           role="menu"
         >
           <div className="h-[2px] w-full bg-gradient-to-r from-[#D4A843] via-[#C8972B] to-[#D4A843]" />
@@ -26,6 +26,7 @@ function DropdownMenu({ items, isOpen }) {
             <li key={item.href} role="none">
               <NavLink
                 to={item.href}
+                onClick={onClose}
                 className={({ isActive }) =>
                   `block px-5 py-2.5 text-xs font-semibold uppercase tracking-wider transition-colors duration-150 ${isActive
                     ? 'bg-white/10 text-[#D4A843]'
@@ -45,11 +46,12 @@ function DropdownMenu({ items, isOpen }) {
 }
 
 /* ─────────────────────────────────────────
-   Desktop Nav Item
+   Desktop Nav Item with Hover + Click Support
 ───────────────────────────────────────── */
 function NavItem({ link }) {
   const [open, setOpen] = useState(false)
   const ref = useRef(null)
+  const timeoutRef = useRef(null)
   const location = useLocation()
 
   useEffect(() => setOpen(false), [location])
@@ -62,10 +64,28 @@ function NavItem({ link }) {
     return () => document.removeEventListener('mousedown', handler)
   }, [])
 
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current)
+    setOpen(true)
+  }
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setOpen(false)
+    }, 150)
+  }
+
   if (link.children) {
-    const isActive = link.children.some(c => location.pathname.startsWith(c.href))
+    const isActive = link.children.some(c => location.pathname === c.href || (c.href !== '/' && location.pathname.startsWith(c.href)))
+      || (link.href && location.pathname.startsWith(link.href))
+
     return (
-      <li className="relative" ref={ref}>
+      <li
+        className="relative"
+        ref={ref}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         <button
           onClick={() => setOpen(o => !o)}
           aria-expanded={open}
@@ -83,7 +103,7 @@ function NavItem({ link }) {
             />
           )}
         </button>
-        <DropdownMenu items={link.children} isOpen={open} />
+        <DropdownMenu items={link.children} isOpen={open} onClose={() => setOpen(false)} />
       </li>
     )
   }
@@ -112,7 +132,7 @@ function NavItem({ link }) {
 }
 
 /* ─────────────────────────────────────────
-   Mobile Nav Item
+   Mobile Nav Item — Accordion Expand/Collapse
 ───────────────────────────────────────── */
 function MobileNavItem({ link, onClose }) {
   const [open, setOpen] = useState(false)
@@ -216,25 +236,23 @@ export default function Navbar() {
           {/* ================= LOGO ================= */}
           <Link
             to="/"
-            className="flex items-center gap-5 shrink-0 overflow-visible group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8972B] rounded-lg"
+            className="flex items-center gap-4 shrink-0 overflow-visible group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8972B] rounded-lg"
             aria-label="Glory Education Center — Home"
           >
-            {/* Large Logo */}
             <div className="relative flex items-center justify-center shrink-0">
               <img
                 src={logo}
                 alt="Glory Education Center Logo"
-                className="w-[48px] h-[48px] lg:w-[52px] lg:h-[52px] object-contain transition-transform duration-300 group-hover:scale-105"
+                className="w-[44px] h-[44px] lg:w-[48px] lg:h-[48px] object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </div>
 
-            {/* Text */}
             <div className="leading-none">
-              <h1 className="text-[18px] font-bold text-white tracking-tight">
+              <h1 className="text-[17px] font-bold text-white tracking-tight">
                 Glory Education Center
               </h1>
 
-              <p className="mt-1 text-[10px] uppercase tracking-[0.22em] text-white/65 font-medium">
+              <p className="mt-1 text-[9px] uppercase tracking-[0.2em] text-white/65 font-medium">
                 Theological &amp; Music Education
               </p>
             </div>
@@ -245,25 +263,25 @@ export default function Navbar() {
             aria-label="Main navigation"
             className="hidden lg:flex items-center"
           >
-            <ul className="flex items-center gap-9 xl:gap-11">
+            <ul className="flex items-center gap-8 xl:gap-10">
               {navData.links.map((link) => (
-                <NavItem key={link.href} link={link} />
+                <NavItem key={link.label} link={link} />
               ))}
             </ul>
           </nav>
 
-          {/* ================= CTA ================= */}
+          {/* ================= CTA BUTTON ================= */}
           <div className="hidden lg:flex items-center">
             <Link
-              to="/admissions"
-              className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#C8972B] text-[#D4A843] text-xs font-bold uppercase tracking-[0.18em] transition-all duration-300 hover:bg-[#C8972B] hover:text-[#0B1526] hover:-translate-y-[1px] hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8972B]"
+              to="/admissions/apply"
+              className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#C8972B] bg-[#C8972B] text-[#0B1526] text-xs font-bold uppercase tracking-[0.16em] transition-all duration-300 hover:bg-[#D4A843] hover:-translate-y-[1px] hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8972B]"
             >
               Apply Now
               <span aria-hidden="true">→</span>
             </Link>
           </div>
 
-          {/* ================= MOBILE MENU ================= */}
+          {/* ================= MOBILE MENU BUTTON ================= */}
           <button
             className="lg:hidden p-2 rounded-lg text-white hover:bg-white/10 transition-colors"
             onClick={() => setMobileOpen((o) => !o)}
@@ -335,7 +353,7 @@ export default function Navbar() {
                 <ul className="px-4 py-5 space-y-1">
                   {navData.links.map(link => (
                     <MobileNavItem
-                      key={link.href}
+                      key={link.label}
                       link={link}
                       onClose={() => setMobileOpen(false)}
                     />
@@ -345,7 +363,7 @@ export default function Navbar() {
 
               <div className="px-6 py-4 border-t border-white/10">
                 <Link
-                  to="/admissions"
+                  to="/admissions/apply"
                   onClick={() => setMobileOpen(false)}
                   className="flex items-center justify-center gap-2 w-full py-3 rounded-full text-xs font-bold uppercase tracking-wider text-[#0B1526] bg-[#C8972B] hover:bg-[#D4A843] transition-all shadow-md"
                 >

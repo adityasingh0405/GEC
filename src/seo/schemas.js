@@ -10,10 +10,10 @@ export const organizationSchema = {
   foundingDate: siteData.founded,
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '123 Seminary Road',
-    addressLocality: 'City',
-    addressRegion: 'State',
-    postalCode: '400001',
+    streetAddress: 'WZ-18/13/3 Village Budella, Vikas Puri',
+    addressLocality: 'New Delhi',
+    addressRegion: 'Delhi',
+    postalCode: '110018',
     addressCountry: 'IN',
   },
   contactPoint: {
