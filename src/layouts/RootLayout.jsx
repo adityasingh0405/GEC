@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import { Suspense } from 'react'
 import SkipLink from '@components/common/SkipLink'
+import ScrollToTop from '@components/common/ScrollToTop'
 import Navbar from '@components/Navbar/Navbar'
 import Footer from '@components/Footer/Footer'
 import JsonLD from '@seo/JsonLD'
@@ -18,9 +19,11 @@ function PageLoader() {
 }
 
 export default function RootLayout() {
-
   return (
     <>
+      {/* Global Scroll-to-Top behavior on route navigation */}
+      <ScrollToTop />
+
       {/* Site-wide JSON-LD */}
       <JsonLD schema={organizationSchema} />
       <JsonLD schema={websiteSchema} />
