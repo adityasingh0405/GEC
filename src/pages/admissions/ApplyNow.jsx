@@ -11,6 +11,7 @@ import admissionsData from '@content/admissions.json'
 export default function ApplyNow() {
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [submitError, setSubmitError] = useState(false)
 
   const [formData, setFormData] = useState({
     fullName: '',
@@ -42,30 +43,52 @@ export default function ApplyNow() {
     }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     setLoading(true)
+    setSubmitError(false)
 
-    // Netlify form submission handling
-    const encodedData = new URLSearchParams({
-      'form-name': 'gec-online-application',
-      ...formData
-    }).toString()
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/gec1322@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          ...formData,
+          _subject: 'New Admission Enquiry',
+          _template: 'table',
+          _captcha: 'true'
+        })
+      })
 
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encodedData
-    })
-      .then(() => {
-        setLoading(false)
+      if (response.ok) {
+        setFormData({
+          fullName: '',
+          email: '',
+          phone: '',
+          dob: '',
+          gender: 'Male',
+          address: '',
+          program: '',
+          education: '',
+          churchName: '',
+          pastorName: '',
+          testimony: '',
+          declaration: false,
+          'bot-field': '',
+        })
         setSubmitted(true)
-      })
-      .catch((error) => {
-        console.error('Form submission error:', error)
-        setLoading(false)
-        setSubmitted(true) // Fallback for local preview
-      })
+      } else {
+        setSubmitError(true)
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
+      setSubmitError(true)
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -91,10 +114,10 @@ export default function ApplyNow() {
                 <CheckIcon className="w-8 h-8" />
               </div>
               <h2 className="font-display text-3xl font-bold text-[#1E3A5F] mb-3">
-                Application Submitted Successfully!
+                Thank you!
               </h2>
               <p className="text-[#5A6A7A] leading-relaxed max-w-lg mx-auto mb-6">
-                Thank you for applying to Glory Education Center. Your application reference ID is <strong>#GEC-2026-{Math.floor(1000 + Math.random() * 9000)}</strong>. Our admissions committee will review your submission and email you within 2–3 business days.
+                Your submission has been received.
               </p>
               <Button href="/" variant="primary" size="md">
                 Return to Home
@@ -103,18 +126,18 @@ export default function ApplyNow() {
           ) : (
             <form
               name="gec-online-application"
-              method="POST"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
               onSubmit={handleSubmit}
               className="space-y-8"
             >
-              <input type="hidden" name="form-name" value="gec-online-application" />
-              <p className="hidden">
-                <label>
-                  Don't fill this out if human: <input name="bot-field" onChange={handleChange} />
-                </label>
-              </p>
+              <input type="hidden" name="_subject" value="New Admission Enquiry" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="true" />
+
+              {submitError && (
+                <div className="p-4 text-center bg-rose-50 text-rose-700 rounded-sm border border-rose-200 text-sm font-sans" role="alert">
+                  Something went wrong. Please try again.
+                </div>
+              )}
 
               {/* Step 1: Personal Info */}
               <div>
@@ -262,7 +285,7 @@ export default function ApplyNow() {
                 loading={loading}
                 className="w-full justify-center text-base"
               >
-                Submit Application Now
+                {loading ? 'Sending...' : 'Submit Application Now'}
               </Button>
             </form>
           )}

@@ -6,7 +6,12 @@ export const organizationSchema = {
   name: siteData.name,
   description: siteData.description,
   url: siteData.domain,
-  logo: `${siteData.domain}/logo.svg`,
+  logo: {
+    '@type': 'ImageObject',
+    url: `${siteData.domain}/logo.png`,
+    width: 512,
+    height: 512,
+  },
   foundingDate: siteData.founded,
   address: {
     '@type': 'PostalAddress',
@@ -22,7 +27,11 @@ export const organizationSchema = {
     email: siteData.contact.email,
     contactType: 'admissions',
   },
-  sameAs: Object.values(siteData.social),
+  sameAs: [
+    siteData.social.facebook,
+    siteData.social.instagram,
+    siteData.social.youtube,
+  ].filter(Boolean),
 }
 
 export const websiteSchema = {
@@ -64,6 +73,47 @@ export function breadcrumbSchema(items) {
       position: index + 1,
       name: item.label,
       item: `${siteData.domain}${item.href}`,
+    })),
+  }
+}
+
+export function newsArticleSchema(article) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'NewsArticle',
+    headline: article.title,
+    description: article.excerpt,
+    datePublished: article.date,
+    author: {
+      '@type': 'Organization',
+      name: article.author || siteData.name,
+    },
+    publisher: {
+      '@type': 'EducationalOrganization',
+      name: siteData.name,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteData.domain}/logo.png`,
+      },
+    },
+    url: `${siteData.domain}/news/${article.slug}`,
+    ...(article.image?.startsWith('http')
+      ? { image: article.image }
+      : {}),
+  }
+}
+
+export function faqSchema(faqItems) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItems.map(item => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
     })),
   }
 }

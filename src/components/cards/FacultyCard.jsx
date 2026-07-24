@@ -10,7 +10,7 @@ export default function FacultyCard({ member, onClick }) {
       variants={cardHover}
       initial="rest"
       whileHover="hover"
-      className="bg-white rounded-2xl overflow-hidden border border-[#DDE3EC] text-center cursor-pointer"
+      className="bg-white rounded-sm overflow-hidden border border-[#DDE3EC] border-t-2 border-t-[#C8972B] text-center cursor-pointer"
       style={{ boxShadow: 'var(--shadow-sm)' }}
       onClick={onClick}
       onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && onClick?.()}
@@ -21,7 +21,7 @@ export default function FacultyCard({ member, onClick }) {
       {/* Avatar */}
       <div className="relative bg-gradient-to-br from-[#EFF3F8] to-[#DDE3EC] aspect-square overflow-hidden">
         <img
-          src={`/images/placeholder-faculty.jpg`}
+          src={member.image || "/images/placeholder-faculty.jpg"}
           alt={`Portrait of ${member.name}`}
           loading="lazy"
           decoding="async"

@@ -100,10 +100,10 @@ export default function Admissions() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/80 shadow-xl shadow-slate-900/5 border-t-4 border-t-[#C8972B] relative overflow-hidden"
+              className="bg-white rounded-sm p-8 sm:p-12 border border-slate-200 shadow-md border-t-4 border-t-[#C8972B] relative overflow-hidden"
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-[#0B1526] text-[#C8972B] flex items-center justify-center font-bold shadow-md">
+                <div className="w-10 h-10 rounded-sm bg-[#0B1526] text-[#C8972B] flex items-center justify-center font-bold shadow-sm">
                   <AcademicCapIcon className="w-5 h-5" />
                 </div>
                 <div>
@@ -120,7 +120,7 @@ export default function Admissions() {
                 Glory Education Center welcomes called men and women from diverse Christian traditions who desire to ground their lives, leadership, and worship in the uncompromised Word of God. Our admissions process is designed to discern spiritual maturity, academic readiness, and a genuine heart for gospel service.
               </p>
 
-              <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#E8D4A2] text-[#1E3A5F] flex items-center gap-3 text-xs sm:text-sm font-semibold">
+              <div className="p-4 rounded-sm bg-[#FAF8F5] border border-[#E8D4A2] text-[#1E3A5F] flex items-center gap-3 text-xs sm:text-sm font-semibold">
                 <SparklesIcon className="w-5 h-5 text-[#C8972B] shrink-0" />
                 <span>{admissionsData.intake}</span>
               </div>
@@ -153,9 +153,9 @@ export default function Admissions() {
                       variants={staggerItem}
                       whileHover={{ y: -5 }}
                       transition={{ duration: 0.3 }}
-                      className="p-8 rounded-3xl bg-white border border-slate-200/80 shadow-lg shadow-slate-900/5 border-t-4 border-t-[#C8972B] hover:shadow-xl transition-all"
+                      className="p-8 rounded-sm bg-white border border-slate-200 shadow-md border-t-4 border-t-[#C8972B] hover:shadow-lg transition-all"
                     >
-                      <div className="w-12 h-12 rounded-2xl bg-[#0B1526] text-[#C8972B] flex items-center justify-center mb-5 shadow-md">
+                      <div className="w-12 h-12 rounded-sm bg-[#0B1526] text-[#C8972B] flex items-center justify-center mb-5 shadow-sm">
                         <Icon className="w-6 h-6" />
                       </div>
                       <h3 className="font-display text-xl font-bold text-[#1E3A5F] mb-3">
@@ -189,9 +189,9 @@ export default function Admissions() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-md flex items-start gap-4 hover:border-[#1E3A5F] transition-all"
+                    className="p-6 rounded-sm bg-white border border-slate-200 shadow-sm flex items-start gap-4 hover:border-[#1E3A5F] transition-all"
                   >
-                    <div className="w-10 h-10 rounded-xl bg-[#0B1526] text-[#C8972B] font-black text-sm flex items-center justify-center shrink-0 shadow-sm">
+                    <div className="w-10 h-10 rounded-sm bg-[#0B1526] text-[#C8972B] font-black text-sm flex items-center justify-center shrink-0 shadow-sm">
                       {item.step}
                     </div>
                     <div>
@@ -220,7 +220,7 @@ export default function Admissions() {
               </div>
 
               {/* Table 1: On-Campus Students */}
-              <div className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-xl shadow-slate-900/5 space-y-6">
+              <div className="bg-white rounded-sm p-8 border border-slate-200 shadow-md border-t-4 border-t-[#1E3A5F] space-y-6">
                 <div className="flex items-center justify-between border-b border-slate-200 pb-4">
                   <div>
                     <span className="text-xs font-bold text-[#C8972B] uppercase tracking-wider block">Residential Scholars</span>
@@ -228,7 +228,7 @@ export default function Admissions() {
                       Table 1: On-Campus Students
                     </h3>
                   </div>
-                  <span className="px-3 py-1 rounded-full bg-[#0B1526] text-[#C8972B] text-xs font-bold">Includes Room &amp; Board</span>
+                  <span className="px-3 py-1 rounded-sm bg-[#0B1526] text-[#C8972B] text-xs font-bold uppercase tracking-wider">Includes Room &amp; Board</span>
                 </div>
 
                 <div className="overflow-x-auto">
@@ -270,7 +270,7 @@ export default function Admissions() {
               </div>
 
               {/* Table 2: Correspondence / Day Scholars */}
-              <div className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-xl shadow-slate-900/5 space-y-6">
+              <div className="bg-white rounded-sm p-8 border border-slate-200 shadow-md border-t-4 border-t-[#1E3A5F] space-y-6">
                 <div className="flex items-center justify-between border-b border-slate-200 pb-4">
                   <div>
                     <span className="text-xs font-bold text-[#C8972B] uppercase tracking-wider block">Non-Residential / Distance</span>
@@ -278,7 +278,7 @@ export default function Admissions() {
                       Table 2: Correspondence / Day Scholars
                     </h3>
                   </div>
-                  <span className="px-3 py-1 rounded-full bg-[#EFF3F8] text-[#1E3A5F] text-xs font-bold">Tuition Only</span>
+                  <span className="px-3 py-1 rounded-sm bg-[#EFF3F8] text-[#1E3A5F] text-xs font-bold uppercase tracking-wider">Tuition Only</span>
                 </div>
 
                 <div className="overflow-x-auto">
@@ -326,12 +326,10 @@ export default function Admissions() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-gradient-to-br from-[#0B1526] to-[#152940] rounded-3xl p-8 sm:p-12 text-white shadow-2xl border border-white/10 text-center relative overflow-hidden"
+              className="bg-gradient-to-br from-[#0B1526] to-[#152940] rounded-sm p-8 sm:p-12 text-white shadow-xl border border-white/10 border-t-4 border-t-[#C8972B] text-center relative overflow-hidden"
             >
-              <div className="absolute top-0 right-0 w-48 h-48 bg-[#C8972B]/10 rounded-full blur-3xl pointer-events-none" />
-
               <div className="max-w-2xl mx-auto space-y-6">
-                <div className="w-12 h-12 rounded-2xl bg-[#C8972B] text-[#0B1526] flex items-center justify-center mx-auto shadow-lg font-bold">
+                <div className="w-12 h-12 rounded-sm bg-[#C8972B] text-[#0B1526] flex items-center justify-center mx-auto shadow-md font-bold">
                   <AcademicCapIcon className="w-6 h-6" />
                 </div>
 
@@ -346,7 +344,7 @@ export default function Admissions() {
                 <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Link
                     to="/admissions/apply"
-                    className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-[#C8972B] text-[#0B1526] text-xs font-bold uppercase tracking-wider hover:bg-[#D4A843] transition-all shadow-lg hover:-translate-y-0.5"
+                    className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-sm bg-[#C8972B] border border-[#C8972B] text-[#0B1526] text-xs font-bold uppercase tracking-wider hover:bg-[#D4A843] hover:border-[#D4A843] transition-all shadow-md hover:-translate-y-0.5"
                   >
                     <span>Apply Online Now</span>
                     <ArrowRightIcon className="w-4 h-4" />
@@ -354,7 +352,7 @@ export default function Admissions() {
 
                   <Link
                     to="/contact"
-                    className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full border border-white/30 text-white text-xs font-bold uppercase tracking-wider hover:bg-white/10 transition-all"
+                    className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-sm border border-white/40 text-white text-xs font-bold uppercase tracking-wider hover:bg-white/10 transition-all hover:-translate-y-0.5 shadow-sm"
                   >
                     <span>Contact Admissions</span>
                   </Link>

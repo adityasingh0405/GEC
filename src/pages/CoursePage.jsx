@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import SEOHead from '@seo/SEOHead'
 import JsonLD from '@seo/JsonLD'
@@ -22,17 +21,27 @@ import {
 } from '@components/common/Icons'
 import { fadeInUp } from '@utils/animations'
 import coursesData from '@content/courses.json'
+import { documents } from '@content/documents.js'
+
+/** Map each course slug to its entry in the documents registry */
+const slugToDocument = {
+  'bth': documents.bth,
+  'mdv': documents.mdiv,
+  'mth': documents.mth,
+  'diploma-music': documents.diplomaMusic,
+  'diploma-church-planting': documents.diplomaChurchPlanting,
+}
 
 const mdvIcons = [BookOpenIcon, AcademicCapIcon, ShieldCheckIcon, Globe, HeartIcon, SparklesIcon]
 
 export default function CoursePage({ slug }) {
-  const [downloadMsg, setDownloadMsg] = useState(false)
+  const doc = slugToDocument[slug] ?? null
   const course = coursesData.find(c => c.slug === slug)
 
   if (!course) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-[#F8FAFC]">
-        <div className="text-center p-8 bg-white rounded-3xl border border-slate-200 shadow-xl">
+        <div className="text-center p-8 bg-white rounded-sm border border-slate-200 shadow-md border-t-4 border-t-[#C8972B]">
           <h1 className="text-2xl font-bold text-[#1E3A5F] mb-2">Program Not Found</h1>
           <p className="text-slate-500 mb-6">The requested academic course could not be located.</p>
           <Button href="/courses" variant="primary" size="md">View All Programs</Button>
@@ -41,11 +50,8 @@ export default function CoursePage({ slug }) {
     )
   }
 
-  const handleDownloadProspectus = (e) => {
-    e.preventDefault()
-    setDownloadMsg(true)
-    setTimeout(() => setDownloadMsg(false), 5000)
-  }
+  // Prospectus URL is sourced from src/content/documents.js
+  const prospectusUrl = doc?.url ?? null
 
   const seoPage = `/courses/${slug}`
   const breadcrumbs = [
@@ -74,9 +80,9 @@ export default function CoursePage({ slug }) {
           <div className="relative z-10 max-w-4xl">
             <Breadcrumb customCrumbs={breadcrumbs} />
             <div className="flex items-center gap-3 mt-4 mb-4">
-              <span className="text-xs font-bold text-white/70 uppercase tracking-widest bg-white/10 px-3 py-1 rounded-full">{course.category}</span>
-              <span className="w-1 h-1 rounded-full bg-white/30" aria-hidden="true" />
-              <span className="text-xs font-bold text-[#C8972B] uppercase tracking-widest bg-white/10 px-3 py-1 rounded-full">{course.level}</span>
+              <span className="text-xs font-bold text-white/70 uppercase tracking-widest bg-white/10 px-3 py-1 rounded-sm border border-white/20">{course.category}</span>
+              <span className="w-1 h-1 bg-white/30" aria-hidden="true" />
+              <span className="text-xs font-bold text-[#C8972B] uppercase tracking-widest bg-white/10 px-3 py-1 rounded-sm border border-[#C8972B]/30">{course.level}</span>
             </div>
             <h1 id="course-title" className="font-display text-4xl sm:text-5xl font-bold text-white mb-2 leading-tight">
               {course.title}
@@ -86,32 +92,26 @@ export default function CoursePage({ slug }) {
 
             {/* Quick facts & Actions */}
             <div className="flex flex-wrap items-center gap-4">
-              <div className="flex items-center gap-2 bg-white/10 border border-white/15 rounded-full px-4 py-2 text-sm text-white/90 font-medium">
+              <div className="flex items-center gap-2 bg-white/10 border border-white/15 rounded-sm px-4 py-2 text-xs font-bold uppercase tracking-wider text-white/90">
                 <ClockIcon className="w-4 h-4 text-[#C8972B]" />
                 Duration: {course.duration}
               </div>
-              <div className="flex items-center gap-2 bg-white/10 border border-white/15 rounded-full px-4 py-2 text-sm text-white/90 font-medium">
+              <div className="flex items-center gap-2 bg-white/10 border border-white/15 rounded-sm px-4 py-2 text-xs font-bold uppercase tracking-wider text-white/90">
                 <AcademicCapIcon className="w-4 h-4 text-[#C8972B]" />
                 Level: {course.level}
               </div>
-              <button
-                onClick={handleDownloadProspectus}
-                className="flex items-center gap-2 bg-[#C8972B] hover:bg-[#D4A843] text-[#0B1526] font-bold rounded-full px-6 py-2.5 text-sm transition-all shadow-lg hover:scale-105"
-              >
-                <DownloadIcon className="w-4 h-4" />
-                Download Prospectus
-              </button>
+              {prospectusUrl && (
+                <a
+                  href={prospectusUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-[#C8972B] hover:bg-[#D4A843] border border-[#C8972B] text-[#0B1526] font-bold uppercase tracking-wider rounded-sm px-6 py-2.5 text-xs transition-all shadow-md hover:-translate-y-0.5"
+                >
+                  <DownloadIcon className="w-4 h-4" />
+                  Download Prospectus
+                </a>
+              )}
             </div>
-
-            {downloadMsg && (
-              <motion.div
-                initial={{ opacity: 0, y: 5 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="mt-4 p-3 bg-white/20 backdrop-blur border border-white/30 text-white text-xs rounded-xl"
-              >
-                📥 // TODO: Replace with client content — Official Academic Prospectus download requested.
-              </motion.div>
-            )}
           </div>
         </Container>
       </section>
@@ -131,10 +131,10 @@ export default function CoursePage({ slug }) {
                 whileInView="visible"
                 viewport={{ once: true }}
                 aria-labelledby="overview-heading"
-                className="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/80 shadow-lg shadow-slate-900/5"
+                className="bg-white rounded-sm p-8 sm:p-10 border border-slate-200 shadow-md border-t-4 border-t-[#1E3A5F]"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#0B1526] text-[#C8972B] flex items-center justify-center font-bold shadow-md">
+                  <div className="w-10 h-10 rounded-sm bg-[#0B1526] text-[#C8972B] flex items-center justify-center font-bold shadow-sm">
                     <BookOpenIcon className="w-5 h-5" />
                   </div>
                   <div>
@@ -155,10 +155,10 @@ export default function CoursePage({ slug }) {
                   whileInView="visible"
                   viewport={{ once: true }}
                   aria-labelledby="whofor-heading"
-                  className="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/80 shadow-lg shadow-slate-900/5 border-l-4 border-l-[#C8972B]"
+                  className="bg-white rounded-sm p-8 sm:p-10 border border-slate-200 shadow-md border-l-4 border-l-[#C8972B]"
                 >
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-[#EFF3F8] text-[#1E3A5F] flex items-center justify-center font-bold">
+                    <div className="w-10 h-10 rounded-sm bg-[#EFF3F8] text-[#1E3A5F] flex items-center justify-center font-bold">
                       <UserGroupIcon className="w-5 h-5 text-[#C8972B]" />
                     </div>
                     <div>
@@ -197,9 +197,9 @@ export default function CoursePage({ slug }) {
                         return (
                           <div
                             key={idx}
-                            className="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-md hover:border-[#1E3A5F] hover:shadow-lg transition-all"
+                            className="p-6 rounded-sm bg-white border border-slate-200 border-t-2 border-t-[#C8972B] shadow-sm hover:border-[#1E3A5F] hover:shadow-md transition-all"
                           >
-                            <div className="w-10 h-10 rounded-xl bg-[#0B1526] text-[#C8972B] flex items-center justify-center mb-4 shadow-sm">
+                            <div className="w-10 h-10 rounded-sm bg-[#0B1526] text-[#C8972B] flex items-center justify-center mb-4 shadow-sm">
                               <Icon className="w-5 h-5" />
                             </div>
                             <h3 className="font-bold text-[#1E3A5F] text-base mb-2">{title}</h3>
@@ -214,8 +214,8 @@ export default function CoursePage({ slug }) {
                     /* General Learning Outcomes Cards */
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {course.learningOutcomes.map((outcome, idx) => (
-                        <div key={idx} className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm flex items-start gap-3.5">
-                          <div className="w-8 h-8 rounded-lg bg-[#C8972B]/15 text-[#C8972B] flex items-center justify-center shrink-0 mt-0.5 font-bold">
+                        <div key={idx} className="p-5 rounded-sm bg-white border border-slate-200 shadow-xs flex items-start gap-3.5">
+                          <div className="w-8 h-8 rounded-sm bg-[#C8972B]/15 text-[#C8972B] flex items-center justify-center shrink-0 mt-0.5 font-bold">
                             <SparklesIcon className="w-4 h-4" />
                           </div>
                           <span className="text-xs sm:text-sm text-slate-700 leading-relaxed font-sans">{outcome}</span>
@@ -240,7 +240,7 @@ export default function CoursePage({ slug }) {
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {course.objectives.map((obj, i) => (
-                      <div key={i} className="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-xs flex items-start gap-3">
+                      <div key={i} className="p-4 rounded-sm bg-white border border-slate-200 shadow-xs flex items-start gap-3">
                         <CheckIcon className="w-4 h-4 text-[#C8972B] shrink-0 mt-1" />
                         <span className="text-xs sm:text-sm text-slate-700 leading-relaxed">{obj}</span>
                       </div>
@@ -257,7 +257,7 @@ export default function CoursePage({ slug }) {
                   whileInView="visible"
                   viewport={{ once: true }}
                   aria-labelledby="curriculum-heading"
-                  className="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/80 shadow-lg shadow-slate-900/5"
+                  className="bg-white rounded-sm p-8 sm:p-10 border border-slate-200 shadow-md border-t-4 border-t-[#1E3A5F]"
                 >
                   <div className="mb-6">
                     <span className="text-xs font-bold text-[#C8972B] uppercase tracking-widest block">Syllabus Breakdown</span>
@@ -270,7 +270,7 @@ export default function CoursePage({ slug }) {
                     {course.curriculum.map((yr, i) => (
                       <div key={i} className="space-y-4">
                         <div className="flex items-center gap-3">
-                          <span className="w-8 h-8 rounded-full bg-[#0B1526] text-[#C8972B] font-bold text-xs flex items-center justify-center shadow-sm">
+                          <span className="w-8 h-8 rounded-sm bg-[#0B1526] text-[#C8972B] font-bold text-xs flex items-center justify-center shadow-sm">
                             Y{i + 1}
                           </span>
                           <h3 className="font-display text-xl font-bold text-[#1E3A5F]">
@@ -284,14 +284,14 @@ export default function CoursePage({ slug }) {
                             yr.semesters.map((sem, j) => (
                               <div
                                 key={j}
-                                className="p-6 rounded-2xl bg-[#FAF8F5] border border-[#E8D4A2]/70 shadow-sm hover:shadow-md hover:border-[#C8972B] transition-all flex flex-col justify-between"
+                                className="p-6 rounded-sm bg-[#FAF8F5] border border-[#E8D4A2]/70 border-t-2 border-t-[#C8972B] shadow-sm hover:shadow-md hover:border-[#C8972B] transition-all flex flex-col justify-between"
                               >
                                 <div>
                                   <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-200">
                                     <span className="font-bold text-[#1E3A5F] text-sm uppercase tracking-wider">
                                       {sem.term}
                                     </span>
-                                    <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-[#C8972B]/20 text-[#966E1A]">
+                                    <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-sm bg-[#C8972B]/20 text-[#966E1A] uppercase tracking-wider">
                                       {sem.subjects.length} Subjects
                                     </span>
                                   </div>
@@ -307,7 +307,7 @@ export default function CoursePage({ slug }) {
                               </div>
                             ))
                           ) : (
-                            <div className="col-span-2 p-6 rounded-2xl bg-[#FAF8F5] border border-slate-200">
+                            <div className="col-span-2 p-6 rounded-sm bg-[#FAF8F5] border border-slate-200">
                               <ul className="space-y-2">
                                 {yr.subjects.map((subj, k) => (
                                   <li key={k} className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-700 font-sans">
@@ -339,8 +339,8 @@ export default function CoursePage({ slug }) {
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {course.careers.map((career, i) => (
-                      <div key={i} className="flex items-center gap-3 p-4 bg-white rounded-2xl border border-slate-200/80 shadow-xs">
-                        <span className="w-2.5 h-2.5 rounded-full bg-[#C8972B] shrink-0" aria-hidden="true" />
+                      <div key={i} className="flex items-center gap-3 p-4 bg-white rounded-sm border border-slate-200 shadow-xs border-l-2 border-l-[#C8972B]">
+                        <span className="w-2 h-2 bg-[#C8972B] shrink-0" aria-hidden="true" />
                         <span className="text-xs sm:text-sm font-semibold text-slate-700">{career}</span>
                       </div>
                     ))}
@@ -371,7 +371,7 @@ export default function CoursePage({ slug }) {
 
                 {/* Apply CTA Card */}
                 <div
-                  className="p-8 rounded-3xl border-2 text-center bg-white shadow-xl"
+                  className="p-8 rounded-sm border-2 text-center bg-white shadow-md border-t-4 border-t-[#1E3A5F]"
                   style={{ borderColor: course.color || '#1E3A5F' }}
                 >
                   <span className="text-xs font-bold text-[#C8972B] uppercase tracking-widest block mb-1">Enroll Today</span>
@@ -384,17 +384,21 @@ export default function CoursePage({ slug }) {
                   <Button href="/admissions/apply" variant="primary" size="md" className="w-full justify-center shadow-md">
                     Apply Online
                   </Button>
-                  <button
-                    onClick={handleDownloadProspectus}
-                    className="w-full mt-3 py-2.5 px-4 rounded-xl border border-slate-200 text-[#1E3A5F] text-xs font-bold hover:bg-[#EFF3F8] transition-colors flex items-center justify-center gap-2"
-                  >
-                    <DownloadIcon className="w-4 h-4" /> Download Prospectus
-                  </button>
+                  {prospectusUrl && (
+                    <a
+                      href={prospectusUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full mt-3 py-2.5 px-4 rounded-sm border border-slate-200 text-[#1E3A5F] text-xs font-bold uppercase tracking-wider hover:bg-[#EFF3F8] transition-colors flex items-center justify-center gap-2"
+                    >
+                      <DownloadIcon className="w-4 h-4" /> Download Prospectus
+                    </a>
+                  )}
                 </div>
 
                 {/* Required Credentials */}
                 {course.admissionRequirements && (
-                  <div className="p-6 rounded-3xl bg-white border border-slate-200/80 shadow-md">
+                  <div className="p-6 rounded-sm bg-white border border-slate-200 shadow-sm">
                     <h3 className="font-bold text-[#1E3A5F] text-sm uppercase tracking-wider mb-4 flex items-center gap-2">
                       <ShieldCheckIcon className="w-4 h-4 text-[#C8972B]" />
                       Admission Requirements

@@ -1,56 +1,119 @@
 [
   {
     "id": "f1",
-    "name": "Rev. Dr. Samuel Thomas",
-    "title": "Principal & Professor of Systematic Theology",
-    "qualifications": "B.Th, M.Dv, Ph.D. (Theology)",
-    "bio": "Rev. Dr. Samuel Thomas has served in ministry and theological education for over 30 years. His research focuses on Reformed Theology and the theology of mission. He is a sought-after speaker and retreat leader.",
-    "image": "faculty-samuel.jpg",
-    "specialization": "Systematic Theology, Missiology"
+    "name": "Dr. Henry",
+    "title": "Director & Principal",
+    "qualifications": "LL.M., Ph.D.",
+    "bio": "Dr. Henry is a writer, musician, pastor, missionary, and educator. As the Director and Principal of Glory Education Centre (GEC), he provides leadership in academic excellence, Christian education, and ministry. He is committed to equipping students through quality education, spiritual development, and community service.",
+    "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/Henry?updatedAt=1784916862186",
+    "specialization": "Leadership, Christian Education, Ministry"
   },
   {
     "id": "f2",
-    "name": "Dr. Grace Mathew",
-    "title": "Dean of Academics & Associate Professor of Biblical Studies",
-    "qualifications": "B.Th, M.Th, Ph.D. (Biblical Studies)",
-    "bio": "Dr. Grace Mathew is a passionate biblical scholar with a specialization in New Testament studies. She has published widely on Pauline literature and is committed to integrating scholarship with spiritual formation.",
-    "image": "faculty-grace.jpg",
-    "specialization": "New Testament, Hermeneutics"
+    "name": "H. Lunjohnson Misao",
+    "title": "Academic Dean",
+    "qualifications": "B.A. (Manipur University), B.D., M.Th. in Christian Ministry (Education)",
+    "bio": "H. Lunjohnson Misao completed his B.A. from Manipur University, followed by a Bachelor of Divinity and an M.Th. in Christian Ministry (Education) under the Senate of Serampore College. After serving in pastoral ministry, he joined Glory Education Centre as a full-time faculty member and now serves as Academic Dean.",
+    "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/Misao?updatedAt=1784916832008",
+    "specialization": "Christian Ministry, Education, Academic Leadership"
   },
   {
     "id": "f3",
-    "name": "Pastor Joel Abraham",
-    "title": "Dean of Students & Lecturer in Pastoral Theology",
-    "qualifications": "B.Th, M.Dv",
-    "bio": "Pastor Joel Abraham brings 20 years of pastoral experience to his role. He lectures in counseling, leadership, and pastoral care, drawing from rich ministry experience across urban and rural church contexts.",
-    "image": "faculty-joel.jpg",
-    "specialization": "Pastoral Theology, Counseling, Leadership"
+    "name": "Lhiwetshou Tsuhah",
+    "title": "Teaching Faculty & Students Dean",
+    "qualifications": "M.Th. in Pastoral Counselling",
+    "bio": "Lhiwetshou Tsuhah holds an M.Th. in Pastoral Counselling from India Baptist Theological Seminary, Kottayam. He has served as a missionary teacher in South Sikkim, a women's ministry leader, and an assistant in charge at El Shaddai. He currently serves as Teaching Faculty and Students Dean at GEC.",
+    "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/Tsuhah?updatedAt=1784916914995",
+    "specialization": "Pastoral Counselling, Student Development, Mission"
   },
   {
     "id": "f4",
-    "name": "Prof. Mary Daniel",
-    "title": "Head of Music Department & Professor of Music",
-    "qualifications": "Dip. Music, B.Mus, M.Mus",
-    "bio": "Prof. Mary Daniel is an accomplished vocalist and music educator with expertise in church music, worship leadership, and choral direction. She has led worship in conferences across Asia.",
-    "image": "faculty-mary.jpg",
-    "specialization": "Vocal Training, Worship Theology, Choral Direction"
+    "name": "Miss Elis",
+    "title": "Lecturer & Warden",
+    "qualifications": "M.Div. (Master of Divinity)",
+    "bio": "Miss Elis serves as Lecturer and Warden at Glory Education Centre. She is passionate about teaching, discipleship, mentoring students, and providing spiritual guidance while fostering a Christ-centered and disciplined learning environment.",
+    "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/%20Elis?updatedAt=1784916954966",
+    "specialization": "Biblical Studies, Student Mentoring, Discipleship"
   },
   {
     "id": "f5",
-    "name": "Dr. Philip George",
-    "title": "Professor of Church History",
-    "qualifications": "B.Th, M.Th, Ph.D. (Church History)",
-    "bio": "Dr. Philip George is a historian of the early church and the global missionary movement. He teaches Church History I & II and has authored two books on the spread of Christianity in South Asia.",
-    "image": "faculty-philip.jpg",
-    "specialization": "Church History, Patristics, Mission History"
+    "name": "Akhilesh Kumar",
+    "title": "Boys Warden",
+    "qualifications": "B.A. (IGNOU), B.Th. (Caleb Institute), LL.B. (Pursuing)",
+    "bio": "Akhilesh Kumar serves as the Boys Warden at GEC. He is committed to student care, Christian ministry, leadership, and providing spiritual guidance while pursuing a Bachelor of Laws (LL.B.).",
+    "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/Akhilesh%20?updatedAt=1784916974615",
+    "specialization": "Student Care, Leadership, Christian Ministry"
   },
   {
     "id": "f6",
-    "name": "Mrs. Esther Paul",
-    "title": "Lecturer in Old Testament",
-    "qualifications": "B.Th, M.Th (OT)",
-    "bio": "Mrs. Esther Paul holds an M.Th in Old Testament studies and teaches Hebrew language, Old Testament survey, and exegesis. She is known for making ancient texts come alive for contemporary students.",
-    "image": "faculty-esther.jpg",
-    "specialization": "Old Testament, Hebrew Language"
+    "name": "Bei Ho Valia",
+    "title": "Lecturer",
+    "qualifications": "B.Ed., M.Th. (Martin Luther Christian University)",
+    "bio": "Bei Ho Valia is a dedicated lecturer committed to academic excellence and Christian ministry. He is passionate about mentoring students and equipping future leaders with sound theological knowledge and strong Christian character.",
+    "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/Valia?updatedAt=1784916994525",
+    "specialization": "Theology, Christian Ministry, Mentorship"
+  },
+  {
+    "id": "f7",
+    "name": "Rev. Samuel",
+    "title": "Bishop & GEC Faculty",
+    "qualifications": "M.Th.",
+    "bio": "Rev. Samuel serves as a Bishop and faculty member at Glory Education Centre. He is actively involved in pastoral ministry, biblical teaching, mentoring students, and preparing future Christian leaders through faithful service.",
+    "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/Samuel?updatedAt=1784917015999",
+    "specialization": "Pastoral Ministry, Biblical Teaching, Christian Leadership"
+  },
+  {
+    "id": "f8",
+    "name": "Gin Piang",
+    "title": "Lecturer",
+    "qualifications": "M.Th. in Missiology",
+    "bio": "Gin Piang accepted Christ during his teenage years and completed his Master of Theology in Missiology. As a preacher, pastor, and lecturer at GEC, he is dedicated to teaching, mentoring students, and equipping believers for Christian ministry.",
+    "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/%20Piang?updatedAt=1784917085427",
+    "specialization": "Missiology, Pastoral Ministry, Christian Education"
+  },
+  {
+    "id": "f9",
+    "name": "Rev. Nay Lin Aung",
+    "title": "Lecturer",
+    "qualifications": "M.Th.",
+    "bio": "Rev. Nay Lin Aung serves as Pastor of Khumi Christian Church and Lecturer at Glory Education Centre. He is committed to preaching God's Word, mentoring students, and preparing believers for faithful Christian ministry.",
+    "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/Aung?updatedAt=1784917101341",
+    "specialization": "Theology, Pastoral Ministry, Biblical Teaching"
+  },
+  {
+    "id": "f10",
+    "name": "Dal Lam Thang",
+    "title": "Music Teacher",
+    "qualifications": "B.A., Diploma in Music (Guitar Major)",
+    "bio": "Dal Lam Thang is a dedicated music educator and guitarist with expertise in guitar, piano, choir, and music theory. He is passionate about helping students develop their musical gifts through practical and disciplined learning.",
+    "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/Thang?updatedAt=1784917114958",
+    "specialization": "Guitar, Piano, Choir, Music Theory"
+  },
+  {
+    "id": "f11",
+    "name": "Sir Solomon",
+    "title": "Computer Teacher & Technical Support",
+    "qualifications": "",
+    "bio": "Sir Solomon manages the institution's technical infrastructure, including computers, biometric systems, and attendance management. During the Summer Course, he teaches Computer Studies and faithfully supports the technological development of Glory Education Centre.",
+    "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/Solomon?updatedAt=1784917128362",
+    "specialization": "Computer Studies, Technical Support, IT Administration"
+  },
+  {
+    "id": "f12",
+    "name": "Rebecca",
+    "title": "Accountant",
+    "qualifications": "B.Th. (Bachelor of Theology)",
+    "bio": "Rebecca serves as the Accountant at Glory Education Centre. She faithfully oversees financial management and administration with integrity and responsibility, supporting the institution's mission of providing quality Christian education.",
+    "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/Rebecca?updatedAt=1784917151348",
+    "specialization": "Finance, Administration, Institutional Management"
+  },
+  {
+    "id": "f13",
+    "name": "Daniel Ngun Nang",
+    "title": "Chef & Manager",
+    "qualifications": "",
+    "bio": "Daniel Ngun Nang has faithfully served at Glory Education Centre for several years as Chef and Manager. Alongside managing daily operations, he actively participates in youth ministry, encouraging young people to grow in their faith through servant leadership.",
+    "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/%20Nang?updatedAt=1784917172033",
+    "specialization": "Operations Management, Hospitality, Youth Ministry"
   }
 ]

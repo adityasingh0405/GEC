@@ -12,15 +12,13 @@ export default function CTA({ heading, body, primaryCta, secondaryCta, dark = tr
       className={`relative overflow-hidden ${dark ? 'gradient-hero' : 'bg-[#EFF3F8]'}`}
       aria-labelledby="cta-heading"
     >
-      {/* Decorative circles */}
+      {/* Decorative accent lines */}
       <div
-        className="absolute -top-20 -right-20 w-80 h-80 rounded-full opacity-10 pointer-events-none"
-        style={{ background: 'radial-gradient(circle, #C8972B, transparent)' }}
+        className="absolute top-0 inset-x-0 h-[2px] bg-[#C8972B]"
         aria-hidden="true"
       />
       <div
-        className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full opacity-10 pointer-events-none"
-        style={{ background: 'radial-gradient(circle, #C8972B, transparent)' }}
+        className="absolute bottom-0 inset-x-0 h-[2px] bg-[#C8972B]/30"
         aria-hidden="true"
       />
 

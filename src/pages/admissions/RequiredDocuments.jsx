@@ -79,12 +79,15 @@ export default function RequiredDocuments() {
               description="Printable reference form to be filled and sealed by your local church pastor."
               format="PDF"
               size="450 KB"
+              href="https://ik.imagekit.io/xdm1pwpls0/pdfs/Pastor_s%20Reference%20Form.pdf"
             />
+
             <DownloadCard
               title="Official GEC Prospectus 2026–2027"
               description="Comprehensive institutional guide with course structures and campus policies."
               format="PDF"
               size="4.2 MB"
+              href="https://ik.imagekit.io/xdm1pwpls0/pdfs/GCI%20Prospectus.pdf"
             />
           </div>
         </div>

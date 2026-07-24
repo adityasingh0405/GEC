@@ -39,12 +39,14 @@ export default function LeadershipFaculty() {
             <motion.div
               key={i}
               variants={staggerItem}
-              className="bg-[#F8F9FA] rounded-2xl p-6 text-center border border-[#DDE3EC]"
+              className="bg-[#F8F9FA] rounded-sm p-6 text-center border border-[#DDE3EC] border-t-2 border-t-[#C8972B]"
               style={{ boxShadow: 'var(--shadow-sm)' }}
             >
-              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#1E3A5F] to-[#2A5284] mx-auto mb-4 flex items-center justify-center text-white text-3xl font-bold">
-                {member.name.split(' ').slice(-1)[0].charAt(0)}
-              </div>
+              <img
+                src={member.image || "/images/placeholder-faculty.jpg"}
+                alt={member.name}
+                className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-2 border-[#C8972B]"
+              />
               <h3 className="font-bold text-[#1E3A5F] text-xl mb-1">{member.name}</h3>
               <p className="text-xs text-[#C8972B] font-bold uppercase tracking-wider mb-3">{member.title}</p>
               <p className="text-sm text-[#5A6A7A] leading-relaxed">{member.bio}</p>

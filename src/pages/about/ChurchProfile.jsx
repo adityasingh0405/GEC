@@ -48,9 +48,9 @@ export default function ChurchProfile() {
             <motion.div
               key={i}
               variants={staggerItem}
-              className="p-8 rounded-2xl bg-[#F8F9FA] border border-[#DDE3EC] text-center"
+              className="p-8 rounded-sm bg-[#F8F9FA] border border-[#DDE3EC] border-t-2 border-t-[#C8972B] text-center"
             >
-              <div className="w-12 h-12 rounded-xl bg-[#1E3A5F] text-[#C8972B] mx-auto mb-5 flex items-center justify-center font-bold text-lg">
+              <div className="w-12 h-12 rounded-sm bg-[#1E3A5F] text-[#C8972B] mx-auto mb-5 flex items-center justify-center font-bold text-lg">
                 0{i + 1}
               </div>
               <h3 className="font-bold text-[#1E3A5F] text-xl mb-3">{pillar.title}</h3>
@@ -59,7 +59,7 @@ export default function ChurchProfile() {
           ))}
         </motion.div>
 
-        <div className="p-8 rounded-2xl bg-[#EFF3F8] border border-[#DDE3EC]">
+        <div className="p-8 rounded-sm bg-[#EFF3F8] border border-[#DDE3EC] border-t-4 border-t-[#1E3A5F]">
           <h3 className="font-display text-2xl font-bold text-[#1E3A5F] mb-4">
             Accreditation &amp; Governance
           </h3>

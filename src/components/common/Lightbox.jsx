@@ -59,7 +59,7 @@ export default function Lightbox({ images, currentIndex, onClose, onPrev, onNext
           {/* Close */}
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 z-10 p-2 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors"
+            className="absolute top-4 right-4 z-10 p-2 rounded-sm bg-white/10 hover:bg-white/20 text-white transition-colors"
             aria-label="Close image viewer"
           >
             <XIcon className="w-6 h-6" />
@@ -74,7 +74,7 @@ export default function Lightbox({ images, currentIndex, onClose, onPrev, onNext
           {images.length > 1 && (
             <button
               onClick={onPrev}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-3 rounded-sm bg-white/10 hover:bg-white/20 text-white transition-colors"
               aria-label="Previous image"
             >
               <ChevronLeftIcon className="w-6 h-6" />
@@ -92,7 +92,7 @@ export default function Lightbox({ images, currentIndex, onClose, onPrev, onNext
             <img
               src={current.src}
               alt={current.alt}
-              className="max-w-full max-h-[80vh] w-auto h-auto object-contain rounded-lg shadow-2xl"
+              className="max-w-full max-h-[80vh] w-auto h-auto object-contain rounded-sm shadow-2xl"
             />
             {current.alt && (
               <p className="text-center text-sm text-white/60 mt-3">{current.alt}</p>
@@ -103,7 +103,7 @@ export default function Lightbox({ images, currentIndex, onClose, onPrev, onNext
           {images.length > 1 && (
             <button
               onClick={onNext}
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-3 rounded-sm bg-white/10 hover:bg-white/20 text-white transition-colors"
               aria-label="Next image"
             >
               <ChevronRightIcon className="w-6 h-6" />

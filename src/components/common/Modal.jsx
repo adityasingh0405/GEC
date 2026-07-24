@@ -57,7 +57,7 @@ export default function Modal({ isOpen, onClose, title, children }) {
             role="dialog"
             aria-modal="true"
             aria-labelledby="modal-title"
-            className="bg-white rounded-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto shadow-2xl"
+            className="bg-white rounded-sm border border-[#DDE3EC] border-t-4 border-t-[#C8972B] w-full max-w-lg max-h-[90vh] overflow-y-auto shadow-2xl"
           >
             {/* Header */}
             <div className="flex items-center justify-between px-6 py-4 border-b border-[#DDE3EC]">
@@ -67,7 +67,7 @@ export default function Modal({ isOpen, onClose, title, children }) {
               <button
                 ref={closeRef}
                 onClick={onClose}
-                className="p-1.5 rounded-lg text-[#5A6A7A] hover:bg-[#EFF3F8] transition-colors"
+                className="p-1.5 rounded-sm text-[#5A6A7A] hover:bg-[#EFF3F8] transition-colors"
                 aria-label="Close dialog"
               >
                 <XIcon className="w-5 h-5" />

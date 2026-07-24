@@ -22,23 +22,23 @@ import { CheckIcon, ArrowRightIcon, BookOpen, FileText, GraduationCap, Globe } f
 // The first image has fetchpriority="high" for LCP; the rest are lazy-loaded.
 const HERO_IMAGES = [
   {
-    src: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1920&q=80&auto=format&fit=crop',
+    src: 'https://ik.imagekit.io/xdm1pwpls0/f_downlods/Farewell/638717514_882843854577029_4074456967038938746_n.jpg?updatedAt=1784888653010',
     alt: 'Students in a college campus courtyard',
   },
   {
-    src: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1920&q=80&auto=format&fit=crop',
+    src: 'https://ik.imagekit.io/xdm1pwpls0/f_downlods/Farewell/719828024_970610315800382_222216543805410874_n.jpg?updatedAt=1784888654501',
     alt: 'Open theological books in a library',
   },
   {
-    src: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1920&q=80&auto=format&fit=crop',
+    src: 'https://ik.imagekit.io/xdm1pwpls0/f_downlods/Fresher%20Meet/469323260_539228198938598_7751733476384619435_n.jpg?updatedAt=1784888651801',
     alt: 'University graduation ceremony',
   },
   {
-    src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&q=80&auto=format&fit=crop',
+    src: 'https://ik.imagekit.io/xdm1pwpls0/f_downlods/Misc/738271019_993261440201936_6224026402438988685_n.jpg?updatedAt=1784888649028',
     alt: 'Student studying in a peaceful setting',
   },
   {
-    src: 'https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=1920&q=80&auto=format&fit=crop',
+    src: 'https://ik.imagekit.io/xdm1pwpls0/f_downlods/Summer%20Program/476281147_583935604467857_1422462504627863717_n.jpg?updatedAt=1784888646385',
     alt: 'Music students in a worship session',
   },
 ]
@@ -100,9 +100,9 @@ function Hero({ data }) {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55 }}
-          className="inline-flex items-center gap-2 mb-7 px-5 py-2 rounded-full border border-white/25 bg-white/10 backdrop-blur-md text-white/90 text-xs sm:text-sm font-medium tracking-wide"
+          className="inline-flex items-center gap-2 mb-7 px-4 py-1.5 rounded-sm border border-white/25 bg-white/10 backdrop-blur-md text-white/90 text-xs sm:text-sm font-semibold uppercase tracking-widest"
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-[#D4A843] animate-pulse shrink-0" />
+          <span className="w-1.5 h-1.5 rounded-none bg-[#D4A843] animate-pulse shrink-0" />
           Accredited Theological &amp; Music Education
         </motion.div>
 
@@ -139,7 +139,7 @@ function Hero({ data }) {
           {/* Primary — Apply Now */}
           <Link
             to="/admissions"
-            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-[15px] font-semibold text-[#1E3A5F] bg-[#D4A843] hover:bg-[#C8972B] transition-all duration-200 hover:-translate-y-0.5 shadow-xl shadow-[#C8972B]/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D4A843]"
+            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-sm text-[15px] font-bold uppercase tracking-wider text-[#1E3A5F] bg-[#D4A843] border border-[#D4A843] hover:bg-[#C8972B] hover:border-[#C8972B] transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-[#C8972B]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D4A843]"
           >
             Apply Now
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -150,7 +150,7 @@ function Hero({ data }) {
           {/* Secondary — Explore Courses */}
           <Link
             to="/courses"
-            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-[15px] font-semibold text-white border-2 border-white/35 hover:border-white/65 hover:bg-white/10 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-sm text-[15px] font-bold uppercase tracking-wider text-white border-2 border-white/40 hover:border-white hover:bg-white/10 transition-all duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
           >
             Explore Courses
           </Link>
@@ -163,7 +163,7 @@ function Hero({ data }) {
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className={`transition-all duration-300 rounded-full ${i === current ? 'w-6 h-1.5 bg-[#D4A843]' : 'w-1.5 h-1.5 bg-white/40 hover:bg-white/65'
+            className={`transition-all duration-300 ${i === current ? 'w-6 h-1 bg-[#D4A843]' : 'w-2 h-1 bg-white/40 hover:bg-white/65'
               }`}
             aria-label={`Go to slide ${i + 1}`}
           />
@@ -183,9 +183,9 @@ function Hero({ data }) {
         <motion.div
           animate={{ y: [0, 5, 0] }}
           transition={{ repeat: Infinity, duration: 1.9, ease: 'easeInOut' }}
-          className="w-5 h-8 rounded-full border-2 border-white/30 flex justify-center items-start pt-1.5"
+          className="w-5 h-8 rounded-sm border-2 border-white/30 flex justify-center items-start pt-1.5"
         >
-          <div className="w-1 h-2 rounded-full bg-[#D4A843]" />
+          <div className="w-1 h-2 bg-[#D4A843]" />
         </motion.div>
       </motion.button>
 
@@ -262,7 +262,7 @@ function AboutPreview({ data }) {
                 'A Vibrant Community of Scholars',
               ].map(item => (
                 <li key={item} className="flex items-center gap-3 text-sm text-[#5A6A7A]">
-                  <span className="w-5 h-5 rounded-full bg-[#1E3A5F]/10 flex items-center justify-center shrink-0">
+                  <span className="w-5 h-5 rounded-sm bg-[#1E3A5F]/10 border border-[#1E3A5F]/20 flex items-center justify-center shrink-0">
                     <CheckIcon className="w-3 h-3 text-[#1E3A5F]" />
                   </span>
                   {item}
@@ -285,22 +285,27 @@ function AboutPreview({ data }) {
             className="relative"
           >
             <div
-              className="rounded-2xl overflow-hidden aspect-[4/3] bg-gradient-to-br from-[#1E3A5F] to-[#2A5284] flex items-center justify-center"
-              style={{ boxShadow: 'var(--shadow-xl)' }}
+              className="relative rounded-sm overflow-hidden aspect-[4/3] border border-[#DDE3EC] border-t-2 border-t-[#C8972B] group"
+              style={{ boxShadow: 'var(--shadow-lg)' }}
             >
-              {/* Placeholder visual — decorative cross/book pattern */}
-              <div className="text-center text-white/20 p-12">
-                <svg className="w-32 h-32 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
-                <p className="text-lg font-semibold text-white/40">Campus Photo</p>
-                <p className="text-xs text-white/20 mt-1">Replace with ImageKit image</p>
-              </div>
+              {/* Image */}
+              <img
+                src="https://ik.imagekit.io/xdm1pwpls0/f_downlods/Farewell/719532886_970724695788944_6267178681070198581_n.jpg?updatedAt=1784888654464"
+                alt="Students of Glory Education Center"
+                className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
+              />
+
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1E3A5F]/55 via-[#1E3A5F]/10 to-transparent" />
+
+
             </div>
 
             {/* Floating badge */}
             <div
-              className="absolute -bottom-5 -left-5 bg-[#C8972B] text-white px-5 py-4 rounded-xl shadow-lg"
+              className="absolute -bottom-5 -left-5 bg-[#C8972B] text-white px-5 py-4 rounded-sm border border-[#A87820] shadow-lg"
               style={{ boxShadow: '0 10px 30px rgba(200,151,43,0.3)' }}
             >
               <p className="text-2xl font-bold">20+</p>
@@ -432,7 +437,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 rounded-2xl overflow-hidden shadow-2xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 rounded-sm overflow-hidden border border-white/20 shadow-xl">
 
             {/* Discover */}
             <div className="group bg-white h-40 flex flex-col justify-center items-center transition-all duration-300 hover:-translate-y-2 hover:z-10">
@@ -489,7 +494,7 @@ export default function Home() {
           <SectionHeading
             heading="Welcome to Glory Education Center"
             subheading="Equipping Leaders for God's Kingdom"
-            className="mb-12"
+            className="mb-14"
           />
 
           <motion.div
@@ -497,17 +502,18 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="relative flex flex-col lg:flex-row items-center"
+            className="grid lg:grid-cols-5 items-stretch"
           >
             {/* Video */}
-            <div className="w-full lg:w-2/3 z-10">
-              <div className="overflow-hidden rounded-2xl shadow-2xl">
-                <div className="aspect-video">
+            <div className="lg:col-span-3">
+              <div className="h-full overflow-hidden border border-[#DDE3EC] shadow-xl bg-white">
+                <div className="aspect-video lg:aspect-auto lg:h-full">
                   <iframe
                     className="w-full h-full"
-                    src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                    src="https://www.youtube.com/embed/oQi5CmZJH2A?si=NXNpFtZpaSg6CmUo"
                     title="Welcome to Glory Education Center"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
                   />
                 </div>
@@ -516,35 +522,40 @@ export default function Home() {
 
             {/* Welcome Card */}
             <motion.div
-              whileHover={{ y: -5 }}
-              className="w-full lg:w-[42%] bg-white rounded-2xl shadow-2xl p-8 lg:-ml-20 lg:mt-0 mt-8 relative z-20"
+              whileHover={{ y: -3 }}
+              transition={{ duration: 0.25 }}
+              className="lg:col-span-2 bg-white border border-[#DDE3EC] lg:border-l-0 border-t-4 lg:border-t-4 border-t-[#1E3A5F] shadow-xl p-10 flex flex-col justify-center"
             >
-              <h3 className="text-2xl font-bold text-[#1E3A5F] mb-5">
+              <span className="text-sm font-semibold tracking-[0.2em] uppercase text-[#D4A017] mb-3">
                 Welcome
+              </span>
+
+              <h3 className="text-4xl font-bold text-[#1E3A5F] leading-tight mb-6">
+                Preparing Faithful Christian Leaders
               </h3>
 
-              <p className="text-gray-600 leading-8 mb-6">
-                Glory Education Center is committed to preparing students
-                through theological education, worship, leadership, and
-                service. We strive to develop faithful Christian leaders who
-                are equipped with biblical knowledge, spiritual maturity, and
-                practical ministry skills to impact churches and communities
-                around the world.
+              <p className="text-gray-600 leading-8 text-lg">
+                Glory Education Center is committed to preparing students through
+                theological education, worship, leadership, and service. We strive
+                to develop faithful Christian leaders equipped with biblical
+                knowledge, spiritual maturity, and practical ministry skills to
+                impact churches and communities around the world.
               </p>
 
               <a
                 href="/about"
-                className="inline-flex items-center text-[#D4A017] font-semibold hover:gap-3 gap-2 transition-all"
+                className="inline-flex items-center gap-2 mt-8 text-[#D4A017] font-semibold hover:gap-3 transition-all duration-300"
               >
-                Read More →
+                Read More
+                <span>→</span>
               </a>
 
-              <div className="border-t mt-8 pt-6">
-                <h4 className="font-bold text-[#1E3A5F] text-lg">
-                  Rev. John Doe
+              <div className="border-t border-[#DDE3EC] mt-10 pt-6">
+                <h4 className="text-2xl font-bold text-[#1E3A5F]">
+                  Dr. Henry Sui
                 </h4>
 
-                <p className="text-gray-500">
+                <p className="text-gray-500 mt-2 text-lg">
                   Principal, Glory Education Center
                 </p>
               </div>

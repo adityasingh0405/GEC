@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import SEOHead from '@seo/SEOHead'
 import PageHeader from '@components/common/PageHeader'
-import Section from '@components/common/Section'
 import Container from '@components/common/Container'
 import Button from '@components/common/Button'
 import { FormInput, FormTextarea } from '@components/forms/FormFields'
@@ -21,6 +20,7 @@ import {
 export default function Contact() {
   const [formSubmitted, setFormSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [submitError, setSubmitError] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -38,15 +38,44 @@ export default function Contact() {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     setLoading(true)
+    setSubmitError(false)
 
-    // TODO: Connect form handler with backend API or email delivery service
-    setTimeout(() => {
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/gec1322@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          ...formData,
+          _subject: 'New Contact Form Submission',
+          _template: 'table',
+          _captcha: 'true'
+        })
+      })
+
+      if (response.ok) {
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        })
+        setFormSubmitted(true)
+      } else {
+        setSubmitError(true)
+      }
+    } catch (error) {
+      console.error('Submission error:', error)
+      setSubmitError(true)
+    } finally {
       setLoading(false)
-      setFormSubmitted(true)
-    }, 1000)
+    }
   }
 
   return (
@@ -73,10 +102,10 @@ export default function Contact() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/80 shadow-xl shadow-slate-900/5 border-t-4 border-t-[#C8972B] relative overflow-hidden"
+              className="bg-white rounded-sm p-8 sm:p-12 border border-slate-200 shadow-xl border-t-4 border-t-[#C8972B] relative overflow-hidden"
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-[#0B1526] text-[#C8972B] flex items-center justify-center font-bold shadow-md">
+                <div className="w-10 h-10 rounded-sm bg-[#0B1526] text-[#C8972B] flex items-center justify-center font-bold shadow-md">
                   <HeartIcon className="w-5 h-5" />
                 </div>
                 <div>
@@ -113,11 +142,11 @@ export default function Contact() {
                 {/* Email Card */}
                 {/* TODO: Replace placeholder email with client's preferred official email */}
                 <motion.div
-                  whileHover={{ y: -5 }}
+                  whileHover={{ y: -6 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-md flex items-start gap-5 hover:border-[#1E3A5F] transition-all"
+                  className="bg-white p-8 rounded-sm border border-slate-200 border-t-4 border-t-[#1E3A5F] shadow-xl flex items-start gap-5 hover:border-[#1E3A5F] transition-colors group"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-[#0B1526] text-[#C8972B] flex items-center justify-center shrink-0 shadow-md">
+                  <div className="w-12 h-12 rounded-sm bg-[#0B1526] text-[#C8972B] flex items-center justify-center shrink-0 shadow-md">
                     <MailIcon className="w-6 h-6" />
                   </div>
                   <div>
@@ -125,21 +154,22 @@ export default function Contact() {
                       Email Address
                     </span>
                     <h3 className="font-bold text-[#1E3A5F] text-lg mb-1">
-                      info@gloryeducationcenter.org
+                      <a href="mailto:gec1322@gmail.com" className="hover:text-[#C8972B] transition-colors">gec1322@gmail.com</a>
                     </h3>
                     <p className="text-xs text-slate-500 font-sans">
-                      Coming Soon — Drop us a line for general inquiries and academic details.
+
+                      Direct email for academic leadership and executive ministry matters.
                     </p>
                   </div>
                 </motion.div>
 
                 {/* Principal Phone Card */}
                 <motion.div
-                  whileHover={{ y: -5 }}
+                  whileHover={{ y: -6 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-md flex items-start gap-5 hover:border-[#1E3A5F] transition-all"
+                  className="bg-white p-8 rounded-sm border border-slate-200 border-t-4 border-t-[#1E3A5F] shadow-xl flex items-start gap-5 hover:border-[#1E3A5F] transition-colors group"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-[#0B1526] text-[#C8972B] flex items-center justify-center shrink-0 shadow-md">
+                  <div className="w-12 h-12 rounded-sm bg-[#0B1526] text-[#C8972B] flex items-center justify-center shrink-0 shadow-md">
                     <PhoneIcon className="w-6 h-6" />
                   </div>
                   <div>
@@ -160,11 +190,11 @@ export default function Contact() {
                 {/* Registrar Phone Card */}
                 {/* TODO: Replace with registrar phone number when available */}
                 <motion.div
-                  whileHover={{ y: -5 }}
+                  whileHover={{ y: -6 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-md flex items-start gap-5 hover:border-[#1E3A5F] transition-all"
+                  className="bg-white p-8 rounded-sm border border-slate-200 border-t-4 border-t-[#1E3A5F] shadow-xl flex items-start gap-5 hover:border-[#1E3A5F] transition-colors group"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-[#0B1526] text-[#C8972B] flex items-center justify-center shrink-0 shadow-md">
+                  <div className="w-12 h-12 rounded-sm bg-[#0B1526] text-[#C8972B] flex items-center justify-center shrink-0 shadow-md">
                     <PhoneIcon className="w-6 h-6" />
                   </div>
                   <div>
@@ -172,21 +202,23 @@ export default function Contact() {
                       Registrar
                     </span>
                     <h3 className="font-bold text-[#1E3A5F] text-lg mb-1">
-                      +91 00000 00000
+                      <a href="tel:+919911053332" className="hover:text-[#C8972B] transition-colors">
+                        +91 9911053332
+                      </a>
                     </h3>
                     <p className="text-xs text-slate-500 font-sans">
-                      // TODO: Replace with registrar phone number — Admissions &amp; Student Records.
+                      Registrar phone number — Admissions &amp; Student Records.
                     </p>
                   </div>
                 </motion.div>
 
                 {/* Campus Address Card */}
                 <motion.div
-                  whileHover={{ y: -5 }}
+                  whileHover={{ y: -6 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-md flex items-start gap-5 hover:border-[#1E3A5F] transition-all"
+                  className="bg-white p-8 rounded-sm border border-slate-200 border-t-4 border-t-[#1E3A5F] shadow-xl flex items-start gap-5 hover:border-[#1E3A5F] transition-colors group"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-[#0B1526] text-[#C8972B] flex items-center justify-center shrink-0 shadow-md">
+                  <div className="w-12 h-12 rounded-sm bg-[#0B1526] text-[#C8972B] flex items-center justify-center shrink-0 shadow-md">
                     <MapPinIcon className="w-6 h-6" />
                   </div>
                   <div>
@@ -215,10 +247,10 @@ export default function Contact() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-lg shadow-slate-900/5 relative overflow-hidden"
+                  className="bg-white rounded-sm p-8 border border-slate-200 shadow-xl border-t-4 border-t-[#1E3A5F] relative overflow-hidden"
                 >
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="w-10 h-10 rounded-xl bg-[#0B1526] text-[#C8972B] flex items-center justify-center font-bold shadow-md">
+                    <div className="w-10 h-10 rounded-sm bg-[#0B1526] text-[#C8972B] flex items-center justify-center font-bold shadow-md">
                       <ClockIcon className="w-5 h-5" />
                     </div>
                     <div>
@@ -240,17 +272,16 @@ export default function Contact() {
                     </li>
                     <li className="flex items-center justify-between pt-3 text-slate-400">
                       <span className="font-semibold">Sunday</span>
-                      <span className="font-bold text-rose-500 bg-rose-50 px-2 py-0.5 rounded-full text-[10px] uppercase">Closed</span>
+                      <span className="font-bold text-rose-500 bg-rose-50 px-2 py-0.5 rounded-sm text-[10px] uppercase">Closed</span>
                     </li>
                   </ul>
 
                   <p className="text-[10px] text-slate-400 mt-6 pt-4 border-t border-slate-100 font-sans italic">
-                    // TODO: Replace with client's actual office hours.
                   </p>
                 </motion.div>
 
                 {/* WhatsApp Quick Chat */}
-                <div className="p-6 rounded-3xl bg-[#25D366] text-white shadow-lg flex items-center justify-between gap-4">
+                <div className="p-6 rounded-sm bg-[#25D366] text-white shadow-md flex items-center justify-between gap-4 border border-[#20B958]">
                   <div>
                     <h4 className="font-bold text-base leading-tight">WhatsApp Assistance</h4>
                     <p className="text-xs text-white/90 mt-1">Chat directly with our admissions desk</p>
@@ -259,7 +290,7 @@ export default function Contact() {
                     href="https://wa.me/916360777933?text=Hello%20Glory%20Education%20Center,%20I%20have%20an%20inquiry"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2.5 rounded-full bg-white text-[#0B1526] font-bold text-xs uppercase tracking-wider hover:bg-slate-100 transition-colors shrink-0 flex items-center gap-1.5 shadow-md"
+                    className="px-4 py-2.5 rounded-sm bg-white text-[#0B1526] font-bold text-xs uppercase tracking-wider hover:bg-slate-100 transition-colors shrink-0 flex items-center gap-1.5 shadow-md"
                   >
                     💬 Chat
                   </a>
@@ -267,7 +298,7 @@ export default function Contact() {
               </div>
 
               {/* Right Column: Premium Contact Form */}
-              <div className="lg:col-span-8 bg-white p-8 sm:p-10 rounded-3xl border border-slate-200/80 shadow-xl shadow-slate-900/5">
+              <div className="lg:col-span-8 bg-white p-8 sm:p-10 rounded-sm border border-slate-200 shadow-xl border-t-4 border-t-[#C8972B]">
                 <div className="mb-6">
                   <span className="text-xs font-bold text-[#C8972B] uppercase tracking-widest block">Send an Inquiry</span>
                   <h3 className="font-display text-2xl sm:text-3xl font-bold text-[#1E3A5F]">
@@ -279,18 +310,27 @@ export default function Contact() {
                 </div>
 
                 {formSubmitted ? (
-                  <div className="p-8 text-center bg-emerald-50 rounded-2xl border border-emerald-200" role="status">
+                  <div className="p-8 text-center bg-emerald-50 rounded-sm border border-emerald-200" role="status">
                     <div className="w-12 h-12 bg-emerald-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
                       <CheckIcon className="w-6 h-6" />
                     </div>
-                    <h4 className="text-xl font-bold text-emerald-900 mb-2">Message Received!</h4>
+                    <h4 className="text-xl font-bold text-emerald-900 mb-2">Thank you!</h4>
                     <p className="text-sm text-emerald-700 leading-relaxed font-sans">
-                      Thank you for contacting Glory Education Center. A representative will get back to you shortly.
+                      Your submission has been received.
                     </p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-5">
-                    {/* TODO: Connect form handler with backend API or mail service */}
+                    <input type="hidden" name="_subject" value="New Contact Form Submission" />
+                    <input type="hidden" name="_template" value="table" />
+                    <input type="hidden" name="_captcha" value="true" />
+
+                    {submitError && (
+                      <div className="p-4 text-center bg-rose-50 text-rose-700 rounded-sm border border-rose-200 text-sm font-sans" role="alert">
+                        Something went wrong. Please try again.
+                      </div>
+                    )}
+
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <FormInput
                         label="Full Name"
@@ -345,8 +385,8 @@ export default function Contact() {
                       onChange={handleChange}
                     />
 
-                    <Button type="submit" variant="primary" size="lg" loading={loading} className="w-full justify-center shadow-lg">
-                      Send Message
+                    <Button type="submit" variant="primary" size="lg" loading={loading} className="w-full justify-center shadow-md rounded-sm">
+                      {loading ? 'Sending...' : 'Send Message'}
                     </Button>
                   </form>
                 )}
@@ -356,7 +396,7 @@ export default function Contact() {
 
             {/* 5. GOOGLE MAP EMBED */}
             {/* TODO: Replace map embed URL with client's exact Google Maps embed iframe */}
-            <div className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-xl shadow-slate-900/5 space-y-4">
+            <div className="bg-white rounded-sm p-8 border border-slate-200 shadow-xl border-t-4 border-t-[#1E3A5F] space-y-4">
               <div className="flex items-center justify-between border-b border-slate-200 pb-4">
                 <div>
                   <span className="text-xs font-bold text-[#C8972B] uppercase tracking-wider block">Find Our Campus</span>
@@ -364,27 +404,27 @@ export default function Contact() {
                     Campus Location &amp; Map
                   </h3>
                 </div>
-                <span className="px-3 py-1 rounded-full bg-[#0B1526] text-[#C8972B] text-xs font-bold">New Delhi, India</span>
+                <span className="px-3 py-1 rounded-sm bg-[#0B1526] text-[#C8972B] text-xs font-bold">New Delhi, India</span>
               </div>
 
-              <div className="w-full h-80 bg-[#EFF3F8] rounded-2xl overflow-hidden relative shadow-inner">
+              <div className="w-full h-80 bg-[#EFF3F8] rounded-sm overflow-hidden relative shadow-inner border border-slate-200">
                 {/* Google Map iframe */}
                 <iframe
                   title="Glory Education Center Google Map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.765412!2d77.06!3d28.63!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zVmlrYXMgUHVyaSwgTmV3IERlbGhp!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d644.5637418163527!2d77.06812133310135!3d28.638721447058696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0594240e1495%3A0xde78273588329df1!2sGlory%20Education%20Center%20Music%20School!5e1!3m2!1sen!2sin!4v1784893746716!5m2!1sen!2sin"
                   className="w-full h-full border-0"
-                  allowFullScreen=""
+                  allowFullScreen
                   loading="lazy"
+                  referrerPolicy="strict-origin-when-cross-origin"
                 />
-
                 {/* Badge Overlay */}
-                <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-md px-4 py-2 rounded-xl text-xs font-bold text-[#1E3A5F] shadow-md border border-slate-200">
+                <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-md px-4 py-2 rounded-sm text-xs font-bold text-[#1E3A5F] shadow-md border border-slate-200">
                   📍 Google Map — WZ-18/13/3 Village Budella, Vikas Puri, New Delhi – 110018
                 </div>
               </div>
 
               <p className="text-center text-xs text-slate-500 font-sans italic pt-1">
-                // TODO: Replace map embed URL with client's exact Google Maps embed iframe.
+
               </p>
             </div>
 
@@ -394,12 +434,12 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-gradient-to-br from-[#0B1526] to-[#152940] rounded-3xl p-8 sm:p-12 text-white shadow-2xl border border-white/10 text-center relative overflow-hidden"
+              className="bg-gradient-to-br from-[#0B1526] to-[#152940] rounded-sm p-8 sm:p-12 text-white shadow-xl border border-white/10 border-t-4 border-t-[#C8972B] text-center relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-48 h-48 bg-[#C8972B]/10 rounded-full blur-3xl pointer-events-none" />
 
               <div className="max-w-2xl mx-auto space-y-6">
-                <div className="w-12 h-12 rounded-2xl bg-[#C8972B] text-[#0B1526] flex items-center justify-center mx-auto shadow-lg font-bold">
+                <div className="w-12 h-12 rounded-sm bg-[#C8972B] text-[#0B1526] flex items-center justify-center mx-auto shadow-md font-bold">
                   <SparklesIcon className="w-6 h-6" />
                 </div>
 
@@ -414,7 +454,7 @@ export default function Contact() {
                 <div className="pt-4">
                   <Link
                     to="/admissions/apply"
-                    className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-[#C8972B] text-[#0B1526] text-xs font-bold uppercase tracking-wider hover:bg-[#D4A843] transition-all shadow-lg hover:-translate-y-0.5"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-sm bg-[#C8972B] border border-[#C8972B] text-[#0B1526] text-xs font-bold uppercase tracking-wider hover:bg-[#D4A843] hover:border-[#D4A843] transition-all shadow-md group-hover:gap-3"
                   >
                     <span>Apply Now</span>
                     <ArrowRightIcon className="w-4 h-4" />

@@ -25,8 +25,8 @@ export function FormInput({
         aria-required={required}
         aria-describedby={errorId}
         aria-invalid={error ? 'true' : undefined}
-        className={`w-full px-4 py-3 rounded-lg border text-sm text-[#1A1A2E] placeholder-[#9BA8B4] bg-white
-          focus:outline-none focus:ring-2 focus:ring-[#1E3A5F] focus:border-transparent transition-colors
+        className={`w-full px-4 py-3 rounded-sm border text-sm text-[#1A1A2E] placeholder-[#9BA8B4] bg-white
+          focus:outline-none focus:ring-1 focus:ring-[#1E3A5F] focus:border-[#1E3A5F] transition-colors
           ${error ? 'border-[#C0392B] bg-red-50' : 'border-[#DDE3EC] hover:border-[#2A5284]'}`}
         {...props}
       />
@@ -62,8 +62,8 @@ export function FormTextarea({
         aria-required={required}
         aria-describedby={errorId}
         aria-invalid={error ? 'true' : undefined}
-        className={`w-full px-4 py-3 rounded-lg border text-sm text-[#1A1A2E] placeholder-[#9BA8B4] bg-white resize-y
-          focus:outline-none focus:ring-2 focus:ring-[#1E3A5F] focus:border-transparent transition-colors
+        className={`w-full px-4 py-3 rounded-sm border text-sm text-[#1A1A2E] placeholder-[#9BA8B4] bg-white resize-y
+          focus:outline-none focus:ring-1 focus:ring-[#1E3A5F] focus:border-[#1E3A5F] transition-colors
           ${error ? 'border-[#C0392B] bg-red-50' : 'border-[#DDE3EC] hover:border-[#2A5284]'}`}
         {...props}
       />
@@ -99,8 +99,8 @@ export function FormSelect({
         aria-required={required}
         aria-describedby={errorId}
         aria-invalid={error ? 'true' : undefined}
-        className={`w-full px-4 py-3 rounded-lg border text-sm text-[#1A1A2E] bg-white appearance-none
-          focus:outline-none focus:ring-2 focus:ring-[#1E3A5F] focus:border-transparent transition-colors
+        className={`w-full px-4 py-3 rounded-sm border text-sm text-[#1A1A2E] bg-white appearance-none
+          focus:outline-none focus:ring-1 focus:ring-[#1E3A5F] focus:border-[#1E3A5F] transition-colors
           ${error ? 'border-[#C0392B] bg-red-50' : 'border-[#DDE3EC] hover:border-[#2A5284]'}`}
         {...props}
       >

@@ -11,7 +11,10 @@ export default function Gallery() {
   const [activeCategory, setActiveCategory] = useState('All')
   const [activeImageIndex, setActiveImageIndex] = useState(null)
 
-  const categories = ['All', 'Campus', 'Worship', 'Graduation', 'Events', 'Music', 'Students']
+  const rawCategories = Array.from(new Set(galleryData.map(item => item.category)))
+  const nonMiscCategories = rawCategories.filter(c => c.toLowerCase() !== 'misc').sort((a, b) => a.localeCompare(b))
+  const miscCategory = rawCategories.find(c => c.toLowerCase() === 'misc')
+  const categories = ['All', ...nonMiscCategories, ...(miscCategory ? [miscCategory] : [])]
 
   const filteredImages = activeCategory === 'All'
     ? galleryData

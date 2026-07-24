@@ -14,12 +14,12 @@ export default function CourseCard({ course }) {
       variants={cardHover}
       initial="rest"
       whileHover="hover"
-      className="bg-white rounded-2xl overflow-hidden border border-[#DDE3EC] flex flex-col h-full"
+      className="bg-white rounded-sm overflow-hidden border border-[#DDE3EC] flex flex-col h-full"
       style={{ boxShadow: 'var(--shadow-sm)' }}
     >
       {/* Color band header */}
       <div
-        className="h-2 w-full"
+        className="h-1.5 w-full"
         style={{ background: color || '#1E3A5F' }}
         aria-hidden="true"
       />
@@ -28,7 +28,7 @@ export default function CourseCard({ course }) {
         {/* Category badge */}
         <div className="flex items-center justify-between mb-4">
           <span
-            className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-sm uppercase tracking-wider"
             style={{
               background: `${color || '#1E3A5F'}15`,
               color: color || '#1E3A5F',
@@ -37,7 +37,7 @@ export default function CourseCard({ course }) {
             <AcademicCapIcon className="w-3.5 h-3.5" />
             {category}
           </span>
-          <span className="text-xs font-bold text-[#5A6A7A] bg-[#EFF3F8] px-2.5 py-1 rounded-full">
+          <span className="text-xs font-bold text-[#5A6A7A] bg-[#EFF3F8] px-2.5 py-1 rounded-sm uppercase tracking-wider">
             {level}
           </span>
         </div>

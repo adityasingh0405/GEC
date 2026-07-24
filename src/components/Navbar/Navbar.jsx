@@ -18,7 +18,7 @@ function DropdownMenu({ items, isOpen, onClose }) {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 8, scale: 0.98 }}
           transition={{ duration: 0.16, ease: 'easeOut' }}
-          className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-60 bg-[#0E1E33] border border-white/15 rounded-xl shadow-2xl shadow-black/50 overflow-hidden z-50 py-1.5"
+          className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-60 bg-[#0E1E33] border border-white/20 rounded-sm shadow-2xl shadow-black/50 overflow-hidden z-50 py-1.5"
           role="menu"
         >
           <div className="h-[2px] w-full bg-gradient-to-r from-[#D4A843] via-[#C8972B] to-[#D4A843]" />
@@ -98,7 +98,7 @@ function NavItem({ link }) {
           {isActive && (
             <motion.span
               layoutId="navUnderline"
-              className="absolute -bottom-1 left-0 right-0 h-[2px] rounded-full bg-[#C8972B]"
+              className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#C8972B]"
               transition={{ type: 'spring', stiffness: 400, damping: 32 }}
             />
           )}
@@ -120,7 +120,7 @@ function NavItem({ link }) {
             {isActive && (
               <motion.span
                 layoutId="navUnderline"
-                className="absolute -bottom-1 left-0 right-0 h-[2px] rounded-full bg-[#C8972B]"
+                className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#C8972B]"
                 transition={{ type: 'spring', stiffness: 400, damping: 32 }}
               />
             )}
@@ -146,7 +146,7 @@ function MobileNavItem({ link, onClose }) {
         <button
           onClick={() => setOpen(o => !o)}
           aria-expanded={open}
-          className="w-full flex items-center justify-between px-4 py-3 rounded-xl text-left font-bold text-white hover:bg-white/10 transition-colors text-xs uppercase tracking-wider"
+          className="w-full flex items-center justify-between px-4 py-3 rounded-sm text-left font-bold text-white hover:bg-white/10 transition-colors text-xs uppercase tracking-wider"
         >
           {link.label}
           <ChevronDownIcon className={`w-4 h-4 text-white/60 transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
@@ -166,7 +166,7 @@ function MobileNavItem({ link, onClose }) {
                     to={child.href}
                     onClick={onClose}
                     className={({ isActive }) =>
-                      `block px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors ${isActive
+                      `block px-4 py-2 rounded-sm text-xs font-semibold uppercase tracking-wider transition-colors ${isActive
                         ? 'bg-[#C8972B] text-[#0B1526]'
                         : 'text-white/75 hover:bg-white/5 hover:text-white'
                       }`
@@ -190,7 +190,7 @@ function MobileNavItem({ link, onClose }) {
         end={link.href === '/'}
         onClick={onClose}
         className={({ isActive }) =>
-          `block px-4 py-3 rounded-xl font-bold text-xs uppercase tracking-wider transition-colors ${isActive
+          `block px-4 py-3 rounded-sm font-bold text-xs uppercase tracking-wider transition-colors ${isActive
             ? 'bg-[#C8972B] text-[#0B1526]'
             : 'text-white/85 hover:bg-white/10 hover:text-white'
           }`
@@ -236,7 +236,7 @@ export default function Navbar() {
           {/* ================= LOGO ================= */}
           <Link
             to="/"
-            className="flex items-center gap-4 shrink-0 overflow-visible group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8972B] rounded-lg"
+            className="flex items-center gap-4 shrink-0 overflow-visible group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8972B] rounded-sm"
             aria-label="Glory Education Center — Home"
           >
             <div className="relative flex items-center justify-center shrink-0">
@@ -274,7 +274,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center">
             <Link
               to="/admissions/apply"
-              className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#C8972B] bg-[#C8972B] text-[#0B1526] text-xs font-bold uppercase tracking-[0.16em] transition-all duration-300 hover:bg-[#D4A843] hover:-translate-y-[1px] hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8972B]"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-sm border border-[#C8972B] bg-[#C8972B] text-[#0B1526] text-xs font-bold uppercase tracking-[0.16em] transition-all duration-200 hover:bg-[#D4A843] hover:-translate-y-0.5 shadow-sm hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8972B]"
             >
               Apply Now
               <span aria-hidden="true">→</span>
@@ -283,7 +283,7 @@ export default function Navbar() {
 
           {/* ================= MOBILE MENU BUTTON ================= */}
           <button
-            className="lg:hidden p-2 rounded-lg text-white hover:bg-white/10 transition-colors"
+            className="lg:hidden p-2 rounded-sm text-white hover:bg-white/10 transition-colors"
             onClick={() => setMobileOpen((o) => !o)}
             aria-expanded={mobileOpen}
             aria-controls="mobile-menu"
@@ -332,7 +332,7 @@ export default function Navbar() {
                   className="flex items-center gap-2.5"
                   onClick={() => setMobileOpen(false)}
                 >
-                  <div className="w-9 h-9 rounded-lg bg-[#C8972B] flex items-center justify-center text-[#0B1526] text-xs font-black">
+                  <div className="w-9 h-9 rounded-sm bg-[#C8972B] flex items-center justify-center text-[#0B1526] text-xs font-black">
                     GEC
                   </div>
                   <div>
@@ -365,7 +365,7 @@ export default function Navbar() {
                 <Link
                   to="/admissions/apply"
                   onClick={() => setMobileOpen(false)}
-                  className="flex items-center justify-center gap-2 w-full py-3 rounded-full text-xs font-bold uppercase tracking-wider text-[#0B1526] bg-[#C8972B] hover:bg-[#D4A843] transition-all shadow-md"
+                  className="flex items-center justify-center gap-2 w-full py-3 rounded-sm text-xs font-bold uppercase tracking-wider text-[#0B1526] bg-[#C8972B] border border-[#C8972B] hover:bg-[#D4A843] transition-all shadow-sm hover:shadow-md"
                 >
                   Apply Now &rarr;
                 </Link>

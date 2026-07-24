@@ -44,15 +44,13 @@ export default function PrincipalsMessage() {
               transition={{ duration: 0.6 }}
               className="lg:col-span-4 lg:sticky lg:top-28 space-y-6"
             >
-              <div className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-xl shadow-slate-900/5 text-center relative overflow-hidden group">
-                {/* Gold Accent Bar */}
-                <div className="absolute top-0 inset-x-0 h-2 bg-gradient-to-r from-[#D4A843] via-[#C8972B] to-[#D4A843]" />
+              <div className="bg-white rounded-sm p-8 border border-slate-200 shadow-md border-t-4 border-t-[#C8972B] text-center relative overflow-hidden group">
 
                 {/* Photo */}
                 <div className="relative w-44 h-44 mx-auto mb-6 rounded-full p-1.5 bg-gradient-to-br from-[#1E3A5F] via-[#C8972B] to-[#0B1526] shadow-lg">
                   <div className="w-full h-full rounded-full overflow-hidden bg-slate-100 relative">
                     <img
-                      src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&auto=format&fit=crop&q=80"
+                      src="https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/Henry?updatedAt=1784916862186"
                       alt="Dr. Henry Sui — Principal of Glory Education Center"
                       className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                     />
@@ -76,7 +74,7 @@ export default function PrincipalsMessage() {
                 <hr className="my-6 border-slate-100" />
 
                 {/* Academic Credentials Box */}
-                <div className="p-4 rounded-2xl bg-[#EFF3F8] text-left space-y-2 border border-slate-200">
+                <div className="p-4 rounded-sm bg-[#EFF3F8] text-left space-y-2 border border-slate-200">
                   <div className="text-xs font-bold text-[#1E3A5F] uppercase tracking-wider flex items-center gap-1.5">
                     <ShieldCheckIcon className="w-4 h-4 text-[#C8972B]" />
                     Academic Mandate
@@ -99,7 +97,7 @@ export default function PrincipalsMessage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.15 }}
-              className="lg:col-span-8 bg-white rounded-3xl p-8 sm:p-12 lg:p-14 border border-slate-200/80 shadow-xl shadow-slate-900/5 relative"
+              className="lg:col-span-8 bg-white rounded-sm p-8 sm:p-12 lg:p-14 border border-slate-200 shadow-md border-t-4 border-t-[#1E3A5F] relative"
             >
               {/* Decorative Watermark */}
               <div className="absolute top-10 right-10 text-slate-100 pointer-events-none font-serif text-9xl leading-none select-none">
@@ -108,7 +106,7 @@ export default function PrincipalsMessage() {
 
               {/* Header */}
               <div className="mb-8">
-                <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF3F8] border border-slate-200 text-[#1E3A5F] text-xs font-bold uppercase tracking-wider mb-4">
+                <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-sm bg-[#EFF3F8] border border-slate-200 text-[#1E3A5F] text-xs font-bold uppercase tracking-wider mb-4">
                   <AcademicCapIcon className="w-3.5 h-3.5 text-[#C8972B]" />
                   Welcome from the Principal
                 </span>
@@ -121,7 +119,7 @@ export default function PrincipalsMessage() {
               </div>
 
               {/* Lead Paragraph */}
-              <div className="text-xl font-serif text-[#1E3A5F] leading-relaxed border-l-4 border-[#C8972B] pl-6 py-2 italic bg-[#FAF8F5] rounded-r-2xl mb-10">
+              <div className="text-xl font-serif text-[#1E3A5F] leading-relaxed border-l-4 border-[#C8972B] pl-6 py-2 italic bg-[#FAF8F5] rounded-r-sm mb-10">
                 Welcome to Glory Education Center — a community dedicated to biblical truth, academic excellence, and vibrant Christian service.
               </div>
 
@@ -136,7 +134,7 @@ export default function PrincipalsMessage() {
                 </p>
 
                 {/* Pull Quote */}
-                <div className="my-10 p-8 rounded-2xl bg-[#0B1526] text-white shadow-xl relative overflow-hidden border-l-4 border-[#C8972B]">
+                <div className="my-10 p-8 rounded-sm bg-[#0B1526] text-white shadow-lg relative overflow-hidden border-l-4 border-[#C8972B]">
                   <div className="text-3xl text-[#C8972B] font-serif leading-none mb-2">“</div>
                   <blockquote className="font-serif text-xl sm:text-2xl italic font-medium leading-snug text-white/95">
                     We do not merely teach theology as an academic discipline; we nurture hearts to love God passionately and minds to think biblically.
@@ -151,7 +149,7 @@ export default function PrincipalsMessage() {
                 </p>
 
                 {/* Highlighted Blessing Section */}
-                <div className="my-8 p-6 rounded-2xl bg-[#FAF8F5] border border-[#E8D4A2] text-[#1E3A5F]">
+                <div className="my-8 p-6 rounded-sm bg-[#FAF8F5] border border-[#E8D4A2] text-[#1E3A5F]">
                   <h4 className="font-bold text-[#C8972B] text-xs uppercase tracking-widest mb-2 flex items-center gap-2">
                     <SparklesIcon className="w-4 h-4" />
                     A Principal's Blessing for Every Student
@@ -175,8 +173,8 @@ export default function PrincipalsMessage() {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-[#1E3A5F] shadow-sm transition-all">
-                    <div className="w-10 h-10 rounded-xl bg-[#1E3A5F] text-[#C8972B] flex items-center justify-center mb-4 shadow-md">
+                  <div className="p-6 rounded-sm bg-white border border-slate-200 border-t-2 border-t-[#C8972B] hover:border-[#1E3A5F] shadow-sm transition-all">
+                    <div className="w-10 h-10 rounded-sm bg-[#1E3A5F] text-[#C8972B] flex items-center justify-center mb-4 shadow-sm">
                       <AcademicCapIcon className="w-5 h-5" />
                     </div>
                     <h4 className="font-bold text-[#1E3A5F] text-base mb-1">Academic Excellence</h4>
@@ -185,8 +183,8 @@ export default function PrincipalsMessage() {
                     </p>
                   </div>
 
-                  <div className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-[#1E3A5F] shadow-sm transition-all">
-                    <div className="w-10 h-10 rounded-xl bg-[#1E3A5F] text-[#C8972B] flex items-center justify-center mb-4 shadow-md">
+                  <div className="p-6 rounded-sm bg-white border border-slate-200 border-t-2 border-t-[#C8972B] hover:border-[#1E3A5F] shadow-sm transition-all">
+                    <div className="w-10 h-10 rounded-sm bg-[#1E3A5F] text-[#C8972B] flex items-center justify-center mb-4 shadow-sm">
                       <HeartIcon className="w-5 h-5" />
                     </div>
                     <h4 className="font-bold text-[#1E3A5F] text-base mb-1">Spiritual Formation</h4>
@@ -195,8 +193,8 @@ export default function PrincipalsMessage() {
                     </p>
                   </div>
 
-                  <div className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-[#1E3A5F] shadow-sm transition-all">
-                    <div className="w-10 h-10 rounded-xl bg-[#1E3A5F] text-[#C8972B] flex items-center justify-center mb-4 shadow-md">
+                  <div className="p-6 rounded-sm bg-white border border-slate-200 border-t-2 border-t-[#C8972B] hover:border-[#1E3A5F] shadow-sm transition-all">
+                    <div className="w-10 h-10 rounded-sm bg-[#1E3A5F] text-[#C8972B] flex items-center justify-center mb-4 shadow-sm">
                       <UserGroupIcon className="w-5 h-5" />
                     </div>
                     <h4 className="font-bold text-[#1E3A5F] text-base mb-1">Leadership Development</h4>
@@ -205,8 +203,8 @@ export default function PrincipalsMessage() {
                     </p>
                   </div>
 
-                  <div className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-[#1E3A5F] shadow-sm transition-all">
-                    <div className="w-10 h-10 rounded-xl bg-[#1E3A5F] text-[#C8972B] flex items-center justify-center mb-4 shadow-md">
+                  <div className="p-6 rounded-sm bg-white border border-slate-200 border-t-2 border-t-[#C8972B] hover:border-[#1E3A5F] shadow-sm transition-all">
+                    <div className="w-10 h-10 rounded-sm bg-[#1E3A5F] text-[#C8972B] flex items-center justify-center mb-4 shadow-sm">
                       <ShieldCheckIcon className="w-5 h-5" />
                     </div>
                     <h4 className="font-bold text-[#1E3A5F] text-base mb-1">Kingdom Service</h4>
@@ -234,7 +232,7 @@ export default function PrincipalsMessage() {
                   </p>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-[#EFF3F8] border border-slate-200 text-center">
+                <div className="p-4 rounded-sm bg-[#EFF3F8] border border-slate-200 text-center">
                   <span className="block text-[10px] uppercase tracking-widest text-slate-400 font-bold">Office of the</span>
                   <span className="block text-sm font-bold text-[#1E3A5F]">Academic Principal</span>
                   <span className="block text-[10px] text-[#C8972B] font-bold">Veritas et Gratia</span>

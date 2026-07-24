@@ -74,9 +74,9 @@ export default function VisionMission() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="p-8 sm:p-10 rounded-3xl border border-slate-200/80 bg-[#FAF8F5] shadow-lg shadow-slate-900/5 border-t-4 border-t-[#C8972B] relative overflow-hidden"
+            className="p-8 sm:p-10 rounded-sm border border-slate-200 bg-[#FAF8F5] shadow-md border-t-4 border-t-[#C8972B] relative overflow-hidden"
           >
-            <div className="w-12 h-12 rounded-2xl bg-[#0B1526] text-[#C8972B] flex items-center justify-center mb-6 shadow-md">
+            <div className="w-12 h-12 rounded-sm bg-[#0B1526] text-[#C8972B] flex items-center justify-center mb-6 shadow-sm border border-[#0B1526]">
               <Globe className="w-6 h-6" />
             </div>
             <span className="text-xs font-bold text-[#C8972B] uppercase tracking-widest block mb-1">
@@ -95,9 +95,9 @@ export default function VisionMission() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="p-8 sm:p-10 rounded-3xl border border-slate-200/80 bg-[#0B1526] text-white shadow-lg shadow-slate-900/5 border-t-4 border-t-[#C8972B] relative overflow-hidden"
+            className="p-8 sm:p-10 rounded-sm border border-slate-700 bg-[#0B1526] text-white shadow-md border-t-4 border-t-[#C8972B] relative overflow-hidden"
           >
-            <div className="w-12 h-12 rounded-2xl bg-[#C8972B] text-[#0B1526] flex items-center justify-center mb-6 shadow-md">
+            <div className="w-12 h-12 rounded-sm bg-[#C8972B] text-[#0B1526] flex items-center justify-center mb-6 shadow-sm">
               <SparklesIcon className="w-6 h-6" />
             </div>
             <span className="text-xs font-bold text-[#C8972B] uppercase tracking-widest block mb-1">
@@ -135,9 +135,9 @@ export default function VisionMission() {
               <motion.div
                 key={i}
                 variants={staggerItem}
-                className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm text-center hover:border-[#1E3A5F] transition-all"
+                className="p-6 rounded-sm bg-white border border-slate-200 border-t-2 border-t-[#C8972B] shadow-sm text-center hover:border-[#1E3A5F] transition-all"
               >
-                <div className="w-12 h-12 rounded-full bg-[#0B1526] text-[#C8972B] font-black text-lg mx-auto mb-4 flex items-center justify-center shadow-md">
+                <div className="w-12 h-12 rounded-sm bg-[#0B1526] text-[#C8972B] font-black text-lg mx-auto mb-4 flex items-center justify-center shadow-sm">
                   0{i + 1}
                 </div>
                 <h3 className="font-bold text-[#1E3A5F] text-lg mb-2">{val.title}</h3>
@@ -157,7 +157,7 @@ export default function VisionMission() {
         {/* NEW SECTION: Aims & Objectives */}
         <div className="max-w-5xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FAF5E8] border border-[#E8D4A2] text-[#966E1A] text-xs font-bold uppercase tracking-wider mb-3">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-sm bg-[#FAF5E8] border border-[#E8D4A2] text-[#966E1A] text-xs font-bold uppercase tracking-wider mb-3">
               <ShieldCheckIcon className="w-4 h-4" />
               Institutional Goals
             </span>
@@ -184,10 +184,10 @@ export default function VisionMission() {
                   variants={staggerItem}
                   whileHover={{ y: -5 }}
                   transition={{ duration: 0.3 }}
-                  className="p-8 rounded-3xl bg-white border border-slate-200/80 shadow-lg shadow-slate-900/5 border-t-4 border-t-[#C8972B] hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+                  className="p-8 rounded-sm bg-white border border-slate-200 shadow-sm border-t-4 border-t-[#C8972B] hover:shadow-md transition-all duration-300 flex flex-col justify-between"
                 >
                   <div>
-                    <div className="w-12 h-12 rounded-2xl bg-[#0B1526] text-[#C8972B] flex items-center justify-center mb-5 shadow-md">
+                    <div className="w-12 h-12 rounded-sm bg-[#0B1526] text-[#C8972B] flex items-center justify-center mb-5 shadow-sm">
                       <Icon className="w-6 h-6" />
                     </div>
 

@@ -32,8 +32,8 @@ export default function Accordion({ items, allowMultiple = false, className = ''
         return (
           <div
             key={index}
-            className={`rounded-xl border transition-colors ${
-              isOpen ? 'border-[#1E3A5F]/30 bg-white' : 'border-[#DDE3EC] bg-white'
+            className={`rounded-sm border transition-colors ${
+              isOpen ? 'border-[#1E3A5F] border-l-4 border-l-[#C8972B] bg-white' : 'border-[#DDE3EC] border-l-4 border-l-[#1E3A5F] bg-white'
             }`}
             style={{ boxShadow: isOpen ? 'var(--shadow-sm)' : 'none' }}
             role="listitem"
@@ -53,7 +53,7 @@ export default function Accordion({ items, allowMultiple = false, className = ''
                 {item.question}
               </span>
               <span
-                className={`shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-colors ${
+                className={`shrink-0 w-7 h-7 rounded-sm flex items-center justify-center transition-colors ${
                   isOpen ? 'bg-[#1E3A5F] text-white' : 'bg-[#EFF3F8] text-[#5A6A7A]'
                 }`}
                 aria-hidden="true"

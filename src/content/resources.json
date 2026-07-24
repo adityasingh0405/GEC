@@ -1,36 +1,100 @@
 {
   "downloads": [
     {
-      "id": "prospectus",
-      "title": "Academic Prospectus 2026–2027",
-      "description": "Comprehensive guide containing full course structures, faculty profiles, admission policies, and campus information.",
+      "id": "gci-prospectus",
+      "title": "GCI Prospectus",
+      "description": "General prospectus containing institutional information, academic programs, admission requirements, and campus policies.",
       "format": "PDF",
-      "size": "4.2 MB",
-      "href": "/downloads/prospectus.pdf"
+      "size": "PDF",
+      "href": "https://ik.imagekit.io/xdm1pwpls0/pdfs/GCI%20Prospectus.pdf"
     },
     {
-      "id": "constitution",
-      "title": "Institution Constitution & Guidelines",
-      "description": "Official bylaws, code of conduct, academic regulations, and governance policies of Glory Education Center.",
+      "id": "bth-prospectus",
+      "title": "Bachelor of Theology (B.Th) Prospectus",
+      "description": "Detailed curriculum, eligibility criteria, course structure, and admission information for the Bachelor of Theology program.",
       "format": "PDF",
-      "size": "1.8 MB",
-      "href": "/downloads/constitution.pdf"
+      "size": "PDF",
+      "href": "https://ik.imagekit.io/xdm1pwpls0/pdfs/GEC_BTh_Prospectus.pdf"
     },
     {
-      "id": "calendar",
-      "title": "Academic Calendar 2026–2027",
-      "description": "Complete breakdown of semester dates, examination schedules, holidays, and campus events.",
+      "id": "mdiv-prospectus",
+      "title": "Master of Divinity (M.Div) Prospectus",
+      "description": "Comprehensive guide covering the Master of Divinity program, curriculum, ministry training, and admission requirements.",
       "format": "PDF",
-      "size": "950 KB",
-      "href": "/downloads/academic-calendar.pdf"
+      "size": "PDF",
+      "href": "https://ik.imagekit.io/xdm1pwpls0/pdfs/GEC_MDiv_Prospectus.pdf"
+    },
+    {
+      "id": "mth-prospectus",
+      "title": "Master of Theology (M.Th) Prospectus",
+      "description": "Program overview, academic structure, specialization details, and admission guidelines for the Master of Theology course.",
+      "format": "PDF",
+      "size": "PDF",
+      "href": "https://ik.imagekit.io/xdm1pwpls0/pdfs/GEC_MTh_Prospectus.pdf"
+    },
+    {
+      "id": "dm-prospectus",
+      "title": "Diploma in Music Prospectus",
+      "description": "Course information, curriculum, eligibility, and admission details for the Diploma in Music program.",
+      "format": "PDF",
+      "size": "PDF",
+      "href": "https://ik.imagekit.io/xdm1pwpls0/pdfs/GEC_DM_Prospectus.pdf"
     },
     {
       "id": "application-form",
-      "title": "Printable Admission Application Form",
-      "description": "Downloadable paper application form for prospective students preferring postal or offline submission.",
+      "title": "Admission Application Form",
+      "description": "Official application form for admission to Glory Education Center academic programs.",
       "format": "PDF",
-      "size": "1.1 MB",
-      "href": "/downloads/application-form.pdf"
+      "size": "PDF",
+      "href": "https://ik.imagekit.io/xdm1pwpls0/pdfs/Application%20Form.pdf"
+    },
+    {
+      "id": "full-application-form",
+      "title": "Full Admission Application Form",
+      "description": "Complete admission application package with all required applicant information sections.",
+      "format": "PDF",
+      "size": "PDF",
+      "href": "https://ik.imagekit.io/xdm1pwpls0/pdfs/Full%20Application%20form.pdf"
+    },
+    {
+      "id": "financial-guarantee",
+      "title": "Financial Guarantee Form",
+      "description": "Financial guarantee declaration form required as part of the admissions process.",
+      "format": "PDF",
+      "size": "PDF",
+      "href": "https://ik.imagekit.io/xdm1pwpls0/pdfs/Financial%20Guarantee%20Form.pdf"
+    },
+    {
+      "id": "pastor-reference",
+      "title": "Pastor's Reference Form",
+      "description": "Reference form to be completed by the applicant's pastor in support of the admission application.",
+      "format": "PDF",
+      "size": "PDF",
+      "href": "https://ik.imagekit.io/xdm1pwpls0/pdfs/Pastor_s%20Reference%20Form.pdf"
+    },
+    {
+      "id": "personal-reference",
+      "title": "Personal Reference Form",
+      "description": "Personal reference form to be completed by an individual who knows the applicant well.",
+      "format": "PDF",
+      "size": "PDF",
+      "href": "https://ik.imagekit.io/xdm1pwpls0/pdfs/Personal%20Reference%20Form.pdf"
+    },
+    {
+      "id": "professional-reference",
+      "title": "Professional / Church Leader Reference Form",
+      "description": "Reference form for completion by a professional supervisor or church leader supporting the applicant.",
+      "format": "PDF",
+      "size": "PDF",
+      "href": "https://ik.imagekit.io/xdm1pwpls0/pdfs/Professional%20or%20Church%20Leader_s%20Reference%20Form.pdf"
+    },
+    {
+      "id": "academic-calendar",
+      "title": "Academic Calendar 2025–2026",
+      "description": "Official academic calendar including semester dates, holidays, examinations, and institutional events.",
+      "format": "PDF",
+      "size": "PDF",
+      "href": "https://ik.imagekit.io/xdm1pwpls0/pdfs/Academic%20Calender%202025-2026.pdf"
     }
   ],
   "quickActions": [
@@ -51,7 +115,7 @@
     {
       "id": "donation",
       "title": "Donation & Support",
-      "description": "Partner with us in training future gospel leaders through financial gifts and scholarships.",
+      "description": "Partner with us in training future Christian leaders through financial gifts, scholarships, and ministry support.",
       "actionLabel": "Give Today",
       "href": "/donation"
     }

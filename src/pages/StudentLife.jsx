@@ -12,12 +12,12 @@ import { staggerContainer, staggerItem } from '@utils/animations'
 import studentLifeData from '@content/studentLife.json'
 
 const iconMap = {
-  worship: SparklesIcon,
+  'chapel-life': SparklesIcon,
   'campus-life': UserGroupIcon,
-  library: BookOpenIcon,
-  'music-department': AcademicCapIcon,
-  events: CalendarIcon,
-  community: HeartIcon,
+  'library': BookOpenIcon,
+  'music': AcademicCapIcon,
+  'student-events': CalendarIcon,
+  'community': HeartIcon,
 }
 
 export default function StudentLife() {

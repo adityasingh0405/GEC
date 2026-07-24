@@ -56,7 +56,7 @@ export default function Courses() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-16 p-8 bg-white rounded-2xl border border-[#DDE3EC] text-center"
+            className="mt-16 p-8 bg-white rounded-sm border border-[#DDE3EC] border-t-4 border-t-[#C8972B] text-center"
             style={{ boxShadow: 'var(--shadow-sm)' }}
           >
             <h2 className="font-display text-2xl font-bold text-[#1E3A5F] mb-3">
@@ -68,13 +68,13 @@ export default function Courses() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/admissions"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-[#1E3A5F] text-white font-semibold hover:bg-[#2A5284] transition-colors"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-sm bg-[#1E3A5F] border border-[#1E3A5F] text-white text-xs font-bold uppercase tracking-wider hover:bg-[#2A5284] hover:border-[#2A5284] hover:-translate-y-0.5 transition-all shadow-sm hover:shadow-md"
               >
                 Explore Admissions
               </a>
               <a
                 href="/contact"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-lg border-2 border-[#1E3A5F] text-[#1E3A5F] font-semibold hover:bg-[#1E3A5F] hover:text-white transition-colors"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-sm border-2 border-[#1E3A5F] text-[#1E3A5F] text-xs font-bold uppercase tracking-wider hover:bg-[#1E3A5F] hover:text-white hover:-translate-y-0.5 transition-all shadow-sm hover:shadow-md"
               >
                 Contact Us
               </a>

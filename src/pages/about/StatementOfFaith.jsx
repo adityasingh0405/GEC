@@ -121,10 +121,10 @@ export default function StatementOfFaith() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/80 shadow-xl shadow-slate-900/5 border-t-4 border-t-[#C8972B] relative overflow-hidden"
+              className="bg-white rounded-sm p-8 sm:p-12 border border-slate-200 shadow-md border-t-4 border-t-[#C8972B] relative overflow-hidden"
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-[#0B1526] text-[#C8972B] flex items-center justify-center font-bold shadow-md">
+                <div className="w-10 h-10 rounded-sm bg-[#0B1526] text-[#C8972B] flex items-center justify-center font-bold shadow-sm">
                   <ShieldCheckIcon className="w-5 h-5" />
                 </div>
                 <div>
@@ -165,12 +165,12 @@ export default function StatementOfFaith() {
                     variants={staggerItem}
                     whileHover={{ y: -4 }}
                     transition={{ duration: 0.3 }}
-                    className="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/80 shadow-lg shadow-slate-900/5 border-t-4 border-t-[#C8972B] hover:shadow-xl transition-all duration-300 relative group overflow-hidden"
+                    className="bg-white rounded-sm p-8 sm:p-10 border border-slate-200 shadow-md border-t-4 border-t-[#C8972B] hover:shadow-lg transition-all duration-300 relative group overflow-hidden"
                   >
                     {/* Header Row */}
                     <div className="flex items-center justify-between gap-4 mb-6">
                       <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 rounded-2xl bg-[#0B1526] text-[#C8972B] flex items-center justify-center shrink-0 shadow-md group-hover:scale-105 transition-transform duration-300">
+                        <div className="w-12 h-12 rounded-sm bg-[#0B1526] text-[#C8972B] flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform duration-300">
                           <IconComponent className="w-6 h-6" />
                         </div>
                         <div>
@@ -183,7 +183,7 @@ export default function StatementOfFaith() {
                         </div>
                       </div>
 
-                      <div className="hidden sm:flex w-10 h-10 rounded-full bg-[#FAF8F5] border border-[#E8D4A2] text-[#1E3A5F] font-serif font-bold text-sm items-center justify-center shrink-0">
+                      <div className="hidden sm:flex w-10 h-10 rounded-sm bg-[#FAF8F5] border border-[#E8D4A2] text-[#1E3A5F] font-serif font-bold text-sm items-center justify-center shrink-0">
                         {item.number}
                       </div>
                     </div>
@@ -194,7 +194,7 @@ export default function StatementOfFaith() {
                     </p>
 
                     {/* Highlighted Scripture References Box */}
-                    <div className="bg-[#FAF8F5] border border-[#E8D4A2]/70 rounded-2xl p-4 sm:p-5 text-[#1E3A5F]">
+                    <div className="bg-[#FAF8F5] border border-[#E8D4A2]/70 rounded-sm p-4 sm:p-5 text-[#1E3A5F]">
                       <div className="flex items-center gap-2 text-xs font-bold text-[#C8972B] uppercase tracking-wider mb-2">
                         <BookOpenIcon className="w-4 h-4" />
                         <span>Scripture References</span>
@@ -203,7 +203,7 @@ export default function StatementOfFaith() {
                         {item.scriptures.map((ref, idx) => (
                           <span
                             key={idx}
-                            className="inline-flex items-center px-3 py-1 rounded-lg bg-white border border-[#E8D4A2] text-[#1E3A5F] text-xs font-semibold shadow-2xs"
+                            className="inline-flex items-center px-3 py-1 rounded-sm bg-white border border-[#E8D4A2] text-[#1E3A5F] text-xs font-semibold"
                           >
                             {ref}
                           </span>
@@ -221,12 +221,10 @@ export default function StatementOfFaith() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-gradient-to-br from-[#0B1526] to-[#152940] rounded-3xl p-8 sm:p-12 text-white shadow-2xl border border-white/10 text-center relative overflow-hidden"
+              className="bg-gradient-to-br from-[#0B1526] to-[#152940] rounded-sm p-8 sm:p-12 text-white shadow-xl border border-white/10 border-t-4 border-t-[#C8972B] text-center relative overflow-hidden"
             >
-              <div className="absolute top-0 right-0 w-48 h-48 bg-[#C8972B]/10 rounded-full blur-3xl pointer-events-none" />
-
               <div className="max-w-2xl mx-auto space-y-6">
-                <div className="w-12 h-12 rounded-2xl bg-[#C8972B] text-[#0B1526] flex items-center justify-center mx-auto shadow-lg font-bold">
+                <div className="w-12 h-12 rounded-sm bg-[#C8972B] text-[#0B1526] flex items-center justify-center mx-auto shadow-md font-bold">
                   <AcademicCapIcon className="w-6 h-6" />
                 </div>
 
@@ -241,7 +239,7 @@ export default function StatementOfFaith() {
                 <div className="pt-4">
                   <Link
                     to="/courses"
-                    className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-[#C8972B] text-[#0B1526] text-xs font-bold uppercase tracking-wider hover:bg-[#D4A843] transition-all shadow-lg hover:-translate-y-0.5"
+                    className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-sm bg-[#C8972B] border border-[#C8972B] text-[#0B1526] text-xs font-bold uppercase tracking-wider hover:bg-[#D4A843] hover:border-[#D4A843] transition-all shadow-md hover:-translate-y-0.5"
                   >
                     <span>Explore Our Programs</span>
                     <ArrowRightIcon className="w-4 h-4" />

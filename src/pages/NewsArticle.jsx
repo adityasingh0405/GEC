@@ -1,5 +1,7 @@
 import { useParams, Link } from 'react-router-dom'
 import SEOHead from '@seo/SEOHead'
+import JsonLD from '@seo/JsonLD'
+import { newsArticleSchema } from '@seo/schemas'
 import PageHeader from '@components/common/PageHeader'
 import Section from '@components/common/Section'
 import Card from '@components/common/Card'
@@ -22,10 +24,13 @@ export default function NewsArticle() {
   return (
     <>
       <SEOHead
-        page={`/news`}
+        page={`/news/${article.slug}`}
         title={article.title}
         description={article.excerpt}
+        canonical={`https://www.gloryeducationcenter.org/news/${article.slug}`}
+        ogImage={article.image?.startsWith('http') ? article.image : undefined}
       />
+      <JsonLD schema={newsArticleSchema(article)} />
 
       <PageHeader
         heading={article.title}
@@ -51,7 +56,7 @@ export default function NewsArticle() {
           {/* Main Image */}
           <div className="relative aspect-video rounded-2xl overflow-hidden bg-[#EFF3F8] mb-10 border border-[#DDE3EC]">
             <img
-              src={`/images/placeholder-news.jpg`}
+              src={article.image?.startsWith('http') ? article.image : `/images/${article.image}`}
               alt={article.title}
               className="w-full h-full object-cover"
               onError={(e) => {
@@ -67,7 +72,6 @@ export default function NewsArticle() {
             </p>
             <p>{article.body}</p>
             <p>
-              // TODO: Replace with client content — Full news article body, extended statements, media coverage links, and high-resolution photo galleries.
             </p>
           </div>
 
@@ -95,6 +99,7 @@ export default function NewsArticle() {
                     subtitle={rel.category}
                     description={rel.excerpt}
                     badge={rel.category}
+                    image={rel.image?.startsWith('http') ? rel.image : `/images/${rel.image}`}
                     href={`/news/${rel.slug}`}
                     actionLabel="Read More"
                   />

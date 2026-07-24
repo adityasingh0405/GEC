@@ -39,7 +39,7 @@ export default function FeeStructure() {
 
         {/* Tuition Table */}
         <div className="max-w-4xl mx-auto mb-16 overflow-x-auto">
-          <table className="w-full text-left border-collapse bg-white rounded-2xl overflow-hidden border border-[#DDE3EC] shadow-sm">
+          <table className="w-full text-left border-collapse bg-white rounded-sm overflow-hidden border border-[#DDE3EC] shadow-sm">
             <thead>
               <tr className="bg-[#1E3A5F] text-white text-xs font-bold uppercase tracking-wider">
                 <th className="py-4 px-6">Program / Course</th>
@@ -75,7 +75,7 @@ export default function FeeStructure() {
               <motion.div
                 key={i}
                 variants={staggerItem}
-                className="p-5 rounded-xl bg-[#F8F9FA] border border-[#DDE3EC] flex items-center justify-between"
+                className="p-5 rounded-sm bg-[#F8F9FA] border border-[#DDE3EC] border-l-2 border-l-[#C8972B] flex items-center justify-between"
               >
                 <span className="text-sm font-medium text-[#1E3A5F]">{fee.item}</span>
                 <span className="text-sm font-bold text-[#C8972B]">{fee.amount}</span>
@@ -85,7 +85,7 @@ export default function FeeStructure() {
         </div>
 
         {/* Financial Assistance */}
-        <div className="max-w-4xl mx-auto p-8 rounded-2xl bg-gradient-to-br from-[#1E3A5F] to-[#0B1526] text-white shadow-xl">
+        <div className="max-w-4xl mx-auto p-8 rounded-sm bg-gradient-to-br from-[#1E3A5F] to-[#0B1526] text-white shadow-xl border-t-4 border-t-[#C8972B]">
           <h3 className="font-display text-2xl font-bold mb-3 text-[#C8972B]">
             Financial Assistance &amp; Scholarships
           </h3>

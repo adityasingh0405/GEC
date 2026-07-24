@@ -1,82 +1,82 @@
 {
   "sections": [
     {
-      "id": "worship",
-      "title": "Worship & Chapel Life",
-      "subtitle": "Spiritual Growth & Fellowship",
-      "description": "Daily chapel services, student-led praise and worship, prayer gatherings, and spiritual retreat days form the heartbeat of spiritual formation at Glory Education Center.",
+      "id": "chapel-life",
+      "title": "Chapel & Worship",
+      "subtitle": "Growing Together in Faith",
+      "description": "Regular chapel services and times of worship provide opportunities for students, faculty, and staff to grow spiritually through prayer, biblical teaching, and fellowship.",
       "features": [
-        "Daily Morning Chapel Services",
-        "Student & Faculty Led Worship Teams",
-        "Weekly Intercessory Prayer Groups",
-        "Annual Spiritual Renewal Retreats"
+        "Regular Chapel Services",
+        "Corporate Worship & Prayer",
+        "Biblical Teaching Sessions",
+        "Student Participation in Worship"
       ],
-      "image": "/images/placeholder-worship.jpg"
+      "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Misc/738271019_993261440201936_6224026402438988685_n.jpg?updatedAt=1784888649028"
     },
     {
       "id": "campus-life",
       "title": "Campus Life",
-      "subtitle": "Community & Living",
-      "description": "Our residential and commuter campus offers a vibrant community life where lifelong friendships are built through communal meals, sports, cultural events, and ministry outreach.",
+      "subtitle": "Learning Beyond the Classroom",
+      "description": "Campus life encourages students to build meaningful relationships through fellowship, academic collaboration, and participation in various campus activities.",
       "features": [
-        "On-Campus Student Hostels",
-        "Dining Hall & Fellowship Center",
-        "Sports & Recreational Facilities",
-        "Cultural Diversity & Fellowship"
+        "Student Fellowship",
+        "Campus Activities & Events",
+        "Supportive Learning Environment",
+        "Community Engagement"
       ],
-      "image": "/images/placeholder-campus.jpg"
+      "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Sports%20Meet/474002104_571721839022567_6384479713650701030_n.jpg?updatedAt=1784888647307"
     },
     {
       "id": "library",
-      "title": "Theological Library",
-      "subtitle": "Academic Excellence & Research",
-      "description": "Houses over 25,000 volumes, rare theological commentaries, digital research databases, quiet study rooms, and high-speed internet for comprehensive academic research.",
+      "title": "Library & Learning Resources",
+      "subtitle": "Supporting Academic Study",
+      "description": "The library provides students with access to theological resources, reference materials, and study spaces that support learning and academic research.",
       "features": [
-        "25,000+ Physical Theological Volumes",
-        "Access to Digital Journals & Databases",
-        "Individual & Group Study Bays",
-        "Dedicated Research Librarians"
+        "Theological Reference Books",
+        "Quiet Study Areas",
+        "Academic Resources",
+        "Research Support"
       ],
-      "image": "/images/placeholder-library.jpg"
+      "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Misc/754825238_1006985828829497_6723008042071483444_n.jpg?updatedAt=1784888649023"
     },
     {
-      "id": "music-department",
-      "title": "Music Department",
-      "subtitle": "Worship Arts & Performance",
-      "description": "Equipped with state-of-the-art practice rooms, sound recording facilities, pianos, key instruments, and choir halls to nurture musical gifts for global ministry.",
+      "id": "music",
+      "title": "Music & Worship Ministry",
+      "subtitle": "Developing Musical Gifts",
+      "description": "Students interested in music and worship have opportunities to develop their skills through practical learning, rehearsals, and participation in worship services and special programs.",
       "features": [
-        "Instrumental & Vocal Training Labs",
-        "Digital Audio Workstations (DAW)",
-        "GEC Sanctuary Choir & Ensemble",
-        "Regular Concerts & Live Recitals"
+        "Vocal & Instrumental Practice",
+        "Worship Team Participation",
+        "Music Workshops",
+        "Special Performances"
       ],
-      "image": "/images/placeholder-music.jpg"
+      "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Farewell/470741360_550977927763625_4249584129824702359_n.jpg?updatedAt=1784888652430"
     },
     {
-      "id": "events",
-      "title": "Student Events & Outreaches",
-      "subtitle": "Practical Ministry & Impact",
-      "description": "Students participate in weekend church ministries, community gospel outreaches, music fests, youth camps, and social service projects across urban and rural communities.",
+      "id": "student-events",
+      "title": "Student Activities",
+      "subtitle": "Building Community",
+      "description": "Throughout the academic year, students participate in campus events, fellowship gatherings, sports activities, and other programs that encourage teamwork and personal growth.",
       "features": [
-        "Weekend Church Internship Placements",
-        "Mission Exposure Trips",
-        "Annual Music & Youth Festival",
-        "Community Outreach & Welfare"
+        "Campus Events",
+        "Sports & Recreation",
+        "Student Fellowship Programs",
+        "Community Activities"
       ],
-      "image": "/images/placeholder-events.jpg"
+      "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Summer%20Program/474023569_571722089022542_7300593993592732382_n.jpg?updatedAt=1784888646103"
     },
     {
       "id": "community",
-      "title": "Community & Care",
-      "subtitle": "Mentorship & Discipleship",
-      "description": "Every student is paired with a faculty mentor for personal discipleship, academic guidance, and pastoral counseling throughout their time at GEC.",
+      "title": "Community & Student Support",
+      "subtitle": "A Caring Learning Environment",
+      "description": "Glory Education Center seeks to provide a welcoming environment where students receive academic encouragement, spiritual guidance, and opportunities to grow in community.",
       "features": [
-        "1-on-1 Faculty Mentorship",
-        "Student Care & Pastoral Counseling",
-        "Peer Support & Care Groups",
-        "Alumni Network & Fellowship"
+        "Faculty Guidance",
+        "Peer Fellowship",
+        "Supportive Campus Community",
+        "Personal & Spiritual Growth"
       ],
-      "image": "/images/placeholder-community.jpg"
+      "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Summer%20Program/476234409_583936801134404_1964509060146368720_n.jpg?updatedAt=1784888646596"
     }
   ]
 }

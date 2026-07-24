@@ -93,7 +93,7 @@ export default function Footer() {
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-lg bg-white/10 hover:bg-[#C8972B] hover:text-[#0B1526] flex items-center justify-center transition-colors"
+                    className="w-9 h-9 rounded-sm bg-white/10 hover:bg-[#C8972B] hover:text-[#0B1526] flex items-center justify-center transition-colors"
                     aria-label={`Follow us on ${key.charAt(0).toUpperCase() + key.slice(1)}`}
                   >
                     <Icon className="w-4 h-4" />

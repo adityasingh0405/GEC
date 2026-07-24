@@ -49,11 +49,31 @@
     }
   ],
   "process": [
-    { "step": 1, "title": "Submit Application", "desc": "Complete the online application form and upload essential personal & academic documents." },
-    { "step": 2, "title": "Document Review", "desc": "Our admissions committee reviews your transcripts, pastoral recommendation, and testimony." },
-    { "step": 3, "title": "Personal Interview", "desc": "Shortlisted candidates attend an in-person or online interview with faculty members." },
-    { "step": 4, "title": "Admission Decision", "desc": "Receive your formal admission offer letter along with scholarship and fee guidance." },
-    { "step": 5, "title": "Enrollment & Orientation", "desc": "Confirm your acceptance, pay tuition deposit, and attend orientation week." }
+    {
+      "step": 1,
+      "title": "Submit Application",
+      "desc": "Complete the online application form and upload essential personal & academic documents."
+    },
+    {
+      "step": 2,
+      "title": "Document Review",
+      "desc": "Our admissions committee reviews your transcripts, pastoral recommendation, and testimony."
+    },
+    {
+      "step": 3,
+      "title": "Personal Interview",
+      "desc": "Shortlisted candidates attend an in-person or online interview with faculty members."
+    },
+    {
+      "step": 4,
+      "title": "Admission Decision",
+      "desc": "Receive your formal admission offer letter along with scholarship and fee guidance."
+    },
+    {
+      "step": 5,
+      "title": "Enrollment & Orientation",
+      "desc": "Confirm your acceptance, pay tuition deposit, and attend orientation week."
+    }
   ],
   "eligibilityMatrix": [
     {
@@ -115,33 +135,198 @@
   "feeStructure": {
     "currency": "INR (₹)",
     "tuition": [
-      { "program": "Bachelor of Theology (B.Th)", "perSemester": "₹ 15,000", "perYear": "₹ 30,000" },
-      { "program": "Master of Divinity (M.Dv)", "perSemester": "₹ 20,000", "perYear": "₹ 40,000" },
-      { "program": "Master of Theology (M.Th)", "perSemester": "₹ 25,000", "perYear": "₹ 50,000" },
-      { "program": "Diploma in Music", "perSemester": "₹ 12,500", "perYear": "₹ 25,000" }
+      {
+        "program": "Bachelor of Theology (B.Th)",
+        "perSemester": "₹ 15,000",
+        "perYear": "₹ 30,000"
+      },
+      {
+        "program": "Master of Divinity (M.Dv)",
+        "perSemester": "₹ 20,000",
+        "perYear": "₹ 40,000"
+      },
+      {
+        "program": "Master of Theology (M.Th)",
+        "perSemester": "₹ 25,000",
+        "perYear": "₹ 50,000"
+      },
+      {
+        "program": "Diploma in Music",
+        "perSemester": "₹ 12,500",
+        "perYear": "₹ 25,000"
+      }
     ],
     "otherFees": [
-      { "item": "Admission / Registration Fee (One-time)", "amount": "₹ 2,000" },
-      { "item": "Library & IT Annual Fee", "amount": "₹ 2,500" },
-      { "item": "Hostel Accommodation (Includes Room & Board / Month)", "amount": "₹ 4,500 / month" },
-      { "item": "Examination Fee (Per Semester)", "amount": "₹ 1,500" }
+      {
+        "item": "Admission / Registration Fee (One-time)",
+        "amount": "₹ 2,000"
+      },
+      {
+        "item": "Library & IT Annual Fee",
+        "amount": "₹ 2,500"
+      },
+      {
+        "item": "Hostel Accommodation (Includes Room & Board / Month)",
+        "amount": "₹ 4,500 / month"
+      },
+      {
+        "item": "Examination Fee (Per Semester)",
+        "amount": "₹ 1,500"
+      }
     ],
     "financialAid": "Need-based scholarships and partial tuition fee waivers are available for deserving candidates recommended by their sponsoring church. Contact the finance office for financial aid forms."
   },
   "academicCalendar": [
-    { "date": "Jan 1, 2026", "event": "Online Applications Open for Academic Year 2026–2027", "category": "Admissions" },
-    { "date": "May 15, 2026", "event": "Application Submission Deadline (First Phase)", "category": "Admissions" },
-    { "date": "May 25–28, 2026", "event": "Applicant Entrance Interviews & Auditions", "category": "Admissions" },
-    { "date": "June 10, 2026", "event": "New Student Hostel Arrival & Check-In", "category": "Campus" },
-    { "date": "June 12, 2026", "event": "Orientation Week & Convocation Chapel", "category": "Academics" },
-    { "date": "June 15, 2026", "event": "Commencement of Semester I Classes", "category": "Academics" },
-    { "date": "Oct 15–22, 2026", "event": "Mid-Term Examinations & Evaluation", "category": "Exams" },
-    { "date": "Nov 20, 2026", "event": "Annual Worship & Music Recital", "category": "Events" },
-    { "date": "Dec 10–18, 2026", "event": "Semester I End Examinations", "category": "Exams" },
-    { "date": "Dec 19 – Jan 3", "event": "Christmas & New Year Vacation", "category": "Holidays" },
-    { "date": "Jan 4, 2027", "event": "Commencement of Semester II Classes", "category": "Academics" },
-    { "date": "April 20–28, 2027", "event": "Semester II Final Examinations", "category": "Exams" },
-    { "date": "May 8, 2027", "event": "Annual Graduation & Commissioning Ceremony", "category": "Graduation" }
+    {
+      "date": "June 26, 2026",
+      "event": "Submission of Lesson Plans",
+      "category": "Academics"
+    },
+    {
+      "date": "June 27, 2026",
+      "event": "Student Arrival & Hostel Check-In",
+      "category": "Campus"
+    },
+    {
+      "date": "June 28, 2026",
+      "event": "Spiritual Emphasis Service",
+      "category": "Events"
+    },
+    {
+      "date": "June 29, 2026",
+      "event": "Student Orientation Program",
+      "category": "Academics"
+    },
+    {
+      "date": "July 1, 2026",
+      "event": "Commencement of Classes",
+      "category": "Academics"
+    },
+    {
+      "date": "July 24, 2026",
+      "event": "College Seminar",
+      "category": "Events"
+    },
+    {
+      "date": "August 7, 2026",
+      "event": "Freshers' Day Celebration",
+      "category": "Events"
+    },
+    {
+      "date": "August 15, 2026",
+      "event": "Independence Day (National Holiday)",
+      "category": "Holidays"
+    },
+    {
+      "date": "August 31 – September 4, 2026",
+      "event": "Mid-Term Examinations",
+      "category": "Exams"
+    },
+    {
+      "date": "September 4, 2026",
+      "event": "Teachers' Day Celebration",
+      "category": "Events"
+    },
+    {
+      "date": "September 11, 2026",
+      "event": "Parents' Orientation",
+      "category": "Academics"
+    },
+    {
+      "date": "September 24–25, 2026",
+      "event": "Annual College Sports",
+      "category": "Events"
+    },
+    {
+      "date": "September 29, 2026",
+      "event": "Faculty & Staff Meeting",
+      "category": "Administration"
+    },
+    {
+      "date": "October 2, 2026",
+      "event": "Gandhi Jayanti (National Holiday) & Prayer Day",
+      "category": "Holidays"
+    },
+    {
+      "date": "October 26–30, 2026",
+      "event": "First Semester Final Examinations",
+      "category": "Exams"
+    },
+    {
+      "date": "November 2, 2026",
+      "event": "Commencement of Second Semester Classes",
+      "category": "Academics"
+    },
+    {
+      "date": "November 14, 2026",
+      "event": "College Excursion",
+      "category": "Events"
+    },
+    {
+      "date": "November 30, 2026",
+      "event": "Faculty & Staff Meeting",
+      "category": "Administration"
+    },
+    {
+      "date": "December 18, 2026",
+      "event": "College Christmas Celebration",
+      "category": "Events"
+    },
+    {
+      "date": "December 19, 2026 – January 7, 2027",
+      "event": "Christmas Vacation",
+      "category": "Holidays"
+    },
+    {
+      "date": "January 8, 2027",
+      "event": "Student Arrival & Hostel Check-In",
+      "category": "Campus"
+    },
+    {
+      "date": "January 9, 2027",
+      "event": "Social Work Program",
+      "category": "Events"
+    },
+    {
+      "date": "January 10, 2027",
+      "event": "New Year Worship Service",
+      "category": "Events"
+    },
+    {
+      "date": "January 11, 2027",
+      "event": "Classes Resume",
+      "category": "Academics"
+    },
+    {
+      "date": "January 26, 2027",
+      "event": "Republic Day (National Holiday)",
+      "category": "Holidays"
+    },
+    {
+      "date": "February 19–25, 2027",
+      "event": "Final Examinations",
+      "category": "Exams"
+    },
+    {
+      "date": "March 1, 2027",
+      "event": "Declaration of Final Results",
+      "category": "Academics"
+    },
+    {
+      "date": "March 3–4, 2027",
+      "event": "Re-Take Examinations",
+      "category": "Exams"
+    },
+    {
+      "date": "March 6, 2027",
+      "event": "Annual Graduation Ceremony",
+      "category": "Graduation"
+    },
+    {
+      "date": "March 15, 2027",
+      "event": "Summer Course Commences",
+      "category": "Academics"
+    }
   ],
   "requirements": {
     "general": [

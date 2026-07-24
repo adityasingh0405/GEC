@@ -67,7 +67,7 @@ export default function Faculty() {
             </div>
             <hr className="border-[#DDE3EC]" />
             <p className="text-sm text-[#5A6A7A] leading-relaxed">
-              {selectedMember.bio || '// TODO: Replace with client content — Full faculty biography and publication credentials.'}
+              {selectedMember.bio || 'Full biography coming soon.'}
             </p>
             {selectedMember.specialization && (
               <p className="text-xs text-[#1E3A5F] font-semibold">

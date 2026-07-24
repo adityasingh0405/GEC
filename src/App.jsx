@@ -12,7 +12,6 @@ const VisionMission = lazy(() => import('@pages/about/VisionMission'))
 const StatementOfFaith = lazy(() => import('@pages/about/StatementOfFaith'))
 const ChurchProfile = lazy(() => import('@pages/about/ChurchProfile'))
 const LeadershipFaculty = lazy(() => import('@pages/about/LeadershipFaculty'))
-const FoundersMessage = lazy(() => import('@pages/about/FoundersMessage'))
 const PrincipalsMessage = lazy(() => import('@pages/about/PrincipalsMessage'))
 
 // Course pages
@@ -62,7 +61,7 @@ const router = createBrowserRouter([
       { path: 'about/statement-of-faith', element: <StatementOfFaith /> },
       { path: 'about/church-profile', element: <ChurchProfile /> },
       { path: 'about/leadership-faculty', element: <LeadershipFaculty /> },
-      { path: 'about/founders-message', element: <FoundersMessage /> },
+      { path: 'about/founders-message', element: <PrincipalsMessage /> },
       { path: 'about/principals-message', element: <PrincipalsMessage /> },
 
       // Courses

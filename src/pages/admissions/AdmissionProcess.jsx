@@ -45,9 +45,9 @@ export default function AdmissionProcess() {
             <motion.div
               key={step.step}
               variants={staggerItem}
-              className="p-8 rounded-2xl bg-[#F8F9FA] border border-[#DDE3EC] shadow-sm flex flex-col md:flex-row items-start gap-6"
+              className="p-8 rounded-sm bg-[#F8F9FA] border border-[#DDE3EC] border-t-2 border-t-[#C8972B] shadow-sm flex flex-col md:flex-row items-start gap-6"
             >
-              <div className="w-14 h-14 rounded-2xl bg-[#1E3A5F] text-[#C8972B] flex items-center justify-center font-black text-2xl shrink-0">
+              <div className="w-14 h-14 rounded-sm bg-[#1E3A5F] text-[#C8972B] flex items-center justify-center font-black text-2xl shrink-0">
                 0{step.step}
               </div>
               <div className="flex-1">
@@ -57,7 +57,7 @@ export default function AdmissionProcess() {
                 <p className="text-[#5A6A7A] leading-relaxed text-sm sm:text-base mb-4">
                   {step.desc}
                 </p>
-                <div className="p-3 bg-white rounded-lg border border-[#DDE3EC] text-xs text-[#5A6A7A]">
+                <div className="p-3 bg-white rounded-sm border border-[#DDE3EC] text-xs text-[#5A6A7A]">
                   💡 <strong>Tip:</strong> Ensure your pastor's recommendation letter and mark sheets are prepared beforehand to prevent delays.
                 </div>
               </div>

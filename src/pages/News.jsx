@@ -1,12 +1,10 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
 import SEOHead from '@seo/SEOHead'
 import PageHeader from '@components/common/PageHeader'
 import Section from '@components/common/Section'
 import Card from '@components/common/Card'
 import CTA from '@components/common/CTA'
-import { CalendarIcon, UserIcon } from '@components/common/Icons'
 import { staggerContainer, staggerItem } from '@utils/animations'
 import newsData from '@content/news.json'
 
@@ -18,34 +16,43 @@ export default function News() {
     { label: 'News & Events', href: '/news' }
   ]
 
-  const categories = ['All', 'Admissions', 'Events', 'Music', 'Academics']
-  const filteredArticles = filter === 'All'
-    ? newsData
-    : newsData.filter(item => item.category === filter)
+  const categories = useMemo(
+    () => ['All', 'Events', 'Programs', 'Sports', 'Campus Life'],
+    []
+  )
+
+  const filteredArticles = useMemo(() => {
+    if (filter === 'All') return newsData
+
+    return newsData.filter(
+      item =>
+        item.category?.trim().toLowerCase() ===
+        filter.trim().toLowerCase()
+    )
+  }, [filter])
 
   return (
     <>
       <SEOHead page="/news" />
 
       <PageHeader
-        heading="News &amp; Events"
-        subheading="Stay informed with the latest updates, upcoming events, academic announcements, and campus stories from GEC."
-        badge="Institutional News"
+        heading="News & Events"
+        subheading="Explore the latest events, student activities, campus programs, and highlights from Glory Education Center."
+        badge="Campus Updates"
         customCrumbs={crumbs}
       />
 
       <Section bg="light">
         {/* Category Filters */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
-          {categories.map((cat) => (
+        <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
+          {categories.map(cat => (
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${
-                filter === cat
+              className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${filter === cat
                   ? 'bg-[#1E3A5F] text-[#C8972B] shadow-md'
-                  : 'bg-[#EFF3F8] text-[#5A6A7A] hover:bg-[#DDE3EC]'
-              }`}
+                  : 'bg-[#EFF3F8] text-[#5A6A7A] hover:bg-[#DDE3EC] hover:text-[#1E3A5F]'
+                }`}
             >
               {cat}
             </button>
@@ -53,33 +60,61 @@ export default function News() {
         </div>
 
         <motion.div
+          key={filter}
           variants={staggerContainer}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
+          animate="visible"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {filteredArticles.map((item) => (
-            <motion.div key={item.id} variants={staggerItem}>
-              <Card
-                title={item.title}
-                subtitle={`${item.category} • ${item.date}`}
-                description={item.excerpt}
-                badge={item.category}
-                image={`/images/placeholder-news.jpg`}
-                href={`/news/${item.slug}`}
-                actionLabel="Read Full Article"
-              />
-            </motion.div>
-          ))}
+          {filteredArticles.length > 0 ? (
+            filteredArticles.map(item => (
+              <motion.div
+                key={item.id}
+                variants={staggerItem}
+                layout
+              >
+                <Card
+                  title={item.title}
+                  subtitle={`${item.category} • ${new Date(
+                    item.date
+                  ).toLocaleDateString('en-IN', {
+                    day: 'numeric',
+                    month: 'long',
+                    year: 'numeric'
+                  })}`}
+                  description={item.excerpt}
+                  badge={item.category}
+                  image={item.image?.startsWith('http') ? item.image : `/images/${item.image}`}
+                  href={`/news/${item.slug}`}
+                  actionLabel="Read Full Article"
+                />
+              </motion.div>
+            ))
+          ) : (
+            <div className="col-span-full py-16 text-center">
+              <h3 className="text-xl font-semibold text-[#1E3A5F] mb-2">
+                No News Found
+              </h3>
+              <p className="text-[#5A6A7A]">
+                There are currently no articles available in the{' '}
+                <strong>{filter}</strong> category.
+              </p>
+            </div>
+          )}
         </motion.div>
       </Section>
 
       <CTA
-        heading="Stay Connected with Glory Education Center"
-        body="Subscribe or check back regularly for upcoming events, concerts, and admission updates."
-        primaryCta={{ label: 'Apply Now', href: '/admissions/apply' }}
-        secondaryCta={{ label: 'Contact Us', href: '/contact' }}
+        heading="Be Part of Campus Life"
+        body="Stay connected with the latest events, student activities, and important updates from Glory Education Center."
+        primaryCta={{
+          label: 'Explore Programs',
+          href: '/programs'
+        }}
+        secondaryCta={{
+          label: 'Contact Us',
+          href: '/contact'
+        }}
       />
     </>
   )
