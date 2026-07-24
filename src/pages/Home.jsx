@@ -542,13 +542,19 @@ export default function Home() {
                 impact churches and communities around the world.
               </p>
 
-              <a
-                href="/about"
+
+
+              <Link
+                to="/about"
                 className="inline-flex items-center gap-2 mt-8 text-[#D4A017] font-semibold hover:gap-3 transition-all duration-300"
               >
+                About
                 Read More
                 <span>→</span>
-              </a>
+              </Link>
+
+
+
 
               <div className="border-t border-[#DDE3EC] mt-10 pt-6">
                 <h4 className="text-2xl font-bold text-[#1E3A5F]">
@@ -562,14 +568,15 @@ export default function Home() {
             </motion.div>
           </motion.div>
         </Container>
-      </section>
+      </section >
 
       {/* Admissions CTA */}
-      <CTA
+      < CTA
         heading={homeData.admissionsCTA.heading}
         body={homeData.admissionsCTA.body}
         primaryCta={homeData.admissionsCTA.cta}
-        secondaryCta={{ label: 'Learn About Us', href: '/about' }}
+        secondaryCta={{ label: 'Learn About Us', href: '/about' }
+        }
       />
     </>
   )
