@@ -332,9 +332,6 @@ export default function Navbar() {
                   className="flex items-center gap-2.5"
                   onClick={() => setMobileOpen(false)}
                 >
-                  <div className="w-9 h-9 rounded-sm bg-[#C8972B] flex items-center justify-center text-[#0B1526] text-xs font-black">
-                    GEC
-                  </div>
                   <div>
                     <span className="block font-bold text-white text-sm">Glory Education Center</span>
                     <span className="block text-[9px] uppercase tracking-widest text-white/60">Theological &amp; Music</span>

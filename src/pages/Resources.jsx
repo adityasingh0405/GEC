@@ -68,6 +68,7 @@ export default function Resources() {
                 description={action.description}
                 href={action.href}
                 actionLabel={action.actionLabel}
+                image={action.image}
               />
             </motion.div>
           ))}

@@ -103,21 +103,24 @@
       "title": "Meeting Schedule",
       "description": "View weekly chapel services, faculty prayer meetings, choir rehearsals, and student fellowships.",
       "actionLabel": "View Schedule",
-      "href": "/meeting-schedule"
+      "href": "/meeting-schedule",
+      "image": "https://ik.imagekit.io/xdm1pwpls0/pdfs/meeting.jpg"
     },
     {
       "id": "prayer-request",
       "title": "Prayer Request",
       "description": "Submit your prayer requests to our intercessory prayer team. We stand with you in faith.",
       "actionLabel": "Send Request",
-      "href": "/prayer-request"
+      "href": "/prayer-request",
+      "image": "https://ik.imagekit.io/xdm1pwpls0/pdfs/prayer.jpg"
     },
     {
       "id": "donation",
       "title": "Donation & Support",
       "description": "Partner with us in training future Christian leaders through financial gifts, scholarships, and ministry support.",
       "actionLabel": "Give Today",
-      "href": "/donation"
+      "href": "/donation",
+      "image": "https://ik.imagekit.io/xdm1pwpls0/pdfs/donate.jpg"
     }
   ]
 }
