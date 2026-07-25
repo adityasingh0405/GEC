@@ -9,35 +9,40 @@
       "title": "Our Story",
       "subtitle": "Two Decades of Grace & Growth",
       "description": "Discover how Glory Education Center grew from a modest cohort into a recognized institution equipping leaders across India.",
-      "href": "/about/our-story"
+      "href": "/about/our-story",
+      "image": "https://ik.imagekit.io/xdm1pwpls0/pdfs/story.jpg"
     },
     {
       "id": "vision-mission",
       "title": "Vision & Mission",
       "subtitle": "Our Calling & Core Purpose",
       "description": "Explore our core mission, visionary goals, educational objectives, and foundational values.",
-      "href": "/about/vision-mission"
+      "href": "/about/vision-mission",
+      "image": "https://ik.imagekit.io/xdm1pwpls0/pdfs/vision.jpg"
     },
     {
       "id": "statement-of-faith",
       "title": "Statement of Faith",
       "subtitle": "Biblical & Doctrinal Beliefs",
       "description": "Read our doctrinal confession anchored in the supreme authority of Holy Scripture.",
-      "href": "/about/statement-of-faith"
+      "href": "/about/statement-of-faith",
+      "image": "https://ik.imagekit.io/xdm1pwpls0/pdfs/faith.jpg"
     },
     {
       "id": "church-profile",
       "title": "Church Profile",
       "subtitle": "Ecclesial Affiliation & Heritage",
       "description": "Learn about our church roots, partner network, and commitment to the local and global church.",
-      "href": "/about/church-profile"
+      "href": "/about/church-profile",
+      "image": "https://ik.imagekit.io/xdm1pwpls0/pdfs/profile.jpg"
     },
     {
       "id": "leadership-faculty",
       "title": "Leadership & Faculty",
       "subtitle": "Mentors & Scholars",
       "description": "Meet our administration, board of governors, and dedicated faculty members.",
-      "href": "/about/leadership-faculty"
+      "href": "/about/leadership-faculty",
+      "image": "https://ik.imagekit.io/xdm1pwpls0/pdfs/leadership.jpg"
     }
   ],
   "mission": {

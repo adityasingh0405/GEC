@@ -120,6 +120,7 @@ export default function About() {
                 icon={iconsMap[item.id]}
                 href={item.href}
                 actionLabel="Explore Section"
+                image={item.image}
               />
             </motion.div>
           ))}
