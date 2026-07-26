@@ -15,10 +15,11 @@ import homeData from '@content/home.json'
 import coursesData from '@content/courses.json'
 import facultyData from '@content/faculty.json'
 import { CheckIcon, ArrowRightIcon, BookOpen, FileText, GraduationCap, Globe } from '@components/common/Icons'
+import { ikFeature, ikAvatar } from '@utils/imagekit'
 
 // ─── Hero Video URL ──────────────────────────────────────────────────────────
 const HERO_VIDEO_URL =
-  'https://ik.imagekit.io/xdm1pwpls0/pdfs/WhatsApp%20Video%202026-07-26%20at%201.45.02%20AM%20-%20Trim%20-%20Trim.mp4?updatedAt=1785082564527'
+  'https://ik.imagekit.io/xdm1pwpls0/pdfs/WhatsApp%20Video%202026-07-27%20at%2012.47.21%20AM%20-%20Trim.mp4'
 
 const OVERLAY =
   'linear-gradient(180deg, rgba(12,25,52,.42) 0%, rgba(15,36,68,.55) 55%, rgba(12,28,58,.68) 100%)'
@@ -37,6 +38,7 @@ function Hero({ data }) {
           muted
           loop
           playsInline
+          preload="metadata"
           className="w-full h-full object-cover"
         >
           <source src={HERO_VIDEO_URL} type="video/mp4" />
@@ -230,7 +232,7 @@ function AboutPreview({ data }) {
             >
               {/* Image */}
               <img
-                src="https://ik.imagekit.io/xdm1pwpls0/f_downlods/Farewell/719532886_970724695788944_6267178681070198581_n.jpg?updatedAt=1784888654464"
+                src={ikFeature('https://ik.imagekit.io/xdm1pwpls0/f_downlods/Farewell/719532886_970724695788944_6267178681070198581_n.jpg')}
                 alt="Students of Glory Education Center"
                 className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 loading="lazy"
@@ -547,9 +549,11 @@ export default function Home() {
             <div className="flex items-center gap-4">
               {selectedFaculty.image ? (
                 <img
-                  src={selectedFaculty.image}
+                  src={ikAvatar(selectedFaculty.image)}
                   alt={selectedFaculty.name}
                   className="w-16 h-16 rounded-full object-cover border-2 border-[#C8972B] shrink-0"
+                  loading="lazy"
+                  decoding="async"
                 />
               ) : (
                 <div className="w-16 h-16 rounded-full bg-[#1E3A5F] text-[#C8972B] flex items-center justify-center font-bold text-xl shrink-0">

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { cardHover } from '@utils/animations'
+import { ikFaculty } from '@utils/imagekit'
 
 /**
  * FacultyCard — displays faculty member with photo, name, title, specialization
@@ -21,7 +22,7 @@ export default function FacultyCard({ member, onClick, className = '' }) {
       {/* Avatar */}
       <div className="relative bg-gradient-to-br from-[#EFF3F8] to-[#DDE3EC] aspect-square overflow-hidden">
         <img
-          src={member.image || "/images/placeholder-faculty.jpg"}
+          src={ikFaculty(member.image || "/images/placeholder-faculty.jpg")}
           alt={`Portrait of ${member.name}`}
           loading="lazy"
           decoding="async"

@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { cardHover } from '@utils/animations'
+import { ikCard } from '@utils/imagekit'
 
 export default function Card({
   title,
@@ -28,7 +29,7 @@ export default function Card({
       <div className="relative aspect-video overflow-hidden bg-[#EFF3F8]">
         {!imgError && image ? (
           <img
-            src={image}
+            src={ikCard(image)}
             alt={title}
             loading="lazy"
             decoding="async"

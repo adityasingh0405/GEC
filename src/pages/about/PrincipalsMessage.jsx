@@ -12,6 +12,7 @@ import {
   BookOpenIcon,
   HeartIcon
 } from '@components/common/Icons'
+import { ikPortrait } from '@utils/imagekit'
 
 export default function PrincipalsMessage() {
   return (
@@ -50,9 +51,11 @@ export default function PrincipalsMessage() {
                 <div className="relative w-44 h-44 mx-auto mb-6 rounded-full p-1.5 bg-gradient-to-br from-[#1E3A5F] via-[#C8972B] to-[#0B1526] shadow-lg">
                   <div className="w-full h-full rounded-full overflow-hidden bg-slate-100 relative">
                     <img
-                      src="https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/Henry?updatedAt=1784916862186"
+                      src={ikPortrait('https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/Henry')}
                       alt="Dr. Henry Sui — Principal of Glory Education Center"
                       className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <div className="absolute bottom-2 right-2 bg-[#1E3A5F] text-[#C8972B] p-2 rounded-full shadow-md">

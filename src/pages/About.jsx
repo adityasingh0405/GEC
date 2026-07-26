@@ -16,6 +16,7 @@ import {
 } from '@components/common/Icons'
 import { staggerContainer, staggerItem } from '@utils/animations'
 import aboutData from '@content/about.json'
+import { ikAvatar } from '@utils/imagekit'
 
 const iconsMap = {
   'our-story': BookOpenIcon,
@@ -63,9 +64,11 @@ export default function About() {
 
               <div className="flex items-center gap-4 mb-5">
                 <img
-                  src="https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/Henry?updatedAt=1784916862186"
+                  src={ikAvatar('https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/Henry')}
                   alt="Dr. Henry"
                   className="w-16 h-16 rounded-full object-cover border-2 border-[#1E3A5F]"
+                  loading="lazy"
+                  decoding="async"
                 />
 
                 <div>

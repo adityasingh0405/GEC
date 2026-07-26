@@ -3,6 +3,7 @@ import SEOHead from '@seo/SEOHead'
 import PageHeader from '@components/common/PageHeader'
 import Container from '@components/common/Container'
 import CTA from '@components/common/CTA'
+import { ikIcon } from '@utils/imagekit'
 import {
   CheckIcon,
   MailIcon,
@@ -179,7 +180,7 @@ export default function Donation() {
 
                   <div className="w-48 h-48 mx-auto mb-6 bg-white p-3 rounded-sm shadow-sm">
                     <img
-                      src="https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/image_yKzou6uJS.png"
+                      src={ikIcon("https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/image_yKzou6uJS.png")}
                       alt="Scan to donate via QR Code"
                       className="w-full h-full object-contain"
                       loading="lazy"

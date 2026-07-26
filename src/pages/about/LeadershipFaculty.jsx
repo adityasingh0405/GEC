@@ -7,6 +7,7 @@ import CTA from '@components/common/CTA'
 import { staggerContainer, staggerItem } from '@utils/animations'
 import aboutData from '@content/about.json'
 import facultyData from '@content/faculty.json'
+import { ikAvatar } from '@utils/imagekit'
 
 export default function LeadershipFaculty() {
   const crumbs = [
@@ -43,9 +44,11 @@ export default function LeadershipFaculty() {
               style={{ boxShadow: 'var(--shadow-sm)' }}
             >
               <img
-                src={member.image || "/images/placeholder-faculty.jpg"}
+                src={ikAvatar(member.image || "/images/placeholder-faculty.jpg")}
                 alt={member.name}
                 className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-2 border-[#C8972B]"
+                loading="lazy"
+                decoding="async"
               />
               <h3 className="font-bold text-[#1E3A5F] text-xl mb-1">{member.name}</h3>
               <p className="text-xs text-[#C8972B] font-bold uppercase tracking-wider mb-3">{member.title}</p>

@@ -8,6 +8,7 @@ import Card from '@components/common/Card'
 import CTA from '@components/common/CTA'
 import { CalendarIcon, UserIcon, ArrowLeftIcon } from '@components/common/Icons'
 import newsData from '@content/news.json'
+import { ikFeature } from '@utils/imagekit'
 
 export default function NewsArticle() {
   const { slug } = useParams()
@@ -56,9 +57,11 @@ export default function NewsArticle() {
           {/* Main Image */}
           <div className="relative aspect-video rounded-2xl overflow-hidden bg-[#EFF3F8] mb-10 border border-[#DDE3EC]">
             <img
-              src={article.image?.startsWith('http') ? article.image : `/images/${article.image}`}
+              src={ikFeature(article.image?.startsWith('http') ? article.image : `/images/${article.image}`)}
               alt={article.title}
               className="w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
               onError={(e) => {
                 e.currentTarget.style.display = 'none'
               }}
