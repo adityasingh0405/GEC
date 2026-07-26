@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import SEOHead from '@seo/SEOHead'
 import PageHeader from '@components/common/PageHeader'
@@ -6,10 +6,15 @@ import Section from '@components/common/Section'
 import Lightbox from '@components/common/Lightbox'
 import CTA from '@components/common/CTA'
 import galleryData from '@content/gallery.json'
+import { ikGalleryThumb, ikTransform } from '@utils/imagekit'
+
+const INITIAL_BATCH_SIZE = 24
 
 export default function Gallery() {
   const [activeCategory, setActiveCategory] = useState('All')
   const [activeImageIndex, setActiveImageIndex] = useState(null)
+  const [visibleCount, setVisibleCount] = useState(INITIAL_BATCH_SIZE)
+  const observerRef = useRef(null)
 
   const rawCategories = Array.from(new Set(galleryData.map(item => item.category)))
   const nonMiscCategories = rawCategories.filter(c => c.toLowerCase() !== 'misc').sort((a, b) => a.localeCompare(b))
@@ -19,6 +24,35 @@ export default function Gallery() {
   const filteredImages = activeCategory === 'All'
     ? galleryData
     : galleryData.filter(item => item.category === activeCategory)
+
+  const handleCategoryChange = (cat) => {
+    setActiveCategory(cat)
+    setVisibleCount(INITIAL_BATCH_SIZE)
+  }
+
+  const visibleImages = filteredImages.slice(0, visibleCount)
+  const hasMore = visibleCount < filteredImages.length
+
+  // Infinite scroll observer for incremental image loading
+  useEffect(() => {
+    if (!hasMore) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setVisibleCount(prev => Math.min(prev + INITIAL_BATCH_SIZE, filteredImages.length))
+        }
+      },
+      { rootMargin: '300px' }
+    )
+
+    const el = observerRef.current
+    if (el) observer.observe(el)
+
+    return () => {
+      if (el) observer.unobserve(el)
+    }
+  }, [hasMore, filteredImages.length])
 
   const crumbs = [
     { label: 'Home', href: '/' },
@@ -42,7 +76,7 @@ export default function Gallery() {
           {categories.map((cat) => (
             <button
               key={cat}
-              onClick={() => setActiveCategory(cat)}
+              onClick={() => handleCategoryChange(cat)}
               className={`px-5 py-2 rounded-full text-xs font-bold transition-all ${
                 activeCategory === cat
                   ? 'bg-[#1E3A5F] text-[#C8972B] shadow-md scale-105'
@@ -60,7 +94,7 @@ export default function Gallery() {
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
         >
           <AnimatePresence>
-            {filteredImages.map((item, index) => (
+            {visibleImages.map((item, index) => (
               <motion.div
                 key={item.id}
                 layout
@@ -73,9 +107,10 @@ export default function Gallery() {
               >
                 <div className="aspect-square relative overflow-hidden bg-[#EFF3F8]">
                   <img
-                    src={item.src}
+                    src={ikGalleryThumb(item.src)}
                     alt={item.alt}
                     loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none'
@@ -99,15 +134,30 @@ export default function Gallery() {
             ))}
           </AnimatePresence>
         </motion.div>
+
+        {/* Intersection Sentinel for Incremental Loading */}
+        {hasMore && (
+          <div
+            ref={observerRef}
+            className="flex justify-center py-8"
+          >
+            <div className="w-8 h-8 border-3 border-[#DDE3EC] border-t-[#1E3A5F] rounded-full animate-spin" />
+          </div>
+        )}
       </Section>
 
       {/* Lightbox Modal */}
       {activeImageIndex !== null && (
         <Lightbox
-          images={filteredImages.map(img => ({ src: img.src, alt: img.alt, title: img.title }))}
+          images={filteredImages.map(img => ({
+            src: ikTransform(img.src, 'f-auto,q-85,w-1280'),
+            alt: img.alt,
+            title: img.title
+          }))}
           currentIndex={activeImageIndex}
           onClose={() => setActiveImageIndex(null)}
-          onNavigate={(newIdx) => setActiveImageIndex(newIdx)}
+          onPrev={() => setActiveImageIndex(idx => (idx > 0 ? idx - 1 : filteredImages.length - 1))}
+          onNext={() => setActiveImageIndex(idx => (idx < filteredImages.length - 1 ? idx + 1 : 0))}
         />
       )}
 

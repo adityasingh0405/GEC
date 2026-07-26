@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { CalendarIcon, ArrowRightIcon } from '@components/common/Icons'
 import { formatDate, truncate } from '@utils/helpers'
 import { cardHover } from '@utils/animations'
+import { ikCard } from '@utils/imagekit'
 
 export default function NewsCard({ article }) {
   const {
@@ -26,10 +27,11 @@ export default function NewsCard({ article }) {
       {/* Thumbnail */}
       <div className="relative aspect-[16/9] overflow-hidden bg-[#EFF3F8]">
         <img
-          src={image}
+          src={ikCard(image)}
           alt={title}
           className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
           loading="lazy"
+          decoding="async"
         />
 
         <span className="absolute top-3 left-3 text-xs font-semibold px-2.5 py-1 rounded-sm uppercase tracking-wider bg-[#1E3A5F] text-white">

@@ -19,7 +19,7 @@ import { ikFeature, ikAvatar } from '@utils/imagekit'
 
 // ─── Hero Video URL ──────────────────────────────────────────────────────────
 const HERO_VIDEO_URL =
-  'https://ik.imagekit.io/xdm1pwpls0/pdfs/WhatsApp%20Video%202026-07-27%20at%2012.47.21%20AM%20-%20Trim.mp4'
+  'https://ik.imagekit.io/xdm1pwpls0/pdfs/WhatsApp%20Video%202026-07-27%20at%2012.47.21%20AM%20-%20Trim.mp4?updatedAt=1785099673141'
 
 const OVERLAY =
   'linear-gradient(180deg, rgba(12,25,52,.42) 0%, rgba(15,36,68,.55) 55%, rgba(12,28,58,.68) 100%)'

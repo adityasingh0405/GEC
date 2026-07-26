@@ -71,6 +71,7 @@ export default function Footer() {
                   src={logo}
                   alt="Glory Education Center Logo"
                   className="w-full h-full object-contain"
+                  loading="lazy"
                 />
               </div>
               <div>
