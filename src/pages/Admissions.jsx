@@ -207,112 +207,88 @@ export default function Admissions() {
               </div>
             </div>
 
-            {/* 4. Fee Structure (Two Modern Responsive Tables) */}
+            {/* 4. Fee Structure */}
             <div className="space-y-12">
               <div className="text-center max-w-2xl mx-auto">
                 <span className="text-xs font-bold uppercase tracking-widest text-[#C8972B]">Financial Transparency</span>
                 <h2 className="font-display text-3xl font-bold text-[#1E3A5F] mt-1">
-                  Fee Structure (2026–2027)
+                  Annual Tuition Fees
                 </h2>
                 <p className="text-slate-500 text-sm mt-2 font-sans">
-                  Transparent breakdown of tuition and installment schedules for On-Campus and Day Scholar programs.
+                  Clear breakdown of annual tuition fees for Residential Students and Day Scholars.
                 </p>
               </div>
 
-              {/* Table 1: On-Campus Students */}
+              {/* Residential Students */}
               <div className="bg-white rounded-sm p-8 border border-slate-200 shadow-md border-t-4 border-t-[#1E3A5F] space-y-6">
                 <div className="flex items-center justify-between border-b border-slate-200 pb-4">
                   <div>
-                    <span className="text-xs font-bold text-[#C8972B] uppercase tracking-wider block">Residential Scholars</span>
+                    <span className="text-xs font-bold text-[#C8972B] uppercase tracking-wider block">On-Campus Living</span>
                     <h3 className="font-display text-xl font-bold text-[#1E3A5F]">
-                      Table 1: On-Campus Students
+                      Residential Students
                     </h3>
                   </div>
-                  <span className="px-3 py-1 rounded-sm bg-[#0B1526] text-[#C8972B] text-xs font-bold uppercase tracking-wider">Includes Room &amp; Board</span>
+                  <span className="px-3 py-1 rounded-sm bg-[#0B1526] text-[#C8972B] text-xs font-bold uppercase tracking-wider">Annual Fees</span>
                 </div>
 
                 <div className="overflow-x-auto">
-                  <table className="w-full text-left border-collapse min-w-[600px]">
+                  <table className="w-full text-left border-collapse min-w-[500px]">
                     <thead>
                       <tr className="border-b border-slate-200 text-xs font-bold text-[#1E3A5F] uppercase tracking-wider bg-[#FAF8F5]">
-                        <th className="py-4 px-4">Fee Breakdown</th>
-                        <th className="py-4 px-4">Dip. Music</th>
-                        <th className="py-4 px-4">Dip. CP</th>
-                        <th className="py-4 px-4">B.Min / B.Th</th>
-                        <th className="py-4 px-4">M.Th / M.Div</th>
+                        <th className="py-4 px-4">Program / Course</th>
+                        <th className="py-4 px-4 text-right">Annual Tuition Fee</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-slate-100 text-xs sm:text-sm font-sans text-slate-700">
-                      <tr className="bg-[#FAF5E8]/60 font-bold text-[#1E3A5F]">
-                        <td className="py-4 px-4 text-[#966E1A] font-bold">Total Fees (Annual)</td>
-                        <td className="py-4 px-4 text-[#966E1A]">₹ 45,000</td>
-                        <td className="py-4 px-4 text-[#966E1A]">₹ 40,000</td>
-                        <td className="py-4 px-4 text-[#966E1A]">₹ 60,000</td>
-                        <td className="py-4 px-4 text-[#966E1A]">₹ 75,000</td>
+                      <tr>
+                        <td className="py-4 px-4 font-semibold text-[#1E3A5F]">Diploma in Music</td>
+                        <td className="py-4 px-4 text-right font-bold text-[#966E1A]">₹70,000/year</td>
                       </tr>
                       <tr>
-                        <td className="py-4 px-4 font-semibold text-[#1E3A5F]">First Installment (Admission)</td>
-                        <td className="py-4 px-4">₹ 25,000</td>
-                        <td className="py-4 px-4">₹ 22,000</td>
-                        <td className="py-4 px-4">₹ 35,000</td>
-                        <td className="py-4 px-4">₹ 42,000</td>
+                        <td className="py-4 px-4 font-semibold text-[#1E3A5F]">Bachelor of Theology (B.Th.)</td>
+                        <td className="py-4 px-4 text-right font-bold text-[#966E1A]">₹50,000/year</td>
                       </tr>
                       <tr>
-                        <td className="py-4 px-4 font-semibold text-[#1E3A5F]">Second Installment (Term II)</td>
-                        <td className="py-4 px-4">₹ 20,000</td>
-                        <td className="py-4 px-4">₹ 18,000</td>
-                        <td className="py-4 px-4">₹ 25,000</td>
-                        <td className="py-4 px-4">₹ 33,000</td>
+                        <td className="py-4 px-4 font-semibold text-[#1E3A5F]">Master of Theology (M.Th.)</td>
+                        <td className="py-4 px-4 text-right font-bold text-[#966E1A]">₹80,000/year</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
 
-              {/* Table 2: Correspondence / Day Scholars */}
+              {/* Day Scholars */}
               <div className="bg-white rounded-sm p-8 border border-slate-200 shadow-md border-t-4 border-t-[#1E3A5F] space-y-6">
                 <div className="flex items-center justify-between border-b border-slate-200 pb-4">
                   <div>
-                    <span className="text-xs font-bold text-[#C8972B] uppercase tracking-wider block">Non-Residential / Distance</span>
+                    <span className="text-xs font-bold text-[#C8972B] uppercase tracking-wider block">Non-Residential</span>
                     <h3 className="font-display text-xl font-bold text-[#1E3A5F]">
-                      Table 2: Correspondence / Day Scholars
+                      Day Scholars
                     </h3>
                   </div>
-                  <span className="px-3 py-1 rounded-sm bg-[#EFF3F8] text-[#1E3A5F] text-xs font-bold uppercase tracking-wider">Tuition Only</span>
+                  <span className="px-3 py-1 rounded-sm bg-[#EFF3F8] text-[#1E3A5F] text-xs font-bold uppercase tracking-wider">Annual Fees</span>
                 </div>
 
                 <div className="overflow-x-auto">
-                  <table className="w-full text-left border-collapse min-w-[600px]">
+                  <table className="w-full text-left border-collapse min-w-[500px]">
                     <thead>
                       <tr className="border-b border-slate-200 text-xs font-bold text-[#1E3A5F] uppercase tracking-wider bg-[#FAF8F5]">
-                        <th className="py-4 px-4">Fee Breakdown</th>
-                        <th className="py-4 px-4">Dip. Music</th>
-                        <th className="py-4 px-4">Dip. CP</th>
-                        <th className="py-4 px-4">B.Min / B.Th</th>
-                        <th className="py-4 px-4">M.Th / M.Div</th>
+                        <th className="py-4 px-4">Program / Course</th>
+                        <th className="py-4 px-4 text-right">Annual Tuition Fee</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-slate-100 text-xs sm:text-sm font-sans text-slate-700">
-                      <tr className="bg-[#FAF5E8]/60 font-bold text-[#1E3A5F]">
-                        <td className="py-4 px-4 text-[#966E1A] font-bold">Total Fees (Annual)</td>
-                        <td className="py-4 px-4 text-[#966E1A]">₹ 25,000</td>
-                        <td className="py-4 px-4 text-[#966E1A]">₹ 20,000</td>
-                        <td className="py-4 px-4 text-[#966E1A]">₹ 30,000</td>
-                        <td className="py-4 px-4 text-[#966E1A]">₹ 40,000</td>
+                      <tr>
+                        <td className="py-4 px-4 font-semibold text-[#1E3A5F]">Diploma in Music</td>
+                        <td className="py-4 px-4 text-right font-bold text-[#966E1A]">₹50,000/year</td>
                       </tr>
                       <tr>
-                        <td className="py-4 px-4 font-semibold text-[#1E3A5F]">First Installment (Admission)</td>
-                        <td className="py-4 px-4">₹ 15,000</td>
-                        <td className="py-4 px-4">₹ 12,000</td>
-                        <td className="py-4 px-4">₹ 18,000</td>
-                        <td className="py-4 px-4">₹ 24,000</td>
+                        <td className="py-4 px-4 font-semibold text-[#1E3A5F]">Bachelor of Theology (B.Th.)</td>
+                        <td className="py-4 px-4 text-right font-bold text-[#966E1A]">₹30,000/year</td>
                       </tr>
                       <tr>
-                        <td className="py-4 px-4 font-semibold text-[#1E3A5F]">Second Installment (Term II)</td>
-                        <td className="py-4 px-4">₹ 10,000</td>
-                        <td className="py-4 px-4">₹ 8,000</td>
-                        <td className="py-4 px-4">₹ 12,000</td>
-                        <td className="py-4 px-4">₹ 16,000</td>
+                        <td className="py-4 px-4 font-semibold text-[#1E3A5F]">Master of Theology (M.Th.)</td>
+                        <td className="py-4 px-4 text-right font-bold text-[#966E1A]">₹40,000/year</td>
                       </tr>
                     </tbody>
                   </table>

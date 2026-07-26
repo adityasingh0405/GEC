@@ -90,7 +90,7 @@ function NavItem({ link }) {
           onClick={() => setOpen(o => !o)}
           aria-expanded={open}
           aria-haspopup="true"
-          className={`relative flex items-center gap-1.5 py-2 text-xs font-bold uppercase tracking-[0.1em] transition-colors duration-200 ${isActive ? 'text-white' : 'text-white/80 hover:text-white'
+          className={`relative flex items-center gap-1.5 py-2 text-xs font-bold uppercase tracking-[0.08em] xl:tracking-[0.1em] whitespace-nowrap transition-colors duration-200 ${isActive ? 'text-white' : 'text-white/80 hover:text-white'
             }`}
         >
           {link.label}
@@ -113,7 +113,7 @@ function NavItem({ link }) {
       <NavLink to={link.href} end={link.href === '/'}>
         {({ isActive }) => (
           <span
-            className={`relative block py-2 text-xs font-bold uppercase tracking-[0.1em] transition-colors duration-200 ${isActive ? 'text-white' : 'text-white/80 hover:text-white'
+            className={`relative block py-2 text-xs font-bold uppercase tracking-[0.08em] xl:tracking-[0.1em] whitespace-nowrap transition-colors duration-200 ${isActive ? 'text-white' : 'text-white/80 hover:text-white'
               }`}
           >
             {link.label}
@@ -263,7 +263,7 @@ export default function Navbar() {
             aria-label="Main navigation"
             className="hidden lg:flex items-center"
           >
-            <ul className="flex items-center gap-8 xl:gap-10">
+            <ul className="flex items-center gap-4 lg:gap-5 xl:gap-8">
               {navData.links.map((link) => (
                 <NavItem key={link.label} link={link} />
               ))}

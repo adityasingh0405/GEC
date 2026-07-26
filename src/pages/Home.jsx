@@ -8,86 +8,39 @@ import Button from '@components/common/Button'
 import SectionHeading from '@components/common/SectionHeading'
 import CourseCard from '@components/cards/CourseCard'
 import FacultyCard from '@components/cards/FacultyCard'
-import NewsCard from '@components/cards/NewsCard'
+import Modal from '@components/common/Modal'
 import CTA from '@components/common/CTA'
 import { staggerContainer, staggerItem, fadeInUp, slideInLeft, slideInRight } from '@utils/animations'
 import homeData from '@content/home.json'
 import coursesData from '@content/courses.json'
 import facultyData from '@content/faculty.json'
-import newsData from '@content/news.json'
 import { CheckIcon, ArrowRightIcon, BookOpen, FileText, GraduationCap, Globe } from '@components/common/Icons'
 
-// ─── Hero Carousel Images ────────────────────────────────────────────────────
-// Replace these Unsplash URLs with actual ImageKit campus photos when available.
-// The first image has fetchpriority="high" for LCP; the rest are lazy-loaded.
-const HERO_IMAGES = [
-  {
-    src: 'https://ik.imagekit.io/xdm1pwpls0/f_downlods/Farewell/638717514_882843854577029_4074456967038938746_n.jpg?updatedAt=1784888653010',
-    alt: 'Students in a college campus courtyard',
-  },
-  {
-    src: 'https://ik.imagekit.io/xdm1pwpls0/f_downlods/Farewell/719828024_970610315800382_222216543805410874_n.jpg?updatedAt=1784888654501',
-    alt: 'Open theological books in a library',
-  },
-  {
-    src: 'https://ik.imagekit.io/xdm1pwpls0/f_downlods/Fresher%20Meet/469323260_539228198938598_7751733476384619435_n.jpg?updatedAt=1784888651801',
-    alt: 'University graduation ceremony',
-  },
-  {
-    src: 'https://ik.imagekit.io/xdm1pwpls0/f_downlods/Misc/738271019_993261440201936_6224026402438988685_n.jpg?updatedAt=1784888649028',
-    alt: 'Student studying in a peaceful setting',
-  },
-  {
-    src: 'https://ik.imagekit.io/xdm1pwpls0/f_downlods/Summer%20Program/476281147_583935604467857_1422462504627863717_n.jpg?updatedAt=1784888646385',
-    alt: 'Music students in a worship session',
-  },
-]
+// ─── Hero Video URL ──────────────────────────────────────────────────────────
+const HERO_VIDEO_URL =
+  'https://ik.imagekit.io/xdm1pwpls0/pdfs/WhatsApp%20Video%202026-07-26%20at%201.45.02%20AM%20-%20Trim%20-%20Trim.mp4?updatedAt=1785082564527'
 
 const OVERLAY =
   'linear-gradient(180deg, rgba(12,25,52,.42) 0%, rgba(15,36,68,.55) 55%, rgba(12,28,58,.68) 100%)'
 
 // ─── Hero Component ──────────────────────────────────────────────────────────
 function Hero({ data }) {
-  const [current, setCurrent] = useState(0)
-
-  // Crossfade every 7 seconds
-  useEffect(() => {
-    const id = setInterval(() => {
-      setCurrent(c => (c + 1) % HERO_IMAGES.length)
-    }, 7000)
-    return () => clearInterval(id)
-  }, [])
-
   return (
     <section
       className="relative h-screen min-h-[600px] max-h-[1080px] flex flex-col overflow-hidden"
       aria-labelledby="hero-heading"
     >
-      {/* ── Image Carousel (crossfade) ─────────────────────────────── */}
+      {/* ── Background Video ───────────────────────────────────────── */}
       <div className="absolute inset-0" aria-hidden="true">
-        {HERO_IMAGES.map((img, i) => (
-          <div
-            key={img.src}
-            className="absolute inset-0 transition-opacity duration-[1800ms] ease-in-out"
-            style={{ opacity: i === current ? 1 : 0 }}
-          >
-            <img
-              src={img.src}
-              alt={img.alt}
-              className="w-full h-full object-cover"
-              style={{
-                // Ken Burns: scale slowly from 1 → 1.06 while visible
-                transform: i === current ? 'scale(1.06)' : 'scale(1)',
-                transition: i === current
-                  ? 'transform 8000ms ease-in-out, opacity 1800ms ease-in-out'
-                  : 'transform 0ms, opacity 1800ms ease-in-out',
-              }}
-              fetchpriority={i === 0 ? 'high' : undefined}
-              loading={i === 0 ? 'eager' : 'lazy'}
-              decoding="async"
-            />
-          </div>
-        ))}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src={HERO_VIDEO_URL} type="video/mp4" />
+        </video>
 
         {/* Deep navy gradient overlay for readability */}
         <div className="absolute inset-0" style={{ background: OVERLAY }} />
@@ -155,19 +108,6 @@ function Hero({ data }) {
             Explore Courses
           </Link>
         </motion.div>
-      </div>
-
-      {/* ── Carousel Dot Indicators ───────────────────────────────── */}
-      <div className="relative z-10 flex items-center justify-center gap-2 pb-8" aria-hidden="true">
-        {HERO_IMAGES.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrent(i)}
-            className={`transition-all duration-300 ${i === current ? 'w-6 h-1 bg-[#D4A843]' : 'w-2 h-1 bg-white/40 hover:bg-white/65'
-              }`}
-            aria-label={`Go to slide ${i + 1}`}
-          />
-        ))}
       </div>
 
       {/* ── Scroll Indicator ──────────────────────────────────────── */}
@@ -319,11 +259,12 @@ function AboutPreview({ data }) {
 }
 
 export default function Home() {
+  const [selectedFaculty, setSelectedFaculty] = useState(null)
+
   const featuredCourses = coursesData.filter(c =>
     homeData.featuredCourses.includes(c.id)
   )
-  const recentNews = newsData.slice(0, 3)
-  const featuredFaculty = facultyData.slice(0, 4)
+  const marqueeFaculty = [...facultyData, ...facultyData, ...facultyData]
 
   const homepageSchema = {
     '@context': 'https://schema.org',
@@ -386,29 +327,46 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* Faculty Section */}
-      <section className="section-padding bg-[#EFF3F8]" aria-labelledby="faculty-section-heading">
+      {/* Faculty Section — Infinite Horizontal Marquee Carousel */}
+      <section className="py-16 sm:py-20 bg-[#EFF3F8] overflow-hidden" aria-labelledby="faculty-section-heading">
+        <style>{`
+          @keyframes facultyMarqueeScroll {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-33.33333%, 0, 0); }
+          }
+        `}</style>
+
         <Container>
           <SectionHeading
-            heading={homeData.facultyHeading}
-            subheading={homeData.facultySubheading}
-            className="mb-12"
+            heading="Our Distinguished Faculty & Leadership"
+            subheading="Scholars, theologians, and educators committed to academic excellence and spiritual formation"
+            className="mb-10 text-center"
           />
+        </Container>
 
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '-60px' }}
-            className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+        {/* Marquee Track Container with Gradient Edge Fades */}
+        <div className="relative w-full overflow-hidden group py-4">
+          <div className="absolute top-0 bottom-0 left-0 w-12 sm:w-28 bg-gradient-to-r from-[#EFF3F8] to-transparent z-10 pointer-events-none" />
+          <div className="absolute top-0 bottom-0 right-0 w-12 sm:w-28 bg-gradient-to-l from-[#EFF3F8] to-transparent z-10 pointer-events-none" />
+
+          <div
+            className="flex gap-6 w-max group-hover:[animation-play-state:paused] focus-within:[animation-play-state:paused]"
+            style={{
+              animation: 'facultyMarqueeScroll 45s linear infinite',
+            }}
           >
-            {featuredFaculty.map(member => (
-              <motion.div key={member.id} variants={staggerItem}>
-                <FacultyCard member={member} />
-              </motion.div>
+            {marqueeFaculty.map((member, idx) => (
+              <div key={`${member.id}-${idx}`} className="w-[260px] sm:w-[280px] shrink-0 h-full">
+                <FacultyCard
+                  member={member}
+                  onClick={() => setSelectedFaculty(member)}
+                />
+              </div>
             ))}
-          </motion.div>
+          </div>
+        </div>
 
+        <Container>
           <motion.div
             variants={fadeInUp}
             initial="hidden"
@@ -416,8 +374,8 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mt-10"
           >
-            <Button href="/about#faculty" variant="secondary" size="md">
-              Meet All Faculty
+            <Button href="/about/leadership-faculty" variant="secondary" size="md">
+              Meet All Faculty &amp; Leadership
             </Button>
           </motion.div>
         </Container>
@@ -571,13 +529,54 @@ export default function Home() {
       </section >
 
       {/* Admissions CTA */}
-      < CTA
+      <CTA
         heading={homeData.admissionsCTA.heading}
         body={homeData.admissionsCTA.body}
         primaryCta={homeData.admissionsCTA.cta}
-        secondaryCta={{ label: 'Learn About Us', href: '/about' }
-        }
+        secondaryCta={{ label: 'Learn About Us', href: '/about' }}
       />
+
+      {/* Faculty Bio Modal */}
+      {selectedFaculty && (
+        <Modal
+          isOpen={Boolean(selectedFaculty)}
+          onClose={() => setSelectedFaculty(null)}
+          title={selectedFaculty.name}
+        >
+          <div className="space-y-4 text-left">
+            <div className="flex items-center gap-4">
+              {selectedFaculty.image ? (
+                <img
+                  src={selectedFaculty.image}
+                  alt={selectedFaculty.name}
+                  className="w-16 h-16 rounded-full object-cover border-2 border-[#C8972B] shrink-0"
+                />
+              ) : (
+                <div className="w-16 h-16 rounded-full bg-[#1E3A5F] text-[#C8972B] flex items-center justify-center font-bold text-xl shrink-0">
+                  {selectedFaculty.name.split(' ').slice(-1)[0].charAt(0)}
+                </div>
+              )}
+              <div>
+                <h4 className="font-bold text-[#1E3A5F] text-lg leading-snug">{selectedFaculty.name}</h4>
+                <p className="text-xs font-bold text-[#C8972B] uppercase tracking-wider">{selectedFaculty.title}</p>
+                <p className="text-xs text-[#5A6A7A] mt-0.5">{selectedFaculty.qualifications}</p>
+              </div>
+            </div>
+            <hr className="border-[#DDE3EC]" />
+            <p className="text-sm text-[#5A6A7A] leading-relaxed font-sans">
+              {selectedFaculty.bio || 'Full biography coming soon.'}
+            </p>
+            {selectedFaculty.specialization && (
+              <div className="bg-[#EFF3F8] p-3 rounded-sm border border-[#DDE3EC]">
+                <p className="text-xs text-[#1E3A5F] font-semibold">
+                  <span className="text-[#C8972B] uppercase font-bold tracking-wider mr-1">Specialization:</span>
+                  {selectedFaculty.specialization}
+                </p>
+              </div>
+            )}
+          </div>
+        </Modal>
+      )}
     </>
   )
 }

@@ -61,7 +61,6 @@ const router = createBrowserRouter([
       { path: 'about/statement-of-faith', element: <StatementOfFaith /> },
       { path: 'about/church-profile', element: <ChurchProfile /> },
       { path: 'about/leadership-faculty', element: <LeadershipFaculty /> },
-      { path: 'about/founders-message', element: <PrincipalsMessage /> },
       { path: 'about/principals-message', element: <PrincipalsMessage /> },
 
       // Courses

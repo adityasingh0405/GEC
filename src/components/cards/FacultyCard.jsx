@@ -4,13 +4,13 @@ import { cardHover } from '@utils/animations'
 /**
  * FacultyCard — displays faculty member with photo, name, title, specialization
  */
-export default function FacultyCard({ member, onClick }) {
+export default function FacultyCard({ member, onClick, className = '' }) {
   return (
     <motion.article
       variants={cardHover}
       initial="rest"
       whileHover="hover"
-      className="bg-white rounded-sm overflow-hidden border border-[#DDE3EC] border-t-2 border-t-[#C8972B] text-center cursor-pointer"
+      className={`bg-white rounded-sm overflow-hidden border border-[#DDE3EC] border-t-2 border-t-[#C8972B] text-center cursor-pointer flex flex-col h-full ${className}`}
       style={{ boxShadow: 'var(--shadow-sm)' }}
       onClick={onClick}
       onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && onClick?.()}

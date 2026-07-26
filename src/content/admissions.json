@@ -134,44 +134,32 @@
   ],
   "feeStructure": {
     "currency": "INR (₹)",
-    "tuition": [
-      {
-        "program": "Bachelor of Theology (B.Th)",
-        "perSemester": "₹ 15,000",
-        "perYear": "₹ 30,000"
-      },
-      {
-        "program": "Master of Divinity (M.Dv)",
-        "perSemester": "₹ 20,000",
-        "perYear": "₹ 40,000"
-      },
-      {
-        "program": "Master of Theology (M.Th)",
-        "perSemester": "₹ 25,000",
-        "perYear": "₹ 50,000"
-      },
+    "residential": [
       {
         "program": "Diploma in Music",
-        "perSemester": "₹ 12,500",
-        "perYear": "₹ 25,000"
+        "perYear": "₹ 70,000/year"
+      },
+      {
+        "program": "Bachelor of Theology (B.Th.)",
+        "perYear": "₹ 50,000/year"
+      },
+      {
+        "program": "Master of Theology (M.Th.)",
+        "perYear": "₹ 80,000/year"
       }
     ],
-    "otherFees": [
+    "dayScholars": [
       {
-        "item": "Admission / Registration Fee (One-time)",
-        "amount": "₹ 2,000"
+        "program": "Diploma in Music",
+        "perYear": "₹ 50,000/year"
       },
       {
-        "item": "Library & IT Annual Fee",
-        "amount": "₹ 2,500"
+        "program": "Bachelor of Theology (B.Th.)",
+        "perYear": "₹ 30,000/year"
       },
       {
-        "item": "Hostel Accommodation (Includes Room & Board / Month)",
-        "amount": "₹ 4,500 / month"
-      },
-      {
-        "item": "Examination Fee (Per Semester)",
-        "amount": "₹ 1,500"
+        "program": "Master of Theology (M.Th.)",
+        "perYear": "₹ 40,000/year"
       }
     ],
     "financialAid": "Need-based scholarships and partial tuition fee waivers are available for deserving candidates recommended by their sponsoring church. Contact the finance office for financial aid forms."

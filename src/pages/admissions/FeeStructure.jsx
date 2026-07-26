@@ -30,58 +30,63 @@ export default function FeeStructure() {
       <Section bg="white">
         <div className="max-w-4xl mx-auto mb-12 text-center">
           <h2 className="font-display text-3xl font-bold text-[#1E3A5F] mb-3">
-            Academic Tuition Fees ({feeStructure.currency})
+            Annual Tuition Fees
           </h2>
           <p className="text-[#5A6A7A] text-base">
-            All fees are structured per semester and per academic year.
+            Structured annual tuition rates for Residential Students and Day Scholars.
           </p>
         </div>
 
-        {/* Tuition Table */}
-        <div className="max-w-4xl mx-auto mb-16 overflow-x-auto">
-          <table className="w-full text-left border-collapse bg-white rounded-sm overflow-hidden border border-[#DDE3EC] shadow-sm">
-            <thead>
-              <tr className="bg-[#1E3A5F] text-white text-xs font-bold uppercase tracking-wider">
-                <th className="py-4 px-6">Program / Course</th>
-                <th className="py-4 px-6">Per Semester</th>
-                <th className="py-4 px-6">Per Year (2 Semesters)</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-[#DDE3EC] text-sm text-[#5A6A7A]">
-              {feeStructure.tuition.map((row, i) => (
-                <tr key={i} className="hover:bg-[#EFF3F8]/50 transition-colors">
-                  <td className="py-4 px-6 font-bold text-[#1E3A5F]">{row.program}</td>
-                  <td className="py-4 px-6">{row.perSemester}</td>
-                  <td className="py-4 px-6 font-semibold text-[#1E3A5F]">{row.perYear}</td>
+        {/* Residential Students */}
+        <div className="max-w-4xl mx-auto mb-12">
+          <div className="bg-white rounded-sm border border-[#DDE3EC] overflow-hidden shadow-sm">
+            <div className="bg-[#1E3A5F] text-white px-6 py-4 flex items-center justify-between">
+              <h3 className="font-display text-lg font-bold text-white">Residential Students</h3>
+              <span className="text-xs bg-[#C8972B] text-[#0B1526] font-bold px-3 py-1 rounded-sm uppercase tracking-wider">Annual Tuition</span>
+            </div>
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="bg-[#FAF8F5] text-xs font-bold text-[#1E3A5F] uppercase tracking-wider border-b border-[#DDE3EC]">
+                  <th className="py-4 px-6">Program / Course</th>
+                  <th className="py-4 px-6 text-right">Annual Fee</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className="divide-y divide-[#DDE3EC] text-sm text-[#5A6A7A]">
+                {feeStructure.residential?.map((row, i) => (
+                  <tr key={i} className="hover:bg-[#EFF3F8]/50 transition-colors">
+                    <td className="py-4 px-6 font-bold text-[#1E3A5F]">{row.program}</td>
+                    <td className="py-4 px-6 text-right font-bold text-[#966E1A]">{row.perYear}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
 
-        {/* Other Charges */}
+        {/* Day Scholars */}
         <div className="max-w-4xl mx-auto mb-16">
-          <h3 className="font-display text-2xl font-bold text-[#1E3A5F] mb-6 text-center">
-            Other Operational &amp; Hostel Charges
-          </h3>
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-4"
-          >
-            {feeStructure.otherFees.map((fee, i) => (
-              <motion.div
-                key={i}
-                variants={staggerItem}
-                className="p-5 rounded-sm bg-[#F8F9FA] border border-[#DDE3EC] border-l-2 border-l-[#C8972B] flex items-center justify-between"
-              >
-                <span className="text-sm font-medium text-[#1E3A5F]">{fee.item}</span>
-                <span className="text-sm font-bold text-[#C8972B]">{fee.amount}</span>
-              </motion.div>
-            ))}
-          </motion.div>
+          <div className="bg-white rounded-sm border border-[#DDE3EC] overflow-hidden shadow-sm">
+            <div className="bg-[#1E3A5F] text-white px-6 py-4 flex items-center justify-between">
+              <h3 className="font-display text-lg font-bold text-white">Day Scholars</h3>
+              <span className="text-xs bg-[#EFF3F8] text-[#1E3A5F] font-bold px-3 py-1 rounded-sm uppercase tracking-wider">Annual Tuition</span>
+            </div>
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="bg-[#FAF8F5] text-xs font-bold text-[#1E3A5F] uppercase tracking-wider border-b border-[#DDE3EC]">
+                  <th className="py-4 px-6">Program / Course</th>
+                  <th className="py-4 px-6 text-right">Annual Fee</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-[#DDE3EC] text-sm text-[#5A6A7A]">
+                {feeStructure.dayScholars?.map((row, i) => (
+                  <tr key={i} className="hover:bg-[#EFF3F8]/50 transition-colors">
+                    <td className="py-4 px-6 font-bold text-[#1E3A5F]">{row.program}</td>
+                    <td className="py-4 px-6 text-right font-bold text-[#966E1A]">{row.perYear}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
 
         {/* Financial Assistance */}

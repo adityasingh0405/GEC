@@ -1,14 +1,14 @@
 {
   "hero": {
     "heading": "About Glory Education Center",
-    "subheading": "Nurturing faithful servant-leaders in word, worship, and scholarship since 2005."
+    "subheading": "Nurturing faithful servant-leaders in word, worship, and scholarship."
   },
   "subpages": [
     {
       "id": "our-story",
       "title": "Our Story",
-      "subtitle": "Two Decades of Grace & Growth",
-      "description": "Discover how Glory Education Center grew from a modest cohort into a recognized institution equipping leaders across India.",
+      "subtitle": "Faith, Calling & Kingdom Service",
+      "description": "Discover how Glory Education Centre was established on 13 June 2022 to equip leaders across India.",
       "href": "/about/our-story",
       "image": "https://ik.imagekit.io/xdm1pwpls0/pdfs/story.jpg"
     },
@@ -124,35 +124,19 @@
   },
   "history": {
     "heading": "Our History",
-    "body": "Glory Education Center was established in 2005 by a group of visionary educators and ministry leaders who recognized the need for academically rigorous, spiritually vibrant theological training.",
+    "body": "Glory Education Centre was established on 13 June 2022 to equip servant-leaders with solid biblical truth, theological discernment, and worship arts.",
     "timeline": [
       {
-        "year": "2005",
-        "event": "Glory Education Center founded with the first cohort of 20 students in the Bachelor of Theology program."
-      },
-      {
-        "year": "2008",
-        "event": "Launched the Diploma in Music program, expanding GEC's ministry formation offerings."
-      },
-      {
-        "year": "2012",
-        "event": "Received formal accreditation from the Board of Theological Education, affirming academic standards."
-      },
-      {
-        "year": "2015",
-        "event": "Introduced the Master of Divinity (M.Dv) program, welcoming post-graduate students."
-      },
-      {
-        "year": "2018",
-        "event": "Launched the Master of Theology (M.Th) program for advanced research and specialization."
-      },
-      {
-        "year": "2021",
-        "event": "Celebrated 500+ alumni serving across India and internationally in ministry and education."
+        "year": "2022",
+        "event": "Glory Education Centre founded on 13 June 2022 with an inaugural batch of 47 students across Theology and Music."
       },
       {
         "year": "2025",
-        "event": "Marking 20 years of transforming lives through Word and worship."
+        "event": "Celebrated historic graduation ceremony on 19 February 2025."
+      },
+      {
+        "year": "2026",
+        "event": "Celebrated graduation ceremony on 19 February 2026, sending graduates into active church and mission ministry."
       }
     ]
   },

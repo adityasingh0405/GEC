@@ -8,52 +8,52 @@ import { staggerContainer, staggerItem } from '@utils/animations'
 
 const scheduleData = [
   {
+    day: "Monday – Saturday",
+    title: "Students Wake Up",
+    time: "6:00 AM – 6:30 AM",
+    location: "Student Hostels",
+    description: "Morning wake-up routine and personal preparation for the day.",
+    category: "Routine"
+  },
+  {
+    day: "Monday – Saturday",
+    title: "Morning Devotion",
+    time: "8:00 AM – 8:30 AM",
+    location: "Prayer Chapel",
+    description: "Corporate morning prayer and scripture meditation to begin the day in God's presence.",
+    category: "Devotion"
+  },
+  {
     day: "Monday – Friday",
-    title: "Morning Chapel Service",
-    time: "8:30 AM – 9:15 AM",
-    location: "Main Sanctuary Hall",
-    description: "Daily worship, student & faculty devotions, prayer, and scripture exposition.",
-    category: "Chapel"
-  },
-  {
-    day: "Tuesday",
-    title: "Intercessory Prayer Meeting",
-    time: "4:00 PM – 5:00 PM",
-    location: "Prayer Chapel (Room 102)",
-    description: "Student-led prayer for global missions, local churches, and personal requests.",
-    category: "Prayer"
-  },
-  {
-    day: "Wednesday",
-    title: "GEC Sanctuary Choir Rehearsal",
-    time: "5:00 PM – 6:30 PM",
-    location: "Music Department Hall",
-    description: "Vocal warmup, choir practice, and song arrangement for chapel and special recitals.",
-    category: "Music"
-  },
-  {
-    day: "Thursday",
-    title: "Faculty & Staff Devotional",
-    time: "3:30 PM – 4:30 PM",
-    location: "Faculty Lounge",
-    description: "Weekly gathering of administrative leadership and faculty for prayer and fellowship.",
+    title: "Faculty & Staff Devotion",
+    time: "8:20 AM",
+    location: "Faculty Lounge / Main Office",
+    description: "Daily morning devotion and prayer gathering for faculty and administrative staff.",
     category: "Faculty"
   },
   {
-    day: "Friday",
-    title: "Youth & Community Bible Study",
-    time: "6:00 PM – 7:30 PM",
-    location: "Auditorium Annex",
-    description: "Interactive Bible study, discussion, and fellowship for resident and commuter students.",
-    category: "Bible Study"
+    day: "Monday – Friday",
+    title: "Chapel Service",
+    time: "10:00 AM – 10:30 AM",
+    location: "Main Sanctuary Hall",
+    description: "Daily chapel worship, song, testimony, and biblical exhortation for all students.",
+    category: "Chapel"
   },
   {
-    day: "Saturday",
-    title: "Weekend Ministry & Outreach Preparation",
-    time: "9:00 AM – 11:30 AM",
-    location: "Campus Fellowship Hall",
-    description: "Team briefing and practical setup for weekend church ministry placements.",
-    category: "Outreach"
+    day: "Monday – Saturday",
+    title: "Lunch Break",
+    time: "1:00 PM – 2:00 PM",
+    location: "Dining Hall",
+    description: "Community lunch break and fellowship for students, faculty, and staff.",
+    category: "Fellowship"
+  },
+  {
+    day: "Monday – Saturday",
+    title: "Study Hours",
+    time: "2:00 PM – 3:00 PM",
+    location: "Library / Classrooms",
+    description: "Dedicated quiet study, reading, research, and assignment preparation.",
+    category: "Academics"
   }
 ]
 

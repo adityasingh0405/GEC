@@ -17,7 +17,7 @@
     },
     "/about/our-story": {
       "title": "Our Story — Glory Education Center",
-      "description": "Explore the history, founding vision, and milestone journey of Glory Education Center since 2005.",
+      "description": "Explore the history, founding vision, and milestone journey of Glory Education Centre since 2022.",
       "keywords": "GEC history, seminary story, theological college milestones"
     },
     "/about/vision-mission": {
@@ -39,11 +39,6 @@
       "title": "Leadership & Governance — Glory Education Center",
       "description": "Meet our institutional leadership team, board of governors, deans, and administration.",
       "keywords": "seminary leadership, principal, academic deans"
-    },
-    "/about/founders-message": {
-      "title": "Message from the Founder — Glory Education Center",
-      "description": "Read Dr. Breckenridge Merkle's message on 'A Church in Every Village' and the founding vision of Glory Education Center.",
-      "keywords": "founder message, Dr Breckenridge Merkle, church in every village, GEC vision"
     },
     "/about/principals-message": {
       "title": "Message from the Principal — Glory Education Center",

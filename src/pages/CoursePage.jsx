@@ -100,14 +100,25 @@ export default function CoursePage({ slug }) {
                 <AcademicCapIcon className="w-4 h-4 text-[#C8972B]" />
                 Level: {course.level}
               </div>
+              {slug === 'diploma-music' && (
+                <a
+                  href="https://www.zahaumusic.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-[#C8972B] hover:bg-[#D4A843] border border-[#C8972B] text-[#0B1526] font-bold uppercase tracking-wider rounded-sm px-6 py-2.5 text-xs transition-all shadow-md hover:-translate-y-0.5"
+                >
+                  <Globe className="w-4 h-4" />
+                  Visit Official Music Academy Website ↗
+                </a>
+              )}
               {prospectusUrl && (
                 <a
                   href={prospectusUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-[#C8972B] hover:bg-[#D4A843] border border-[#C8972B] text-[#0B1526] font-bold uppercase tracking-wider rounded-sm px-6 py-2.5 text-xs transition-all shadow-md hover:-translate-y-0.5"
+                  className="flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold uppercase tracking-wider rounded-sm px-6 py-2.5 text-xs transition-all shadow-md hover:-translate-y-0.5"
                 >
-                  <DownloadIcon className="w-4 h-4" />
+                  <DownloadIcon className="w-4 h-4 text-[#C8972B]" />
                   Download Prospectus
                 </a>
               )}
@@ -123,6 +134,34 @@ export default function CoursePage({ slug }) {
 
             {/* Main Article Section */}
             <div className="lg:col-span-2 space-y-12">
+
+              {/* Special Official Academy Callout Banner */}
+              {slug === 'diploma-music' && (
+                <motion.div
+                  variants={fadeInUp}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  className="bg-gradient-to-r from-[#0B1526] to-[#152940] rounded-sm p-6 sm:p-8 text-white border border-[#C8972B]/40 shadow-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6"
+                >
+                  <div className="space-y-2">
+                    <span className="text-xs font-bold text-[#C8972B] uppercase tracking-widest block">Official Music Academy</span>
+                    <h3 className="text-xl sm:text-2xl font-bold font-display">Zahau Music Academy</h3>
+                    <p className="text-sm text-white/80 max-w-lg font-sans">
+                      Explore comprehensive course modules, faculty performances, recitals, and admissions directly on our official website.
+                    </p>
+                  </div>
+                  <a
+                    href="https://www.zahaumusic.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#C8972B] hover:bg-[#D4A843] text-[#0B1526] text-xs font-bold uppercase tracking-wider rounded-sm transition-all shadow-md shrink-0 hover:-translate-y-0.5"
+                  >
+                    <span>Explore the Music Academy</span>
+                    <span aria-hidden="true" className="text-sm">↗</span>
+                  </a>
+                </motion.div>
+              )}
 
               {/* 1. Program Overview */}
               <motion.section
@@ -384,6 +423,16 @@ export default function CoursePage({ slug }) {
                   <Button href="/admissions/apply" variant="primary" size="md" className="w-full justify-center shadow-md">
                     Apply Online
                   </Button>
+                  {slug === 'diploma-music' && (
+                    <a
+                      href="https://www.zahaumusic.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full mt-3 py-2.5 px-4 rounded-sm bg-[#C8972B] hover:bg-[#D4A843] text-[#0B1526] text-xs font-bold uppercase tracking-wider transition-all shadow-sm flex items-center justify-center gap-2"
+                    >
+                      <Globe className="w-4 h-4" /> Visit Official Website ↗
+                    </a>
+                  )}
                   {prospectusUrl && (
                     <a
                       href={prospectusUrl}

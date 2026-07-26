@@ -39,7 +39,7 @@ export default function About() {
       {/* Leadership Messages Section (Featured Cards) */}
       <Section
         heading="Leadership Messages"
-        subheading="Hear directly from our Founder and Principal regarding our core vision and academic mandate."
+        subheading="Hear directly from our Principal regarding our core vision and academic mandate."
         bg="white"
       >
         <div className="flex justify-center">
@@ -138,16 +138,16 @@ export default function About() {
               Word, Worship &amp; Servant Leadership
             </h2>
             <p className="text-[#5A6A7A] leading-relaxed mb-6">
-              Since 2005, Glory Education Center has committed itself to equipping servant-leaders with solid biblical truth, theological discernment, and worship arts. We believe that true theological education transforms both the heart and the mind.
+              Glory Education Centre is committed to equipping servant-leaders with solid biblical truth, theological discernment, and worship arts. We believe that true theological education transforms both the heart and the mind.
             </p>
             <div className="grid grid-cols-2 gap-4">
               <div className="p-4 rounded-sm bg-[#EFF3F8] border border-[#DDE3EC]">
-                <div className="text-2xl font-black text-[#1E3A5F]">20+</div>
-                <div className="text-xs text-[#5A6A7A] font-semibold mt-1">Years of Excellence</div>
+                <div className="text-xl font-bold text-[#1E3A5F]">13 June 2022</div>
+                <div className="text-xs text-[#5A6A7A] font-semibold mt-1">Date Established</div>
               </div>
               <div className="p-4 rounded-sm bg-[#EFF3F8] border border-[#DDE3EC]">
-                <div className="text-2xl font-black text-[#C8972B]">500+</div>
-                <div className="text-xs text-[#5A6A7A] font-semibold mt-1">Active Ministry Alumni</div>
+                <div className="text-xl font-bold text-[#C8972B]">47 Students</div>
+                <div className="text-xs text-[#5A6A7A] font-semibold mt-1">Inaugural Cohort</div>
               </div>
             </div>
           </div>

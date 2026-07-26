@@ -59,6 +59,22 @@ export default function CourseCard({ course }) {
           <span>{duration}</span>
         </div>
 
+        {/* Official Website CTA for Diploma in Music */}
+        {slug === 'diploma-music' && (
+          <div className="mb-4 pt-3 border-t border-[#EFF3F8]">
+            <a
+              href="https://www.zahaumusic.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 w-full px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-[#0B1526] bg-[#C8972B] hover:bg-[#D4A843] rounded-sm transition-all shadow-xs hover:shadow-sm"
+              aria-label="Visit Official Music Academy Website"
+            >
+              <span>Visit Official Music Academy Website</span>
+              <span aria-hidden="true" className="text-sm">↗</span>
+            </a>
+          </div>
+        )}
+
         {/* CTA */}
         <Link
           to={`/courses/${slug}`}
