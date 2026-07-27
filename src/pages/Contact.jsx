@@ -254,7 +254,9 @@ export default function Contact() {
                       <ClockIcon className="w-5 h-5" />
                     </div>
                     <div>
-                      <span className="text-[10px] font-bold text-[#C8972B] uppercase tracking-widest block">Hours of Operation</span>
+                      <span className="text-[10px] font-bold text-[#C8972B] uppercase tracking-widest block">
+                        Hours of Operation
+                      </span>
                       <h3 className="font-display text-xl font-bold text-[#1E3A5F]">
                         Office Hours
                       </h3>
@@ -264,19 +266,38 @@ export default function Contact() {
                   <ul className="space-y-4 text-xs sm:text-sm font-sans divide-y divide-slate-100">
                     <li className="flex items-center justify-between pt-2">
                       <span className="font-semibold text-slate-700">Monday – Friday</span>
-                      <span className="font-bold text-[#1E3A5F]">9:00 AM – 5:00 PM</span>
+                      <span className="font-bold text-[#1E3A5F]">9:00 AM – 4:00 PM</span>
                     </li>
+
                     <li className="flex items-center justify-between pt-3">
                       <span className="font-semibold text-slate-700">Saturday</span>
-                      <span className="font-bold text-[#1E3A5F]">9:00 AM – 1:00 PM</span>
+                      <span className="font-bold text-[#1E3A5F]">10:00 AM – Worship Prayer</span>
                     </li>
-                    <li className="flex items-center justify-between pt-3 text-slate-400">
-                      <span className="font-semibold">Sunday</span>
-                      <span className="font-bold text-rose-500 bg-rose-50 px-2 py-0.5 rounded-sm text-[10px] uppercase">Closed</span>
+
+                    <li className="flex items-center justify-between pt-3">
+                      <span className="font-semibold text-slate-700">Sunday Service</span>
+                      <span className="font-bold text-[#1E3A5F]">10:00 AM</span>
+                    </li>
+
+                    <li className="flex items-center justify-between pt-3">
+                      <span className="font-semibold text-slate-700">Wednesday Service</span>
+                      <span className="font-bold text-[#1E3A5F]">6:30 PM</span>
+                    </li>
+
+                    <li className="pt-3">
+                      <div className="flex flex-col gap-1">
+                        <span className="font-semibold text-slate-700">
+                          Faculty & Staff Prayer
+                        </span>
+                        <span className="font-bold text-[#1E3A5F]">
+                          Every Morning • 8:20 AM
+                        </span>
+                      </div>
                     </li>
                   </ul>
 
                   <p className="text-[10px] text-slate-400 mt-6 pt-4 border-t border-slate-100 font-sans italic">
+                    Visitors are encouraged to contact the office in advance before visiting.
                   </p>
                 </motion.div>
 
