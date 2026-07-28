@@ -2,10 +2,14 @@ import { motion } from 'framer-motion'
 import { cardHover } from '@utils/animations'
 import { ikFaculty } from '@utils/imagekit'
 
+
 /**
- * FacultyCard — displays faculty member with photo, name, title, specialization
+ * FacultyCard — displays faculty member with photo, name, title, specialization, and email
  */
 export default function FacultyCard({ member, onClick, className = '' }) {
+  // Use the email directly from faculty data
+  const resolvedEmail = member.email || null
+
   return (
     <motion.article
       variants={cardHover}
@@ -40,12 +44,22 @@ export default function FacultyCard({ member, onClick, className = '' }) {
         />
       </div>
 
-      <div className="p-5">
+      <div className="p-5 flex flex-col flex-1">
         <h3 className="text-base font-bold text-[#1E3A5F] leading-snug mb-1">{member.name}</h3>
         <p className="text-xs font-semibold text-[#C8972B] mb-2 leading-snug">{member.title}</p>
         <p className="text-xs text-[#5A6A7A]">{member.qualifications}</p>
         {member.specialization && (
           <p className="text-xs text-[#5A6A7A] mt-1 italic">{member.specialization}</p>
+        )}
+        {resolvedEmail && (
+          <a
+            href={`mailto:${resolvedEmail}`}
+            onClick={(e) => e.stopPropagation()}
+            className="mt-auto pt-3 text-xs font-medium text-[#2A5284] hover:text-[#C8972B] transition-colors truncate"
+            aria-label={`Email ${member.name} at ${resolvedEmail}`}
+          >
+            {resolvedEmail}
+          </a>
         )}
       </div>
     </motion.article>

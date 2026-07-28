@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import SEOHead from '@seo/SEOHead'
 import JsonLD from '@seo/JsonLD'
 import { newsArticleSchema } from '@seo/schemas'
@@ -8,7 +8,6 @@ import Card from '@components/common/Card'
 import CTA from '@components/common/CTA'
 import { CalendarIcon, UserIcon, ArrowLeftIcon } from '@components/common/Icons'
 import newsData from '@content/news.json'
-import { ikFeature } from '@utils/imagekit'
 
 export default function NewsArticle() {
   const { slug } = useParams()
@@ -28,7 +27,7 @@ export default function NewsArticle() {
         page={`/news/${article.slug}`}
         title={article.title}
         description={article.excerpt}
-        canonical={`https://www.gloryeducationcenter.org/news/${article.slug}`}
+        canonical={`https://gloryeducationcenter.com/news/${article.slug}`}
         ogImage={article.image?.startsWith('http') ? article.image : undefined}
       />
       <JsonLD schema={newsArticleSchema(article)} />

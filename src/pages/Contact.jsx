@@ -17,17 +17,22 @@ import {
   ArrowRightIcon
 } from '@components/common/Icons'
 
+// Form submission endpoint
+const SUBMISSION_EMAIL = 'gec1322@gmail.com'
+
+const initialFormState = {
+  name: '',
+  email: '',
+  phone: '',
+  subject: '',
+  message: ''
+}
+
 export default function Contact() {
   const [formSubmitted, setFormSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
   const [submitError, setSubmitError] = useState(false)
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
-  })
+  const [formData, setFormData] = useState(initialFormState)
 
   const crumbs = [
     { label: 'Home', href: '/' },
@@ -35,7 +40,8 @@ export default function Contact() {
   ]
 
   const handleChange = (e) => {
-    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }))
+    const { name, value } = e.target
+    setFormData(prev => ({ ...prev, [name]: value }))
   }
 
   const handleSubmit = async (e) => {
@@ -44,7 +50,7 @@ export default function Contact() {
     setSubmitError(false)
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/gec1322@gmail.com', {
+      const response = await fetch(`https://formsubmit.co/ajax/${SUBMISSION_EMAIL}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -52,26 +58,19 @@ export default function Contact() {
         },
         body: JSON.stringify({
           ...formData,
-          _subject: 'New Contact Form Submission',
+          _subject: `[${formData.subject}] New Contact Submission`,
           _template: 'table',
-          _captcha: 'true'
+          _captcha: 'false'
         })
       })
 
       if (response.ok) {
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          subject: '',
-          message: ''
-        })
+        setFormData(initialFormState)
         setFormSubmitted(true)
       } else {
         setSubmitError(true)
       }
-    } catch (error) {
-      console.error('Submission error:', error)
+    } catch {
       setSubmitError(true)
     } finally {
       setLoading(false)
@@ -82,7 +81,7 @@ export default function Contact() {
     <>
       <SEOHead page="/contact" />
 
-      {/* 1. HERO SECTION */}
+      {/* HERO SECTION */}
       <PageHeader
         heading="Contact Us"
         subheading="&quot;We'd love to hear from you. Whether you have questions about admissions, courses, or ministry opportunities, our team is here to help.&quot;"
@@ -91,13 +90,12 @@ export default function Contact() {
       />
 
       <section className="py-16 lg:py-24 bg-[#F8FAFC] relative overflow-hidden" aria-label="Contact Section Body">
-        {/* Subtle Background Texture */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#1E3A5F_1px,transparent_1px)] [background-size:24px_24px]" />
 
         <Container>
           <div className="max-w-5xl mx-auto space-y-16">
 
-            {/* 2. WELCOME SECTION ("Partner With Us") */}
+            {/* WELCOME SECTION */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -128,7 +126,7 @@ export default function Contact() {
               </div>
             </motion.div>
 
-            {/* 3. CONTACT INFORMATION CARDS */}
+            {/* CONTACT INFORMATION CARDS */}
             <div className="space-y-6">
               <div className="text-center max-w-xl mx-auto">
                 <span className="text-xs font-bold uppercase tracking-widest text-[#C8972B]">Direct Channels</span>
@@ -139,8 +137,7 @@ export default function Contact() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-                {/* Email Card */}
-                {/* TODO: Replace placeholder email with client's preferred official email */}
+                {/* Email Card with Dropdown Quick Link */}
                 <motion.div
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.3 }}
@@ -149,16 +146,17 @@ export default function Contact() {
                   <div className="w-12 h-12 rounded-sm bg-[#0B1526] text-[#C8972B] flex items-center justify-center shrink-0 shadow-md">
                     <MailIcon className="w-6 h-6" />
                   </div>
-                  <div>
+                  <div className="w-full">
                     <span className="text-xs font-bold text-[#C8972B] uppercase tracking-wider block mb-1">
-                      Email Address
+                      Email Department
                     </span>
                     <h3 className="font-bold text-[#1E3A5F] text-lg mb-1">
-                      <a href="mailto:gec1322@gmail.com" className="hover:text-[#C8972B] transition-colors">gec1322@gmail.com</a>
+                      <a href="mailto:office@gloryeducationcenter.com" className="hover:text-[#C8972B] transition-colors">
+                        office@gloryeducationcenter.com
+                      </a>
                     </h3>
-                    <p className="text-xs text-slate-500 font-sans">
-
-                      Direct email for academic leadership and executive ministry matters.
+                    <p className="text-xs text-slate-500 font-sans mb-3">
+                      Fill out the form below or write directly to our office.
                     </p>
                   </div>
                 </motion.div>
@@ -188,7 +186,6 @@ export default function Contact() {
                 </motion.div>
 
                 {/* Registrar Phone Card */}
-                {/* TODO: Replace with registrar phone number when available */}
                 <motion.div
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.3 }}
@@ -237,11 +234,10 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* 4. OFFICE HOURS & CONTACT FORM GRID */}
+            {/* OFFICE HOURS & CONTACT FORM GRID */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
 
               {/* Left Column: Office Hours Card */}
-              {/* TODO: Replace with client's actual office hours */}
               <div className="lg:col-span-4 space-y-6">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -287,7 +283,7 @@ export default function Contact() {
                     <li className="pt-3">
                       <div className="flex flex-col gap-1">
                         <span className="font-semibold text-slate-700">
-                          Faculty & Staff Prayer
+                          Faculty &amp; Staff Prayer
                         </span>
                         <span className="font-bold text-[#1E3A5F]">
                           Every Morning • 8:20 AM
@@ -336,21 +332,25 @@ export default function Contact() {
                       <CheckIcon className="w-6 h-6" />
                     </div>
                     <h4 className="text-xl font-bold text-emerald-900 mb-2">Thank you!</h4>
-                    <p className="text-sm text-emerald-700 leading-relaxed font-sans">
+                    <p className="text-sm text-emerald-700 leading-relaxed font-sans mb-4">
                       Your submission has been received.
                     </p>
+                    <button
+                      type="button"
+                      onClick={() => setFormSubmitted(false)}
+                      className="text-xs text-[#1E3A5F] underline font-semibold hover:text-[#C8972B]"
+                    >
+                      Send another message
+                    </button>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-5">
-                    <input type="hidden" name="_subject" value="New Contact Form Submission" />
-                    <input type="hidden" name="_template" value="table" />
-                    <input type="hidden" name="_captcha" value="true" />
-
                     {submitError && (
                       <div className="p-4 text-center bg-rose-50 text-rose-700 rounded-sm border border-rose-200 text-sm font-sans" role="alert">
-                        Something went wrong. Please try again.
+                        Something went wrong while submitting. Please check your connection or contact us directly.
                       </div>
                     )}
+
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <FormInput
@@ -363,7 +363,7 @@ export default function Contact() {
                         onChange={handleChange}
                       />
                       <FormInput
-                        label="Email Address"
+                        label="Your Email Address"
                         id="contact-email"
                         name="email"
                         type="email"
@@ -415,8 +415,7 @@ export default function Contact() {
 
             </div>
 
-            {/* 5. GOOGLE MAP EMBED */}
-            {/* TODO: Replace map embed URL with client's exact Google Maps embed iframe */}
+            {/* GOOGLE MAP EMBED */}
             <div className="bg-white rounded-sm p-8 border border-slate-200 shadow-xl border-t-4 border-t-[#1E3A5F] space-y-4">
               <div className="flex items-center justify-between border-b border-slate-200 pb-4">
                 <div>
@@ -429,7 +428,6 @@ export default function Contact() {
               </div>
 
               <div className="w-full h-80 bg-[#EFF3F8] rounded-sm overflow-hidden relative shadow-inner border border-slate-200">
-                {/* Google Map iframe */}
                 <iframe
                   title="Glory Education Center Google Map"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d644.5637418163527!2d77.06812133310135!3d28.638721447058696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0594240e1495%3A0xde78273588329df1!2sGlory%20Education%20Center%20Music%20School!5e1!3m2!1sen!2sin!4v1784893746716!5m2!1sen!2sin"
@@ -438,18 +436,13 @@ export default function Contact() {
                   loading="lazy"
                   referrerPolicy="strict-origin-when-cross-origin"
                 />
-                {/* Badge Overlay */}
                 <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-md px-4 py-2 rounded-sm text-xs font-bold text-[#1E3A5F] shadow-md border border-slate-200">
                   📍 Google Map — WZ-18/13/3 Village Budella, Vikas Puri, New Delhi – 110018
                 </div>
               </div>
-
-              <p className="text-center text-xs text-slate-500 font-sans italic pt-1">
-
-              </p>
             </div>
 
-            {/* 6. QUICK CONTACT CTA BANNER */}
+            {/* QUICK CONTACT CTA BANNER */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -475,10 +468,10 @@ export default function Contact() {
                 <div className="pt-4">
                   <Link
                     to="/admissions/apply"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-sm bg-[#C8972B] border border-[#C8972B] text-[#0B1526] text-xs font-bold uppercase tracking-wider hover:bg-[#D4A843] hover:border-[#D4A843] transition-all shadow-md group-hover:gap-3"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-sm bg-[#C8972B] border border-[#C8972B] text-[#0B1526] text-xs font-bold uppercase tracking-wider hover:bg-[#D4A843] hover:border-[#D4A843] transition-all shadow-md group"
                   >
                     <span>Apply Now</span>
-                    <ArrowRightIcon className="w-4 h-4" />
+                    <ArrowRightIcon className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </div>
               </div>

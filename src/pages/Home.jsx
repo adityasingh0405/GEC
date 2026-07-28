@@ -272,7 +272,7 @@ export default function Home() {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: 'Glory Education Center — Home',
-    url: 'https://www.gloryeducationcenter.org/',
+    url: 'https://gloryeducationcenter.com/',
     description: 'Glory Education Center offers B.Th, M.Dv, M.Th, and Diploma in Music programs.',
   }
 

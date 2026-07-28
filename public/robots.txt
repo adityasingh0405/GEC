@@ -4,4 +4,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/
 
-Sitemap: https://www.gloryeducationcenter.org/sitemap.xml
+Sitemap: https://gloryeducationcenter.com/sitemap.xml

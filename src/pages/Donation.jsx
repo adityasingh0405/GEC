@@ -222,7 +222,7 @@ export default function Donation() {
               </div>
 
               <a
-                href={`mailto:gec1322@gmail.com`}
+                href={`mailto:accounts@gloryeducationcenter.com`}
                 className="relative z-10 inline-flex items-center gap-2 px-6 py-3 rounded-sm bg-[#C8972B] border border-[#C8972B] text-[#0B1526] text-xs font-bold uppercase tracking-wider hover:bg-[#D4A843] hover:border-[#D4A843] transition-all shadow-md shrink-0 w-full sm:w-auto justify-center"
               >
                 <span>Email Finance Office</span>

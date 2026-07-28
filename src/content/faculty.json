@@ -6,7 +6,8 @@
     "qualifications": "LL.M., Ph.D.",
     "bio": "Dr. Henry is a writer, musician, pastor, missionary, and educator. As the Director and Principal of Glory Education Centre (GEC), he provides leadership in academic excellence, Christian education, and ministry. He is committed to equipping students through quality education, spiritual development, and community service.",
     "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/Henry?updatedAt=1784916862186",
-    "specialization": "Leadership, Christian Education, Ministry"
+    "specialization": "Leadership, Christian Education, Ministry",
+    "email": "director@gloryeducationcenter.com"
   },
   {
     "id": "f2",
@@ -15,7 +16,8 @@
     "qualifications": "B.A. (Manipur University), B.D., M.Th. in Christian Ministry (Education)",
     "bio": "H. Lunjohnson Misao completed his B.A. from Manipur University, followed by a Bachelor of Divinity and an M.Th. in Christian Ministry (Education) under the Senate of Serampore College. After serving in pastoral ministry, he joined Glory Education Centre as a full-time faculty member and now serves as Academic Dean.",
     "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/Misao?updatedAt=1784916832008",
-    "specialization": "Christian Ministry, Education, Academic Leadership"
+    "specialization": "Christian Ministry, Education, Academic Leadership",
+    "email": "academicdean@gloryeducationcenter.com"
   },
   {
     "id": "f3",
@@ -24,7 +26,8 @@
     "qualifications": "M.Th. in Pastoral Counselling",
     "bio": "Lhiwetshou Tsuhah holds an M.Th. in Pastoral Counselling from India Baptist Theological Seminary, Kottayam. He has served as a missionary teacher in South Sikkim, a women's ministry leader, and an assistant in charge at El Shaddai. He currently serves as Teaching Faculty and Students Dean at GEC.",
     "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/Tsuhah?updatedAt=1784916914995",
-    "specialization": "Pastoral Counselling, Student Development, Mission"
+    "specialization": "Pastoral Counselling, Student Development, Mission",
+    "email": "studentaffairs@gloryeducationcenter.com"
   },
   {
     "id": "f4",
@@ -33,7 +36,8 @@
     "qualifications": "M.Div. (Master of Divinity)",
     "bio": "Miss Elis serves as Lecturer and Warden at Glory Education Centre. She is passionate about teaching, discipleship, mentoring students, and providing spiritual guidance while fostering a Christ-centered and disciplined learning environment.",
     "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/Elis?updatedAt=1785097603531",
-    "specialization": "Biblical Studies, Student Mentoring, Discipleship"
+    "specialization": "Biblical Studies, Student Mentoring, Discipleship",
+    "email": "warden@gloryeducationcenter.com"
   },
   {
     "id": "f5",
@@ -42,7 +46,8 @@
     "qualifications": "B.A. (IGNOU), B.Th. (Caleb Institute), LL.B. (Pursuing)",
     "bio": "Akhilesh Kumar serves as the Boys Warden at GEC. He is committed to student care, Christian ministry, leadership, and providing spiritual guidance while pursuing a Bachelor of Laws (LL.B.).",
     "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/Akhilesh?updatedAt=1785097602972",
-    "specialization": "Student Care, Leadership, Christian Ministry"
+    "specialization": "Student Care, Leadership, Christian Ministry",
+    "email": "warden@gloryeducationcenter.com"
   },
   {
     "id": "f6",
@@ -51,7 +56,8 @@
     "qualifications": "B.Ed., M.Th. (Martin Luther Christian University)",
     "bio": "Bei Ho Valia is a dedicated lecturer committed to academic excellence and Christian ministry. He is passionate about mentoring students and equipping future leaders with sound theological knowledge and strong Christian character.",
     "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/Valia?updatedAt=1784916994525",
-    "specialization": "Theology, Christian Ministry, Mentorship"
+    "specialization": "Theology, Christian Ministry, Mentorship",
+    "email": "faculty@gloryeducationcenter.com"
   },
   {
     "id": "f7",
@@ -60,7 +66,8 @@
     "qualifications": "M.Th.",
     "bio": "Rev. Samuel serves as a Bishop and faculty member at Glory Education Centre. He is actively involved in pastoral ministry, biblical teaching, mentoring students, and preparing future Christian leaders through faithful service.",
     "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/Samuel?updatedAt=1784917015999",
-    "specialization": "Pastoral Ministry, Biblical Teaching, Christian Leadership"
+    "specialization": "Pastoral Ministry, Biblical Teaching, Christian Leadership",
+    "email": "faculty@gloryeducationcenter.com"
   },
   {
     "id": "f8",
@@ -69,7 +76,8 @@
     "qualifications": "M.Th. in Missiology",
     "bio": "Gin Piang accepted Christ during his teenage years and completed his Master of Theology in Missiology. As a preacher, pastor, and lecturer at GEC, he is dedicated to teaching, mentoring students, and equipping believers for Christian ministry.",
     "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/Piang?updatedAt=1785097603959",
-    "specialization": "Missiology, Pastoral Ministry, Christian Education"
+    "specialization": "Missiology, Pastoral Ministry, Christian Education",
+    "email": "faculty@gloryeducationcenter.com"
   },
   {
     "id": "f9",
@@ -78,7 +86,8 @@
     "qualifications": "M.Th.",
     "bio": "Rev. Nay Lin Aung serves as Pastor of Khumi Christian Church and Lecturer at Glory Education Centre. He is committed to preaching God's Word, mentoring students, and preparing believers for faithful Christian ministry.",
     "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/Aung?updatedAt=1784917101341",
-    "specialization": "Theology, Pastoral Ministry, Biblical Teaching"
+    "specialization": "Theology, Pastoral Ministry, Biblical Teaching",
+    "email": "faculty@gloryeducationcenter.com"
   },
   {
     "id": "f10",
@@ -87,7 +96,8 @@
     "qualifications": "B.A., Diploma in Music (Guitar Major)",
     "bio": "Dal Lam Thang is a dedicated music educator and guitarist with expertise in guitar, piano, choir, and music theory. He is passionate about helping students develop their musical gifts through practical and disciplined learning.",
     "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/Thang?updatedAt=1784917114958",
-    "specialization": "Guitar, Piano, Choir, Music Theory"
+    "specialization": "Guitar, Piano, Choir, Music Theory",
+    "email": "music@gloryeducationcenter.com"
   },
   {
     "id": "f11",
@@ -96,7 +106,8 @@
     "qualifications": "",
     "bio": "Sir Solomon manages the institution's technical infrastructure, including computers, biometric systems, and attendance management. During the Summer Course, he teaches Computer Studies and faithfully supports the technological development of Glory Education Centre.",
     "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/Solomon?updatedAt=1784917128362",
-    "specialization": "Computer Studies, Technical Support, IT Administration"
+    "specialization": "Computer Studies, Technical Support, IT Administration",
+    "email": "it@gloryeducationcenter.com"
   },
   {
     "id": "f12",
@@ -105,7 +116,8 @@
     "qualifications": "B.Th. (Bachelor of Theology)",
     "bio": "Rebecca serves as the Accountant at Glory Education Centre. She faithfully oversees financial management and administration with integrity and responsibility, supporting the institution's mission of providing quality Christian education.",
     "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/Rebecca?updatedAt=1784917151348",
-    "specialization": "Finance, Administration, Institutional Management"
+    "specialization": "Finance, Administration, Institutional Management",
+    "email": "accounts@gloryeducationcenter.com"
   },
   {
     "id": "f13",
@@ -114,6 +126,7 @@
     "qualifications": "",
     "bio": "Daniel Ngun Nang has faithfully served at Glory Education Centre for several years as Chef and Manager. Alongside managing daily operations, he actively participates in youth ministry, encouraging young people to grow in their faith through servant leadership.",
     "image": "https://ik.imagekit.io/xdm1pwpls0/f_downlods/Faculty/Nang?updatedAt=1785097603593",
-    "specialization": "Operations Management, Hospitality, Youth Ministry"
+    "specialization": "Operations Management, Hospitality, Youth Ministry",
+    "email": "office@gloryeducationcenter.com"
   }
 ]

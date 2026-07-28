@@ -34,7 +34,7 @@ export default function PrayerRequest() {
     setSubmitError(false)
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/gec1322@gmail.com', {
+      const response = await fetch('https://formsubmit.co/ajax/office@gloryeducationcenter.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -59,8 +59,7 @@ export default function PrayerRequest() {
       } else {
         setSubmitError(true)
       }
-    } catch (error) {
-      console.error('Submission error:', error)
+    } catch {
       setSubmitError(true)
     } finally {
       setLoading(false)

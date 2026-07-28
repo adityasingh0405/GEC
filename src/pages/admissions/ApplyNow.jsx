@@ -49,7 +49,7 @@ export default function ApplyNow() {
     setSubmitError(false)
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/gec1322@gmail.com', {
+      const response = await fetch('https://formsubmit.co/ajax/admissions@gloryeducationcenter.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -83,8 +83,7 @@ export default function ApplyNow() {
       } else {
         setSubmitError(true)
       }
-    } catch (error) {
-      console.error('Form submission error:', error)
+    } catch {
       setSubmitError(true)
     } finally {
       setLoading(false)
