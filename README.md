@@ -163,4 +163,5 @@ All institutional content resides in `src/content/*.json`. When transitioning to
 1. Connect the CMS output to write to `src/content/*.json` or query via API inside custom data hooks.
 2. The UI components (`src/components/` and `src/pages/`) consume these JSON schemas directly, requiring **zero design or markup refactoring**.
 #   G E C  
+ #   g l o r y e d u c a t i o n c e n t e r  
  
